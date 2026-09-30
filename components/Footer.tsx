@@ -6,6 +6,7 @@ import {
   Phone,
   Mail,
   ChevronUp,
+  Heart,
 } from 'lucide-react'
 
 export default function Footer() {
@@ -252,10 +253,10 @@ export default function Footer() {
             </a>
           </div>
 
-          <div className="flex items-center gap-1">
-            <span>Designed with</span>
-            <span className="text-red-500">❤️</span>
-            <span>for a Brighter Tomorrow</span>
+          <div className="flex items-center gap-1.5 text-slate-400">
+            <span>Designed by</span>
+            <span className="font-semibold text-white tracking-wide">Sunseaz</span>
+            <Heart className="w-3.5 h-3.5 fill-red-500 text-red-500 inline-block animate-pulse" />
           </div>
         </div>
       </div>
