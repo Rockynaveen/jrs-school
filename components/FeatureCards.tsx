@@ -62,6 +62,8 @@ export default function FeatureCards() {
             return (
               <div
                 key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className={`bg-white rounded-2xl p-5 sm:p-6 text-center shadow-sm hover:shadow-xl border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 ${item.hoverBorder} flex flex-col items-center justify-center group`}
               >
                 {/* Circular Badge Icon */}

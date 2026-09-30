@@ -85,7 +85,10 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: Stylized Image Frame with Exact Red Organic Shapes */}
-          <div className="lg:col-span-6 relative flex items-center justify-center">
+          <div
+            className="lg:col-span-6 relative flex items-center justify-center"
+            data-aos="fade-right"
+          >
             {/* SVG Filter / Clip Definitions */}
             <svg width="0" height="0" className="absolute">
               <defs>
@@ -170,7 +173,7 @@ export default function AboutSection() {
           </div>
 
           {/* Right Column: About Content */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-6" data-aos="fade-left">
             {/* Tagline */}
             <div>
               <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24]">
@@ -191,6 +194,8 @@ export default function AboutSection() {
               {pillars.map((item, index) => (
                 <div
                   key={index}
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
                   className="flex flex-col items-center text-center group cursor-default"
                 >
                   <div className="w-10 h-10 flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform duration-200">

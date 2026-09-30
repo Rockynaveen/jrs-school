@@ -1,6 +1,7 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
 import Navbar from './Navbar'
 import Hero from './Hero'
 import FeatureCards from './FeatureCards'
@@ -14,6 +15,14 @@ import AdmissionsCTA from './AdmissionsCTA'
 import Footer from './Footer'
 
 export default function LandingPage() {
+  useEffect(() => {
+    AOS.init({
+      duration: 750,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50,
+    })
+  }, [])
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-800 antialiased">
       {/* 1. Header / Navbar */}

@@ -70,7 +70,7 @@ export default function AcademicsSection() {
     <section id="academics" className="py-10 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-10" data-aos="fade-up">
           <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626]">
             ACADEMIC PROGRAMMES
           </span>
@@ -87,6 +87,8 @@ export default function AcademicsSection() {
           {stages.map((stage, index) => (
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
               className="bg-white rounded-[26px] overflow-hidden border border-slate-200 transition-all duration-200 flex flex-col group"
             >
               {/* Top Accent Gradient Rim */}

@@ -37,7 +37,7 @@ export default function EventsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Heading & Description */}
-          <div className="lg:col-span-4 space-y-5">
+          <div className="lg:col-span-4 space-y-5" data-aos="fade-right">
             <div>
               <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626]">
                 LATEST EVENTS
@@ -69,6 +69,8 @@ export default function EventsSection() {
               {events.map((event, index) => (
                 <div
                   key={index}
+                  data-aos="fade-left"
+                  data-aos-delay={index * 150}
                   className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 flex flex-col group"
                 >
                   {/* Image with date badge */}

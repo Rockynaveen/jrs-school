@@ -61,7 +61,7 @@ export default function BeyondClassroom() {
     <section id="beyond" className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-8" data-aos="fade-up">
           <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626]">
             BEYOND CLASSROOM
           </span>
@@ -77,6 +77,8 @@ export default function BeyondClassroom() {
             return (
               <div
                 key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 80}
                 className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-slate-100"
               >
                 {/* Image Container */}

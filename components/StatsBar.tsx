@@ -120,6 +120,8 @@ export default function StatsBar() {
             return (
               <div
                 key={idx}
+                data-aos="fade-up"
+                data-aos-delay={idx * 120}
                 className="flex flex-col items-center justify-center space-y-2 group"
               >
                 <div className="text-amber-400 group-hover:scale-110 transition-transform duration-300">

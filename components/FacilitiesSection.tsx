@@ -36,7 +36,7 @@ export default function FacilitiesSection() {
     <section id="facilities" className="py-10 bg-[#edf5fd] border-y border-[#dbeafe]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-8" data-aos="fade-up">
           <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626]">
             OUR FACILITIES
           </span>
@@ -50,6 +50,8 @@ export default function FacilitiesSection() {
           {facilities.map((facility, index) => (
             <div
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 flex flex-col text-left"
             >
               {/* Image Container */}

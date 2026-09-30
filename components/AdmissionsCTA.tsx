@@ -52,11 +52,11 @@ export default function AdmissionsCTA() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Heading, Subtitle & 3 Feature Pills */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-amber-300 bg-amber-400/10 border border-amber-400/20 mb-3">
                 <MapPin className="w-3.5 h-3.5" />
-                <span>Uppal, Hyderabad</span>
+                <span>Narapally, Hyderabad</span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
                 Admission Open for <br />
@@ -120,7 +120,7 @@ export default function AdmissionsCTA() {
           </div>
 
           {/* Right Column: Floating White Enquiry Form Card */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5" data-aos="fade-left">
             <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl text-slate-900 border border-slate-100/60">
               <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6">
                 Enquire for Admissions
