@@ -53,7 +53,7 @@ export default function Hero() {
       id="home"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      className="relative min-h-[520px] md:min-h-[580px] lg:min-h-[640px] w-full overflow-hidden flex items-center bg-[#031c3f]"
+      className="relative h-[105vh] min-h-[105vh] w-full overflow-hidden flex items-center bg-[#031c3f]"
     >
       {/* Right space ONLY for the hero slider images (no image under the left overlay) */}
       <div className="absolute top-0 right-0 bottom-0 w-full md:w-[54%] lg:w-[58%] xl:w-[60%] z-0 overflow-hidden">
