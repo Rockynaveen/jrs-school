@@ -122,7 +122,9 @@ export default function Hero() {
 
             {/* Secondary Virtual Tour Button */}
             <a
-              href="#tour"
+              href="https://youtu.be/LBvByB-S0O4"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-[#031c3f]/50 hover:bg-[#031c3f]/80 active:scale-95 border border-white/40 backdrop-blur-sm transition-all duration-200 group"
             >
               <span>Take a Virtual Tour</span>
