@@ -3,18 +3,24 @@
 import React, { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
-const navLinks = [
-  { name: 'Home', href: '#home', active: true },
-  { name: 'About Us', href: '#about' },
-  { name: 'Academics', href: '#academics' },
-  { name: 'Admissions', href: '#admissions' },
-  { name: 'Beyond Classroom', href: '#beyond' },
-  { name: 'Facilities', href: '#facilities' },
-  { name: 'Contact', href: '#contact' },
-]
+interface NavbarProps {
+  activePage?: 'home' | 'about' | 'academics' | 'admissions' | 'beyond' | 'facilities' | 'gallery' | 'events' | 'contact'
+}
 
-export default function Navbar() {
+export default function Navbar({ activePage = 'home' }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const navLinks = [
+    { name: 'Home', href: '/', id: 'home' },
+    { name: 'About JRS', href: '/about', id: 'about' },
+    { name: 'Academics', href: '/#academics', id: 'academics' },
+    { name: 'Admissions', href: '/#admissions', id: 'admissions' },
+    { name: 'Beyond Classroom', href: '/#beyond', id: 'beyond' },
+    { name: 'Facilities', href: '/#facilities', id: 'facilities' },
+    { name: 'Gallery', href: '/#gallery', id: 'gallery' },
+    { name: 'Sports & Events', href: '/#events', id: 'events' },
+    { name: 'Contact', href: '/#contact', id: 'contact' },
+  ]
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
@@ -31,19 +37,22 @@ export default function Navbar() {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden xl:flex items-center gap-6 2xl:gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`text-[15px] font-medium transition-colors hover:text-red-600 ${
-                  link.active
-                    ? 'text-red-600 font-semibold'
-                    : 'text-slate-700'
-                }`}
-              >
-                {link.name}
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.id === activePage
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`text-[15px] font-medium transition-colors hover:text-red-600 ${
+                    isActive
+                      ? 'text-red-600 font-semibold'
+                      : 'text-slate-700'
+                  }`}
+                >
+                  {link.name}
+                </a>
+              )
+            })}
           </nav>
 
           {/* Enquire Now CTA Button */}
@@ -72,20 +81,23 @@ export default function Navbar() {
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
         <div className="xl:hidden bg-white border-b border-slate-200 shadow-xl px-4 pt-3 pb-6 space-y-2">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setMobileMenuOpen(false)}
-              className={`block px-3 py-2 rounded-md text-[15px] font-medium transition-colors ${
-                link.active
-                  ? 'bg-red-50 text-red-600 font-semibold'
-                  : 'text-slate-700 hover:bg-slate-50 hover:text-red-600'
-              }`}
-            >
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const isActive = link.id === activePage
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={`block px-3 py-2 rounded-md text-[15px] font-medium transition-colors ${
+                  isActive
+                    ? 'bg-red-50 text-red-600 font-semibold'
+                    : 'text-slate-700 hover:bg-slate-50 hover:text-red-600'
+                }`}
+              >
+                {link.name}
+              </a>
+            )
+          })}
           <div className="pt-2">
             <a
               href="#enquire"

@@ -99,42 +99,47 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs font-medium text-slate-600">
               <li>
-                <a href="#home" className="hover:text-red-600 transition-colors">
+                <a href="/" className="hover:text-red-600 transition-colors">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#about" className="hover:text-red-600 transition-colors">
-                  About Us
+                <a href="/about" className="hover:text-red-600 transition-colors">
+                  About JRS
                 </a>
               </li>
               <li>
-                <a href="#academics" className="hover:text-red-600 transition-colors">
+                <a href="/#academics" className="hover:text-red-600 transition-colors">
                   Academics
                 </a>
               </li>
               <li>
-                <a href="#enquire" className="hover:text-red-600 transition-colors">
+                <a href="/#admissions" className="hover:text-red-600 transition-colors">
                   Admissions
                 </a>
               </li>
               <li>
-                <a href="#beyond" className="hover:text-red-600 transition-colors">
+                <a href="/#beyond" className="hover:text-red-600 transition-colors">
                   Beyond Classroom
                 </a>
               </li>
               <li>
-                <a href="#facilities" className="hover:text-red-600 transition-colors">
+                <a href="/#facilities" className="hover:text-red-600 transition-colors">
                   Facilities
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="hover:text-red-600 transition-colors">
+                <a href="/#gallery" className="hover:text-red-600 transition-colors">
                   Gallery
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-red-600 transition-colors">
+                <a href="/#events" className="hover:text-red-600 transition-colors">
+                  Sports & Events
+                </a>
+              </li>
+              <li>
+                <a href="/#contact" className="hover:text-red-600 transition-colors">
                   Contact
                 </a>
               </li>
@@ -184,13 +189,13 @@ export default function Footer() {
             <div className="space-y-2.5 text-xs text-slate-600">
               <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-red-600 flex-shrink-0 mt-0.5" />
-                <span>JRS International School, Narapally, Hyderabad, Telangana</span>
+                <span>JRS International School, Narapally, Near Uppal Depot, Hyderabad, Telangana</span>
               </div>
 
               <div className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-red-600 flex-shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-red-600 transition-colors">
-                  +91 98765 43210
+                <a href="tel:+9191574043210" className="hover:text-red-600 transition-colors">
+                  +91 915740 43210
                 </a>
               </div>
 
@@ -254,9 +259,9 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-1.5 text-slate-400">
-            <span>Designed by</span>
-            <span className="font-semibold text-white tracking-wide">Sunseaz</span>
+            <span>Designed with</span>
             <Heart className="w-3.5 h-3.5 fill-red-500 text-red-500 inline-block animate-pulse" />
+            <span className="font-semibold text-white tracking-wide">for a Brighter Tomorrow</span>
           </div>
         </div>
       </div>
