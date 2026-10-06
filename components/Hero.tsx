@@ -82,13 +82,14 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] min-h-[calc(100vh-5rem)] min-h-[calc(100dvh-5rem)] lg:h-[calc(100vh-5rem)] lg:h-[calc(100dvh-5rem)]"
+      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] min-h-[520px] sm:min-h-[580px] md:min-h-[calc(100vh-5rem)] md:min-h-[calc(100dvh-5rem)] lg:h-[calc(100vh-5rem)] lg:h-[calc(100dvh-5rem)]"
     >
       {/* Latest News Marquee Ticker */}
       <div className="relative z-20 w-full bg-[#02132d] border-b border-white/10 shadow-sm flex items-center py-2 sm:py-2.5 px-3 sm:px-6">
-        <div className="flex items-center gap-1.5 shrink-0 bg-[#dc2626] text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider px-2.5 sm:px-3 py-1 rounded shadow-sm">
+        <div className="flex items-center gap-1.5 shrink-0 bg-[#dc2626] text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider px-2 sm:px-3 py-1 rounded shadow-sm">
           <Megaphone className="w-3.5 h-3.5 shrink-0 animate-bounce" />
-          <span>Latest News</span>
+          <span className="hidden xs:inline">Latest News</span>
+          <span className="xs:hidden">News</span>
         </div>
         <div className="flex-1 overflow-hidden ml-3 sm:ml-4">
           <marquee
@@ -155,19 +156,22 @@ export default function Hero() {
             </div>
           ))}
 
-          {/* Soft Navy Gradient Overlay from Left (same style as About Hero): Solid opacity over text, fading horizontally across half of the hero section */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#031c3f] via-[#031c3f]/80 via-35% md:via-50% to-transparent z-[1] pointer-events-none" />
+          {/* Mobile Overlay: Solid/vertical navy gradient protecting full-width text */}
+          <div className="md:hidden absolute inset-0 bg-gradient-to-t from-[#031c3f] via-[#031c3f]/90 to-[#031c3f]/75 z-[1] pointer-events-none" />
+
+          {/* Desktop Overlay: Soft navy horizontal gradient fading to showcase campus photography */}
+          <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#031c3f] via-[#031c3f]/85 via-45% to-transparent z-[1] pointer-events-none" />
 
           {/* Subtle Dark Bottom Gradient */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f]/40 via-transparent to-transparent z-[1] pointer-events-none" />
         </div>
 
       {/* Hero Content on Clean Solid Navy Left Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 lg:pb-14 w-full">
-        <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in translate-y-3 sm:translate-y-6 md:translate-y-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 md:pt-24 lg:pt-28 pb-20 sm:pb-16 lg:pb-14 w-full">
+        <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in sm:translate-y-2 md:translate-y-4">
           {/* Tagline / Subtitle */}
-          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">
-            <span className="text-white/95 text-xs sm:text-[13px] font-bold tracking-[0.16em] uppercase flex items-center gap-2">
+          <div className="inline-flex items-center gap-2 mb-2.5 sm:mb-4">
+            <span className="text-white/95 text-[11px] sm:text-xs md:text-[13px] font-bold tracking-[0.14em] uppercase flex flex-wrap items-center gap-x-2 gap-y-1">
               {current.tagline.split('•').map((part, i) => (
                 <React.Fragment key={i}>
                   {i > 0 && <span className="text-[#f59e0b] font-black">•</span>}
@@ -178,24 +182,24 @@ export default function Hero() {
           </div>
 
           {/* Big Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[56px] font-extrabold text-white tracking-tight leading-[1.12] mb-3 sm:mb-4 lg:mb-5">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[56px] font-extrabold text-white tracking-tight leading-[1.14] mb-3 sm:mb-4 lg:mb-5 break-words">
             <span>{current.titlePart1}</span>{' '}
-            <span className="text-[#ffbe1a] block mt-1">
+            <span className="text-[#ffbe1a] block mt-1 sm:mt-1.5">
               {current.titlePart2}
             </span>
           </h1>
 
           {/* Subtext */}
-          <p className="text-xs sm:text-sm md:text-[15px] lg:text-base text-white/90 leading-relaxed font-normal mb-6 sm:mb-8 max-w-lg lg:max-w-xl">
+          <p className="text-xs sm:text-sm md:text-[15px] lg:text-base text-white/90 leading-relaxed font-normal mb-5 sm:mb-7 max-w-lg lg:max-w-xl">
             {current.description}
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-3.5 sm:gap-4">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
             {/* Primary Admissions Button */}
             <Link
               href="/admissions"
-              className="inline-flex items-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/30 transition-all duration-200"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/30 transition-all duration-200 text-center"
             >
               <span>Admissions 2026-27</span>
               <ArrowRight className="w-4 h-4" />
@@ -206,7 +210,7 @@ export default function Hero() {
               type="button"
               onClick={() => setIsVideoModalOpen(true)}
               aria-label="Play virtual campus tour video"
-              className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#031c3f]/50 hover:bg-[#031c3f]/80 active:scale-95 border border-white/40 backdrop-blur-sm transition-all duration-200 group cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#031c3f]/50 hover:bg-[#031c3f]/80 active:scale-95 border border-white/40 backdrop-blur-sm transition-all duration-200 group cursor-pointer text-center"
             >
               <span>Take a Virtual Tour</span>
               <Play className="w-3 h-3 fill-white text-white group-hover:scale-110 transition-transform ml-0.5" />
@@ -216,18 +220,18 @@ export default function Hero() {
       </div>
 
       {/* Bottom Right Carousel Controls matching design */}
-      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 right-4 sm:right-6 lg:right-12 z-20 flex items-center gap-2.5">
+      <div className="absolute bottom-3 sm:bottom-6 lg:bottom-8 right-3 sm:right-6 lg:right-12 z-20 flex items-center gap-2 sm:gap-2.5">
         {/* Previous Button (Dark) */}
         <button
           onClick={prevSlide}
           aria-label="Previous slide"
-          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center transition-colors border border-white/10 shadow-lg cursor-pointer"
+          className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center transition-colors border border-white/10 shadow-lg cursor-pointer"
         >
-          <ArrowLeft className="w-4 h-4 text-white" />
+          <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
         </button>
 
         {/* Indicators */}
-        <div className="flex items-center gap-2 px-1">
+        <div className="flex items-center gap-1.5 sm:gap-2 px-1">
           {slides.map((_, idx) => (
             <button
               key={idx}
@@ -235,8 +239,8 @@ export default function Hero() {
               aria-label={`Go to slide ${idx + 1}`}
               className={`rounded-full transition-all duration-300 cursor-pointer ${
                 activeSlide === idx
-                  ? 'w-6 h-2.5 bg-[#e31e24]'
-                  : 'w-2.5 h-2.5 bg-white opacity-90 hover:opacity-100'
+                  ? 'w-5 sm:w-6 h-2 sm:h-2.5 bg-[#e31e24]'
+                  : 'w-2 sm:w-2.5 h-2 sm:h-2.5 bg-white opacity-85 hover:opacity-100'
               }`}
             />
           ))}
@@ -246,9 +250,9 @@ export default function Hero() {
         <button
           onClick={nextSlide}
           aria-label="Next slide"
-          className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-slate-100 text-[#031c3f] flex items-center justify-center transition-colors shadow-lg cursor-pointer"
+          className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white hover:bg-slate-100 text-[#031c3f] flex items-center justify-center transition-colors shadow-lg cursor-pointer"
         >
-          <ArrowRight className="w-4 h-4 text-[#031c3f]" />
+          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#031c3f]" />
         </button>
       </div>
       </div>

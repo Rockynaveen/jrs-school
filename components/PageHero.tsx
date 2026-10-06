@@ -41,7 +41,7 @@ export default function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[#031c3f] text-white min-h-[70vh] flex flex-col justify-center">
+    <section className="relative overflow-hidden bg-[#031c3f] text-white min-h-[460px] sm:min-h-[520px] md:min-h-[580px] lg:min-h-[660px] flex flex-col justify-center">
       {/* Background Campus Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -58,23 +58,24 @@ export default function PageHero({
 
         {overlayType === 'logo-blue' ? (
           <>
-            {/* Logo Blue Light Overlay */}
-            <div className="absolute inset-0 bg-[#013aa3]/40" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#013aa3]/90 via-[#013aa3]/60 via-40% to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#013aa3]/40 via-transparent to-transparent" />
+            {/* Logo Blue Overlay: Full mobile protection + desktop horizontal fade */}
+            <div className="absolute inset-0 bg-[#013aa3]/50 md:bg-[#013aa3]/40 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#013aa3] via-[#013aa3]/80 to-[#013aa3]/50 md:hidden pointer-events-none" />
+            <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#013aa3]/90 via-[#013aa3]/60 via-40% to-transparent pointer-events-none" />
+            <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-[#013aa3]/40 via-transparent to-transparent pointer-events-none" />
           </>
         ) : (
           <>
-            {/* Soft Navy Gradient from Left for high readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#031c3f] via-[#031c3f]/85 via-35% md:via-45% to-transparent" />
-            {/* Subtle Dark Bottom Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f]/30 via-transparent to-transparent" />
+            {/* Navy Overlay: Full mobile protection + desktop horizontal fade */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f] via-[#031c3f]/85 to-[#031c3f]/65 md:hidden pointer-events-none" />
+            <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-[#031c3f] via-[#031c3f]/85 via-35% md:via-45% to-transparent pointer-events-none" />
+            <div className="hidden md:block absolute inset-0 bg-gradient-to-t from-[#031c3f]/30 via-transparent to-transparent pointer-events-none" />
           </>
         )}
       </div>
 
-      {/* Decorative Red Curved Swoosh in Bottom-Right Corner (matching design) */}
-      <div className="absolute -bottom-8 -right-8 w-60 sm:w-80 h-60 sm:h-80 pointer-events-none z-10 overflow-hidden">
+      {/* Decorative Red Curved Swoosh in Bottom-Right Corner (subtle on mobile) */}
+      <div className="absolute -bottom-6 -right-6 sm:-bottom-8 sm:-right-8 w-36 sm:w-56 md:w-80 h-36 sm:h-56 md:h-80 pointer-events-none z-10 overflow-hidden opacity-40 sm:opacity-90">
         <svg
           viewBox="0 0 300 300"
           className="w-full h-full"
@@ -95,12 +96,12 @@ export default function PageHero({
       </div>
 
       {/* Hero Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 w-full">
-        <div className="max-w-2xl" data-aos="fade-right">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-16 lg:py-20 w-full">
+        <div className="max-w-xl md:max-w-2xl" data-aos="fade-right">
           {/* Breadcrumb Navigation */}
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300 mb-4 sm:mb-5"
+            className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300 mb-3 sm:mb-4 md:mb-5"
           >
             <Link href="/" className="hover:text-white transition-colors">
               Home
@@ -110,7 +111,7 @@ export default function PageHero({
           </nav>
 
           {/* Main Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-white leading-[1.15] break-words">
             {title}{' '}
             {titleHighlight && (
               <span className="text-[#f59e0b]">{titleHighlight}</span>
@@ -119,21 +120,21 @@ export default function PageHero({
 
           {/* Subtitle */}
           {subtitle && (
-            <p className="text-xl sm:text-2xl font-bold text-white/95 mt-2 sm:mt-3 tracking-tight">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white/95 mt-2 sm:mt-3 tracking-tight leading-snug">
               {subtitle}
             </p>
           )}
 
           {/* Description Paragraph */}
           {description && (
-            <p className="text-slate-200 text-xs sm:text-sm sm:leading-relaxed max-w-xl opacity-90 leading-relaxed mt-4">
+            <p className="text-slate-200 text-xs sm:text-sm md:text-[15px] sm:leading-relaxed max-w-xl opacity-90 leading-relaxed mt-3 sm:mt-4">
               {description}
             </p>
           )}
 
           {/* Action Buttons */}
           {(primaryButton || secondaryButton) && (
-            <div className="flex flex-wrap items-center gap-3.5 sm:gap-4 mt-7 sm:mt-8">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mt-6 sm:mt-8">
               {/* Primary Button */}
               {primaryButton &&
                 (primaryButton.href ? (
@@ -141,7 +142,7 @@ export default function PageHero({
                     <a
                       href={primaryButton.href}
                       onClick={primaryButton.onClick}
-                      className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95"
+                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
                     >
                       <span>{primaryButton.text}</span>
                       <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -150,7 +151,7 @@ export default function PageHero({
                     <Link
                       href={primaryButton.href}
                       onClick={primaryButton.onClick}
-                      className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95"
+                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
                     >
                       <span>{primaryButton.text}</span>
                       <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -160,7 +161,7 @@ export default function PageHero({
                   <button
                     type="button"
                     onClick={primaryButton.onClick}
-                    className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95"
+                    className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
                   >
                     <span>{primaryButton.text}</span>
                     <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -174,7 +175,7 @@ export default function PageHero({
                     <a
                       href={secondaryButton.href}
                       onClick={secondaryButton.onClick}
-                      className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95"
+                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
                     >
                       <span>{secondaryButton.text}</span>
                       {secondaryButton.icon === 'phone' ? (
@@ -189,7 +190,7 @@ export default function PageHero({
                     <Link
                       href={secondaryButton.href}
                       onClick={secondaryButton.onClick}
-                      className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95"
+                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
                     >
                       <span>{secondaryButton.text}</span>
                       {secondaryButton.icon === 'phone' ? (
@@ -205,7 +206,7 @@ export default function PageHero({
                   <button
                     type="button"
                     onClick={secondaryButton.onClick}
-                    className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 cursor-pointer"
+                    className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center cursor-pointer"
                   >
                     <span>{secondaryButton.text}</span>
                     {secondaryButton.icon === 'phone' ? (
