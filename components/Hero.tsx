@@ -82,7 +82,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] min-h-[520px] sm:min-h-[580px] md:min-h-[calc(100vh-5rem)] md:min-h-[calc(100dvh-5rem)] lg:h-[calc(100vh-5rem)] lg:h-[calc(100dvh-5rem)]"
+      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] h-[105vh] min-h-[105vh]"
     >
       {/* Latest News Marquee Ticker */}
       <div className="relative z-20 w-full bg-[#02132d] border-b border-white/10 shadow-sm flex items-center py-2 sm:py-2.5 px-3 sm:px-6">
