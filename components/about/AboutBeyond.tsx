@@ -1,130 +1,170 @@
 'use client'
 
 import React from 'react'
-import { ArrowRight } from 'lucide-react'
+import {
+  Palette,
+  Music,
+  Sparkles,
+  Shield,
+  Heart,
+  Wind,
+  Trophy,
+  Lightbulb,
+  Compass,
+  Users,
+  ArrowRight,
+} from 'lucide-react'
 import SchoolImage from '../SchoolImage'
 
 export default function AboutBeyond() {
-  const topActivities = [
+  const activities = [
     {
       title: 'Art & Painting',
+      category: 'Creative Expression',
+      icon: Palette,
       src: '/images/primary-school-study.jpg',
-      fallback: '/images/primary-school-study.jpg',
+      accent: 'from-pink-500 to-rose-600',
     },
     {
       title: 'Music',
-      src: '/images/beyond/music.jpg',
-      fallback: '/images/music.jpg',
+      category: 'Vocal & Instruments',
+      icon: Music,
+      src: '/images/music.jpg',
+      accent: 'from-blue-500 to-indigo-600',
     },
     {
       title: 'Dance',
-      src: '/images/beyond/dance.jpg',
-      fallback: '/images/dance.jpg',
+      category: 'Rhythm & Grace',
+      icon: Sparkles,
+      src: '/images/dance.jpg',
+      accent: 'from-purple-500 to-fuchsia-600',
     },
     {
-      title: 'Dramatics',
-      src: '/images/beyond/drama.jpg',
-      fallback: '/images/annual-day.jpg',
+      title: 'Karate',
+      category: 'Discipline & Defense',
+      icon: Shield,
+      src: '/images/about karate.webp',
+      accent: 'from-red-600 to-rose-700',
     },
     {
       title: 'Yoga',
-      src: '/images/beyond/yoga.jpg',
-      fallback: '/images/karate.jpg',
+      category: 'Mind & Wellness',
+      icon: Heart,
+      src: '/images/yoga.jpg',
+      accent: 'from-emerald-500 to-teal-600',
     },
     {
       title: 'Skating',
-      src: '/images/beyond/skating.jpg',
-      fallback: '/images/skating.jpg',
+      category: 'Balance & Speed',
+      icon: Wind,
+      src: '/images/skating.jpg',
+      accent: 'from-cyan-500 to-blue-600',
     },
-  ]
-
-  const bottomActivities = [
     {
       title: 'Games & Sports',
-      src: '/images/beyond/sports.jpg',
-      fallback: '/images/sports.jpg',
+      category: 'Fitness & Teamwork',
+      icon: Trophy,
+      src: '/images/sports.jpg',
+      accent: 'from-amber-500 to-orange-600',
     },
     {
       title: 'Project Work',
-      src: '/images/beyond/project-work.jpg',
-      fallback: '/images/science-lab.jpg',
+      category: 'Research & Labs',
+      icon: Lightbulb,
+      src: '/images/science-lab.jpg',
+      accent: 'from-violet-500 to-purple-600',
     },
     {
       title: 'Excursions & Trips',
-      src: '/images/beyond/excursions.jpg',
-      fallback: '/images/transport.jpg',
+      category: 'Experiential Tours',
+      icon: Compass,
+      src: '/images/transport.jpg',
+      accent: 'from-teal-500 to-emerald-600',
     },
     {
       title: 'Clubs & Activities',
-      src: '/images/beyond/clubs.jpg',
-      fallback: '/images/library.jpg',
+      category: 'Leadership & Social',
+      icon: Users,
+      src: '/images/library.jpg',
+      accent: 'from-sky-500 to-blue-600',
     },
   ]
 
   return (
-    <section id="beyond-classroom" className="py-12 sm:py-16 bg-white">
+    <section id="beyond-classroom" className="py-16 sm:py-20 bg-slate-50/70 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header with Title and Explore Button */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
-          <div className="max-w-2xl">
-            <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24]">
-              EDUCATION BEYOND THE CLASSROOM
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight">
-              Learn. Explore. Create. Grow.
+        {/* Header with Title and Description */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
+          <div className="max-w-2xl" data-aos="fade-right">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-100 text-[#e31e24] text-xs font-extrabold uppercase tracking-wider mb-2.5">
+              <span>Co-Curricular Excellence</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
+              Education Beyond The Classroom
             </h2>
-            <p className="text-slate-600 text-xs sm:text-[14px] leading-relaxed mt-3">
-              We encourage students to explore their interests and develop their talents through a wide range of co-curricular activities, helping them grow into confident and well-rounded individuals.
+            <p className="text-slate-700 text-[14px] leading-relaxed mt-3">
+              We empower students to explore their passions, build physical stamina, and cultivate artistic talents through a diverse suite of holistic activities designed for all-round growth.
             </p>
           </div>
 
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0" data-aos="fade-left">
             <a
-              href="#activities"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold text-[#e31e24] border-2 border-[#e31e24] hover:bg-[#e31e24] hover:text-white transition-all duration-200 active:scale-95"
+              href="#campus-video"
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold text-[#e31e24] border-2 border-[#e31e24] hover:bg-[#e31e24] hover:text-white transition-all duration-200 active:scale-95 shadow-sm"
             >
-              <span>Explore Activities</span>
+              <span>Watch Campus Tour</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
         </div>
 
-        {/* Top 6 Activities Row */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-          {topActivities.map((act, index) => (
-            <div key={index} className="group cursor-default">
-              <div className="overflow-hidden rounded-xl bg-slate-100 aspect-[4/3] relative shadow-xs">
+        {/* 10 Activities in Harmonious 5-Column Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5 sm:gap-5">
+          {activities.map((act, index) => {
+            const Icon = act.icon
+            return (
+              <div
+                key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 50}
+                className="group relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/5] bg-slate-900 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 border border-slate-200/80 cursor-default"
+              >
+                {/* Full-bleed Activity Photo with Zoom Animation */}
                 <SchoolImage
                   src={act.src}
                   alt={act.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   fallbackText={act.src}
+                  fallbackBg="from-slate-800 to-slate-900"
                 />
-              </div>
-              <h4 className="text-xs sm:text-[13px] font-bold text-[#031c3f] mt-2 text-center sm:text-left">
-                {act.title}
-              </h4>
-            </div>
-          ))}
-        </div>
 
-        {/* Bottom 4 Activities Row */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mt-5 sm:mt-6">
-          {bottomActivities.map((act, index) => (
-            <div key={index} className="group cursor-default">
-              <div className="overflow-hidden rounded-xl bg-slate-100 aspect-[16/10] relative shadow-xs">
-                <SchoolImage
-                  src={act.src}
-                  alt={act.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  fallbackText={act.src}
-                />
+                {/* Dark Gradient Overlay for Contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300 pointer-events-none" />
+
+                {/* Top Subtle Pill with Icon */}
+                <div className="absolute top-3 left-3 z-10">
+                  <div className="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-white shadow-md group-hover:scale-110 group-hover:bg-white group-hover:text-[#e31e24] transition-all duration-300">
+                    <Icon className="w-4 h-4" />
+                  </div>
+                </div>
+
+                {/* Bottom Content Overlay */}
+                <div className="absolute inset-x-0 bottom-0 p-3.5 sm:p-4 z-10 flex flex-col justify-end">
+                  <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-amber-300/90 group-hover:text-amber-300 transition-colors">
+                    {act.category}
+                  </span>
+                  <h3 className="text-sm sm:text-base font-extrabold text-white tracking-tight leading-snug mt-0.5 group-hover:text-white transition-colors">
+                    {act.title}
+                  </h3>
+
+                  {/* Expanding Accent Underline on Hover */}
+                  <div
+                    className={`h-0.5 w-0 group-hover:w-full bg-gradient-to-r ${act.accent} rounded-full mt-2 transition-all duration-300`}
+                  />
+                </div>
               </div>
-              <h4 className="text-xs sm:text-[13px] font-bold text-[#031c3f] mt-2 text-center sm:text-left">
-                {act.title}
-              </h4>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

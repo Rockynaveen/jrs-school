@@ -53,9 +53,7 @@ export default function AboutWhyChoose() {
   const bottomBadges = [
     {
       icon: <Users className="w-5 h-5 text-[#2563eb]" />,
-      title: '1:25',
-      subtitle: 'Teacher-Student Ratio',
-      isRatio: true,
+      title: '1:25 Student-Teacher Ratio',
     },
     {
       icon: <Presentation className="w-5 h-5 text-[#0284c7]" />,
@@ -128,7 +126,7 @@ export default function AboutWhyChoose() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-xs text-slate-500 leading-relaxed mt-2.5">
+                <p className="text-[14px] text-slate-700 leading-relaxed mt-2.5">
                   {item.description}
                 </p>
               </div>
@@ -144,20 +142,9 @@ export default function AboutWhyChoose() {
               className="bg-white rounded-xl border border-slate-100 p-3 sm:p-3.5 text-center shadow-[0_1px_6px_rgba(0,0,0,0.02)] hover:border-slate-300 hover:bg-slate-50/60 transition-all flex flex-col items-center justify-center min-h-[96px]"
             >
               <div className="mb-2">{badge.icon}</div>
-              {badge.isRatio ? (
-                <>
-                  <span className="text-xs sm:text-[13px] font-extrabold text-[#031c3f]">
-                    {badge.title}
-                  </span>
-                  <span className="text-[10px] sm:text-[11px] text-slate-500 leading-tight mt-0.5">
-                    {badge.subtitle}
-                  </span>
-                </>
-              ) : (
-                <span className="text-[11px] sm:text-xs font-bold text-slate-800 leading-tight">
-                  {badge.title}
-                </span>
-              )}
+              <span className="text-[14px] font-semibold text-slate-700 leading-tight">
+                {badge.title}
+              </span>
             </div>
           ))}
         </div>

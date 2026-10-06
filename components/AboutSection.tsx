@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import SchoolImage from './SchoolImage'
 
@@ -185,7 +186,7 @@ export default function AboutSection() {
             </div>
 
             {/* Description Paragraph */}
-            <p className="text-slate-600 text-sm sm:text-[15px] leading-relaxed max-w-xl">
+            <p className="text-slate-700 text-sm sm:text-[15px] leading-relaxed max-w-xl">
               JRS International School, Uppal, Hyderabad is committed to providing quality education with a perfect blend of academics, values and co-curricular activities. We focus on developing confident, responsible and compassionate individuals who are prepared for a constantly evolving world.
             </p>
 
@@ -210,13 +211,13 @@ export default function AboutSection() {
 
             {/* CTA Button */}
             <div className="pt-2">
-              <a
-                href="#admissions"
+              <Link
+                href="/about"
                 className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/25 transition-all duration-200"
               >
                 <span>Know More About Us</span>
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

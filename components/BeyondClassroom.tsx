@@ -95,10 +95,12 @@ export default function BeyondClassroom() {
 
                 {/* Colored Label Bar */}
                 <div
-                  className={`${item.color} text-white py-3 px-2.5 sm:px-3.5 flex items-center justify-center gap-2 font-bold text-sm sm:text-base shadow-md transition-all duration-300 min-h-[48px] sm:min-h-[52px]`}
+                  className={`${item.color} text-white py-2.5 sm:py-3 px-1.5 sm:px-2.5 flex items-center justify-center gap-1.5 sm:gap-2 font-bold shadow-md transition-all duration-300 min-h-[48px] sm:min-h-[52px]`}
                 >
-                  <Icon className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
-                  <span className="leading-tight text-center">{item.title}</span>
+                  <Icon className="w-4 h-4 sm:w-4.5 sm:h-4.5 flex-shrink-0" />
+                  <span className="leading-tight text-center whitespace-nowrap text-[11px] sm:text-xs md:text-[13px] xl:text-sm">
+                    {item.title}
+                  </span>
                 </div>
               </div>
             )

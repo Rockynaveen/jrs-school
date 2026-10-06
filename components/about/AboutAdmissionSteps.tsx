@@ -17,8 +17,8 @@ export default function AboutAdmissionSteps() {
       title: 'Meet the Admission Officer',
       description:
         'Visit the school campus and meet our admission officer for guidance.',
-      bgGradient: 'from-[#0091df] to-[#0077c8]',
-      badgeBg: 'bg-[#0091df]',
+      bgGradient: 'from-[#031c3f] to-[#0a1931]',
+      badgeBg: 'bg-[#031c3f]',
       icon: (
         <svg
           className="w-10 h-10 text-white"
@@ -47,8 +47,8 @@ export default function AboutAdmissionSteps() {
       title: 'Procure the Application Form',
       description:
         'Collect the application form from the school or download it as provided.',
-      bgGradient: 'from-[#071938] to-[#040e24]',
-      badgeBg: 'bg-[#071938]',
+      bgGradient: 'from-[#dc2626] to-[#b91c1c]',
+      badgeBg: 'bg-[#dc2626]',
       icon: <FileText className="w-10 h-10 text-white stroke-[2]" />,
     },
     {
@@ -56,8 +56,8 @@ export default function AboutAdmissionSteps() {
       title: 'Register with Us',
       description:
         'Submit the completed application form with the required details.',
-      bgGradient: 'from-[#1a66ff] to-[#0052e0]',
-      badgeBg: 'bg-[#1a66ff]',
+      bgGradient: 'from-[#031c3f] to-[#081730]',
+      badgeBg: 'bg-[#031c3f]',
       icon: <UserCheck className="w-10 h-10 text-white stroke-[2]" />,
     },
     {
@@ -65,8 +65,8 @@ export default function AboutAdmissionSteps() {
       title: 'Appear for the Admission Test',
       description:
         'The student needs to appear for the admission test as per the grade.',
-      bgGradient: 'from-[#071938] to-[#040e24]',
-      badgeBg: 'bg-[#071938]',
+      bgGradient: 'from-[#f59e0b] to-[#d97706]',
+      badgeBg: 'bg-[#f59e0b]',
       icon: <FileEdit className="w-10 h-10 text-white stroke-[2]" />,
     },
     {
@@ -74,8 +74,8 @@ export default function AboutAdmissionSteps() {
       title: 'Appear for the Personal Interview',
       description:
         'The student and parents may be called for a personal interview.',
-      bgGradient: 'from-[#0091df] to-[#0077c8]',
-      badgeBg: 'bg-[#0091df]',
+      bgGradient: 'from-[#031c3f] to-[#0a2559]',
+      badgeBg: 'bg-[#031c3f]',
       icon: <MessagesSquare className="w-10 h-10 text-white stroke-[2]" />,
     },
     {
@@ -83,8 +83,8 @@ export default function AboutAdmissionSteps() {
       title: 'Pay Fee',
       description:
         'Upon selection, complete the fee payment to confirm admission.',
-      bgGradient: 'from-[#071938] to-[#040e24]',
-      badgeBg: 'bg-[#071938]',
+      bgGradient: 'from-[#dc2626] to-[#991b1b]',
+      badgeBg: 'bg-[#dc2626]',
       icon: <CreditCard className="w-10 h-10 text-white stroke-[2]" />,
     },
   ]
@@ -105,7 +105,7 @@ export default function AboutAdmissionSteps() {
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] mt-2 tracking-tight">
             ADMISSION <span className="text-[#e31e24]">PROCESS</span>
           </h2>
-          <p className="text-slate-500 text-xs sm:text-sm font-medium mt-3">
+          <p className="text-slate-700 text-xs sm:text-sm font-medium mt-3">
             Follow these simple steps to complete the admission process at JRS.
           </p>
         </div>
@@ -216,7 +216,7 @@ export default function AboutAdmissionSteps() {
               </h4>
 
               {/* Step Description */}
-              <p className="text-[11px] sm:text-xs text-slate-500 leading-relaxed mt-2 px-1">
+              <p className="text-[11px] sm:text-xs text-slate-700 leading-relaxed mt-2 px-1">
                 {item.description}
               </p>
             </div>
@@ -252,7 +252,7 @@ export default function AboutAdmissionSteps() {
               <h4 className="text-sm font-bold text-[#031c3f] mt-3 leading-snug">
                 {item.title}
               </h4>
-              <p className="text-xs text-slate-500 leading-relaxed mt-1.5">
+              <p className="text-xs text-slate-700 leading-relaxed mt-1.5">
                 {item.description}
               </p>
             </div>

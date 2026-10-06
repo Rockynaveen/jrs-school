@@ -6,11 +6,10 @@ import Navbar from './Navbar'
 import AboutHero from './about/AboutHero'
 import AboutStats from './about/AboutStats'
 import AboutStory from './about/AboutStory'
+import AboutVideo from './about/AboutVideo'
 import AboutVisionMission from './about/AboutVisionMission'
-import AboutValues from './about/AboutValues'
 import AboutWhyChoose from './about/AboutWhyChoose'
-import AboutBeyond from './about/AboutBeyond'
-import AboutAdmissionSteps from './about/AboutAdmissionSteps'
+import AboutPTA from './about/AboutPTA'
 import AboutBottomCTA from './about/AboutBottomCTA'
 import Footer from './Footer'
 
@@ -25,7 +24,7 @@ export default function AboutPage() {
   }, [])
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-800 antialiased selection:bg-red-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-white text-slate-700 text-[14px] antialiased selection:bg-red-500 selection:text-white">
       {/* 1. Header / Navbar with active 'about' state */}
       <Navbar activePage="about" />
 
@@ -39,22 +38,19 @@ export default function AboutPage() {
         {/* 4. Our Story (Journey of Learning & Human Values, Indian Ethos, Int'l Standards, Interactive, Real-World) */}
         <AboutStory />
 
-        {/* 5. Our Vision & Our Mission Dual Cards with Custom Mountain Flag & Rocket Launch Illustrations */}
-        <AboutVisionMission />
+        {/* 5. Campus Tour & Video Showcase (Inline Framed Player & Welcome Section) */}
+        <AboutVideo />
 
-        {/* 6. Our Values & Attributes (Hygiene, Perseverance, Integrity, Honesty, Respect, Trust, Determination, Teamwork, Compassion) */}
-        <AboutValues />
+        {/* 6. Our Vision & Our Mission Dual Cards with Custom Mountain Flag & Rocket Launch Illustrations */}
+        <AboutVisionMission />
 
         {/* 7. Why Choose JRS? What Makes JRS Different? (5 Top Feature Cards + 8 Compact Badges) */}
         <AboutWhyChoose />
 
-        {/* 8. Education Beyond the Classroom (10 Co-curricular Activities: Art, Music, Dance, Dramatics, Yoga, Skating, Sports, Projects, Excursions, Clubs) */}
-        <AboutBeyond />
+        {/* 8. Parent Teacher Association (PTA) Members Table */}
+        <AboutPTA />
 
-        {/* 9. Steps of Admission Process (6-Step Hexagonal Workflow with Dashed Connectors) */}
-        <AboutAdmissionSteps />
-
-        {/* 10. Bottom CTA Navy Banner (Give Your Child a Strong Foundation for Tomorrow) */}
+        {/* 9. Bottom CTA Navy Banner */}
         <AboutBottomCTA />
       </main>
 

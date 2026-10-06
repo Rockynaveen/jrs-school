@@ -1,12 +1,12 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { ArrowRight, ArrowLeft, Play, X } from 'lucide-react'
+import Link from 'next/link'
+import { ArrowRight, ArrowLeft, Play, X, Megaphone } from 'lucide-react'
 import SchoolImage from './SchoolImage'
 
 export default function Hero() {
   const [activeSlide, setActiveSlide] = useState(0)
-  const [isPaused, setIsPaused] = useState(false)
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
 
   const slides = [
@@ -28,6 +28,15 @@ export default function Hero() {
       image: '/images/heroslider3.png',
       alt: 'JRS International School Students',
     },
+    {
+      titlePart1: 'Holistic & Global',
+      titlePart2: 'Future-Ready Education',
+      tagline: 'SHAPING MINDS • FOSTERING CREATIVITY',
+      description:
+        'Empowering students with 21st-century skills, digital classrooms, sports excellence, and a lifelong passion for knowledge.',
+      image: '/images/campus-building.jpg',
+      alt: 'JRS International School Campus Infrastructure',
+    },
   ]
 
   const current = slides[activeSlide]
@@ -40,14 +49,14 @@ export default function Hero() {
     setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
-  // Auto-advance slides every 6 seconds unless user is hovering
+  // Automatic slide progression every 5 seconds (pauses only when video modal is open)
   useEffect(() => {
-    if (isPaused) return
+    if (isVideoModalOpen) return
     const timer = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length)
-    }, 6000)
+    }, 5000)
     return () => clearInterval(timer)
-  }, [isPaused, slides.length])
+  }, [activeSlide, isVideoModalOpen, slides.length])
 
   // Handle escape key and body scroll lock for video popup
   useEffect(() => {
@@ -73,41 +82,91 @@ export default function Hero() {
   return (
     <section
       id="home"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      className="relative h-[105vh] min-h-[105vh] w-full overflow-hidden flex items-center bg-[#031c3f]"
+      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] min-h-[calc(100vh-5rem)] min-h-[calc(100dvh-5rem)] lg:h-[calc(100vh-5rem)] lg:h-[calc(100dvh-5rem)]"
     >
-      {/* Right space ONLY for the hero slider images (no image under the left overlay) */}
-      <div className="absolute top-0 right-0 bottom-0 w-full md:w-[54%] lg:w-[58%] xl:w-[60%] z-0 overflow-hidden">
-        {slides.map((slide, idx) => (
-          <div
-            key={slide.image}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              activeSlide === idx ? 'opacity-100' : 'opacity-0 pointer-events-none'
-            }`}
+      {/* Latest News Marquee Ticker */}
+      <div className="relative z-20 w-full bg-[#02132d] border-b border-white/10 shadow-sm flex items-center py-2 sm:py-2.5 px-3 sm:px-6">
+        <div className="flex items-center gap-1.5 shrink-0 bg-[#dc2626] text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider px-2.5 sm:px-3 py-1 rounded shadow-sm">
+          <Megaphone className="w-3.5 h-3.5 shrink-0 animate-bounce" />
+          <span>Latest News</span>
+        </div>
+        <div className="flex-1 overflow-hidden ml-3 sm:ml-4">
+          <marquee
+            behavior="scroll"
+            direction="left"
+            scrollamount="6"
+            className="text-xs sm:text-[13px] font-medium text-white/95 py-0.5 cursor-pointer block"
+            onMouseEnter={(e: any) => e.currentTarget.stop()}
+            onMouseLeave={(e: any) => e.currentTarget.start()}
           >
-            <SchoolImage
-              src={slide.image}
-              alt={slide.alt}
-              className="w-full h-full object-cover object-center"
-              fallbackText={slide.image}
-              fallbackBg="from-slate-800 via-[#0d2146] to-[#0a1931]"
-            />
-          </div>
-        ))}
-
-        {/* Smooth feather fade on the left edge of the right image container */}
-        <div className="absolute inset-y-0 left-0 w-24 sm:w-36 md:w-48 bg-gradient-to-r from-[#031c3f] via-[#031c3f]/80 to-transparent z-[1] pointer-events-none" />
-
-        {/* Mobile-only background tint so text is readable if stacked */}
-        <div className="absolute inset-0 md:hidden bg-[#031c3f]/80 z-[1] pointer-events-none" />
+            <span className="inline-flex items-center gap-6 sm:gap-8">
+              <span className="inline-flex items-center gap-2">
+                <span className="text-[#f59e0b] font-bold">★</span>
+                <span>Admissions Open for Academic Year 2026–2027 (Nursery to Grade XII) — Enroll Today!</span>
+              </span>
+              <span className="text-white/30">•</span>
+              <span className="inline-flex items-center gap-2">
+                <span className="text-[#f59e0b] font-bold">★</span>
+                <span>CBSE Curriculum with State-of-the-Art STEM, Robotics & AI Labs</span>
+              </span>
+              <span className="text-white/30">•</span>
+              <a
+                href="https://jrsinternationalschooluppal.com/wp-content/uploads/2020/05/JRS_International_School-Prospectus.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 underline underline-offset-2 hover:text-[#f59e0b] transition-colors"
+              >
+                <span className="text-[#f59e0b] font-bold">★</span>
+                <span>Download Official School Prospectus & Admission Guidelines (PDF)</span>
+              </a>
+              <span className="text-white/30">•</span>
+              <span className="inline-flex items-center gap-2">
+                <span className="text-[#f59e0b] font-bold">★</span>
+                <span>Campus Tours & Personalized Counseling Sessions Available at Narapally Campus</span>
+              </span>
+              <span className="text-white/30">•</span>
+              <span className="inline-flex items-center gap-2">
+                <span className="text-[#f59e0b] font-bold">★</span>
+                <span>Admissions Helpline: +91 91009 55555 / +91 91009 66666 | Email: admissions@jrsinternationalschool.com</span>
+              </span>
+            </span>
+          </marquee>
+        </div>
       </div>
 
+      {/* Main Hero Slider Container */}
+      <div className="relative flex-1 w-full flex items-center">
+        {/* Background Hero Slider Images (full width) */}
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {slides.map((slide, idx) => (
+            <div
+              key={slide.image}
+              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                activeSlide === idx ? 'opacity-100' : 'opacity-0 pointer-events-none'
+              }`}
+            >
+              <SchoolImage
+                src={slide.image}
+                alt={slide.alt}
+                className="w-full h-full object-cover object-center"
+                fallbackText={slide.image}
+                fallbackBg="from-slate-800 via-[#0d2146] to-[#0a1931]"
+              />
+            </div>
+          ))}
+
+          {/* Soft Navy Gradient Overlay from Left (same style as About Hero): Solid opacity over text, fading horizontally across half of the hero section */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#031c3f] via-[#031c3f]/80 via-35% md:via-50% to-transparent z-[1] pointer-events-none" />
+
+          {/* Subtle Dark Bottom Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f]/40 via-transparent to-transparent z-[1] pointer-events-none" />
+        </div>
+
       {/* Hero Content on Clean Solid Navy Left Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28 w-full">
-        <div className="max-w-xl lg:max-w-2xl text-left">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 lg:pb-14 w-full">
+        <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in translate-y-3 sm:translate-y-6 md:translate-y-8">
           {/* Tagline / Subtitle */}
-          <div className="inline-flex items-center gap-2 mb-4 sm:mb-5">
+          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">
             <span className="text-white/95 text-xs sm:text-[13px] font-bold tracking-[0.16em] uppercase flex items-center gap-2">
               {current.tagline.split('•').map((part, i) => (
                 <React.Fragment key={i}>
@@ -119,7 +178,7 @@ export default function Hero() {
           </div>
 
           {/* Big Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-[58px] font-extrabold text-white tracking-tight leading-[1.08] mb-5">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[56px] font-extrabold text-white tracking-tight leading-[1.12] mb-3 sm:mb-4 lg:mb-5">
             <span>{current.titlePart1}</span>{' '}
             <span className="text-[#ffbe1a] block mt-1">
               {current.titlePart2}
@@ -127,27 +186,27 @@ export default function Hero() {
           </h1>
 
           {/* Subtext */}
-          <p className="text-sm sm:text-[15px] lg:text-base text-white/90 leading-relaxed font-normal mb-8 max-w-lg lg:max-w-xl">
+          <p className="text-xs sm:text-sm md:text-[15px] lg:text-base text-white/90 leading-relaxed font-normal mb-6 sm:mb-8 max-w-lg lg:max-w-xl">
             {current.description}
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3.5 sm:gap-4">
             {/* Primary Admissions Button */}
-            <a
-              href="#admissions"
-              className="inline-flex items-center gap-2 px-7 py-3 rounded-full text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/30 transition-all duration-200"
+            <Link
+              href="/admissions"
+              className="inline-flex items-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/30 transition-all duration-200"
             >
               <span>Admissions 2026-27</span>
               <ArrowRight className="w-4 h-4" />
-            </a>
+            </Link>
 
             {/* Secondary Virtual Tour Button */}
             <button
               type="button"
               onClick={() => setIsVideoModalOpen(true)}
               aria-label="Play virtual campus tour video"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-[#031c3f]/50 hover:bg-[#031c3f]/80 active:scale-95 border border-white/40 backdrop-blur-sm transition-all duration-200 group cursor-pointer"
+              className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#031c3f]/50 hover:bg-[#031c3f]/80 active:scale-95 border border-white/40 backdrop-blur-sm transition-all duration-200 group cursor-pointer"
             >
               <span>Take a Virtual Tour</span>
               <Play className="w-3 h-3 fill-white text-white group-hover:scale-110 transition-transform ml-0.5" />
@@ -157,7 +216,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom Right Carousel Controls matching design */}
-      <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-12 z-20 flex items-center gap-2.5">
+      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 right-4 sm:right-6 lg:right-12 z-20 flex items-center gap-2.5">
         {/* Previous Button (Dark) */}
         <button
           onClick={prevSlide}
@@ -191,6 +250,7 @@ export default function Hero() {
         >
           <ArrowRight className="w-4 h-4 text-[#031c3f]" />
         </button>
+      </div>
       </div>
 
       {/* Magnified Virtual Tour Video Modal Popup */}

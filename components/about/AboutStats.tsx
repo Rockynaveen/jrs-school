@@ -63,7 +63,7 @@ export default function AboutStats() {
               </span>
 
               {/* Label */}
-              <span className="text-xs sm:text-sm text-slate-500 font-medium mt-1">
+              <span className="text-[14px] text-slate-700 font-medium mt-1">
                 {item.label}
               </span>
             </div>

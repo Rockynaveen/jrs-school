@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 import { ArrowRight, X, BookOpen, CheckCircle, Sparkles } from 'lucide-react'
 import SchoolImage from './SchoolImage'
 
@@ -77,7 +78,7 @@ export default function AcademicsSection() {
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-[1.15] mb-4">
             Shaping Inquiring Minds at Every Stage
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p className="text-slate-700 text-sm sm:text-base leading-relaxed">
             From early foundational exploration to advanced preparatory excellence, our curriculum builds conceptual clarity, character, and lifelong curiosity.
           </p>
         </div>
@@ -124,7 +125,7 @@ export default function AcademicsSection() {
                 </span>
 
                 {/* Description */}
-                <p className="text-slate-600 text-xs sm:text-[13px] leading-relaxed mb-6 flex-1">
+                <p className="text-slate-700 text-[14px] leading-relaxed mb-6 flex-1">
                   {stage.description}
                 </p>
 
@@ -132,10 +133,10 @@ export default function AcademicsSection() {
                 <button
                   type="button"
                   onClick={() => setActiveCurriculum(index)}
-                  className="group/btn inline-flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 rounded-xl bg-slate-50 hover:bg-[#e31e24] border border-slate-200/80 hover:border-[#e31e24] text-slate-800 hover:text-white font-semibold text-xs sm:text-sm transition-all duration-300 hover:shadow-lg hover:shadow-red-600/25 active:scale-[0.98] cursor-pointer"
+                  className="group/btn inline-flex items-center justify-center gap-2 w-full py-2.5 sm:py-3 rounded-xl bg-slate-50 hover:bg-[#e31e24] border border-slate-200/80 hover:border-[#e31e24] text-slate-800 hover:text-white font-semibold text-xs sm:text-[14px] transition-all duration-300 hover:shadow-lg hover:shadow-red-600/25 active:scale-[0.98] cursor-pointer"
                 >
                   <span>View Curriculum</span>
-                  <ArrowRight className="w-4 h-4 text-slate-600 group-hover/btn:text-white group-hover/btn:translate-x-1 transition-all duration-300" />
+                  <ArrowRight className="w-4 h-4 text-slate-700 group-hover/btn:text-white group-hover/btn:translate-x-1 transition-all duration-300" />
                 </button>
               </div>
             </div>
@@ -175,7 +176,7 @@ export default function AcademicsSection() {
 
               <ul className="space-y-2.5 mb-6">
                 {currentModal.curriculumHighlights.map((highlight, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-xs sm:text-[13px] text-slate-600">
+                  <li key={i} className="flex items-start gap-2.5 text-[14px] text-slate-700">
                     <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0 mt-0.5" />
                     <span>{highlight}</span>
                   </li>
@@ -183,17 +184,17 @@ export default function AcademicsSection() {
               </ul>
 
               <div className="flex items-center gap-3">
-                <a
-                  href="#admissions"
+                <Link
+                  href="/admissions"
                   onClick={() => setActiveCurriculum(null)}
                   className="flex-1 py-3 px-4 rounded-xl text-center text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-md shadow-red-600/20 transition-all"
                 >
                   Apply for Admissions
-                </a>
+                </Link>
                 <button
                   type="button"
                   onClick={() => setActiveCurriculum(null)}
-                  className="py-3 px-5 rounded-xl text-xs sm:text-sm font-semibold text-slate-600 bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
+                  className="py-3 px-5 rounded-xl text-xs sm:text-sm font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors cursor-pointer"
                 >
                   Close
                 </button>

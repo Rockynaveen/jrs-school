@@ -196,7 +196,7 @@ export default function AboutStory() {
             </div>
 
             {/* Description Paragraph */}
-            <p className="text-slate-600 text-sm sm:text-[14.5px] leading-relaxed">
+            <p className="text-slate-700 text-[14px] leading-relaxed">
               JRS International School, Narapally, Near Uppal Depot, Hyderabad has been committed to the field of education and human values since 2021. We follow the CBSE/NCERT curriculum and strive to provide a perfect blend of academics, values and co-curricular activities. Our aim is to nurture confident, responsible and compassionate individuals who are prepared for a global future.
             </p>
 
@@ -213,7 +213,7 @@ export default function AboutStory() {
                   <h4 className="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight">
                     {item.title}
                   </h4>
-                  <p className="text-[11px] text-slate-500 leading-tight mt-1">
+                  <p className="text-[14px] text-slate-700 leading-snug mt-1">
                     {item.subtitle}
                   </p>
                 </div>

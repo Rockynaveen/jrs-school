@@ -12,6 +12,8 @@
     "vite:build": "vite build"
   },
   "dependencies": {
+    "@radix-ui/react-label": "^2.1.16",
+    "@radix-ui/react-slot": "^1.4.0",
     "@types/aos": "^3.0.8",
     "aos": "^2.3.4",
     "autoprefixer": "^10.6.1",

@@ -66,11 +66,11 @@ export default function FacilitiesSection() {
               </div>
 
               {/* Text info */}
-              <div className="p-4 flex-1 flex flex-col justify-center">
-                <h3 className="text-sm font-bold text-slate-900 leading-snug group-hover:text-red-600 transition-colors">
+              <div className="p-4 sm:p-4.5 flex-1 flex flex-col justify-center">
+                <h3 className="text-[15px] sm:text-base font-bold text-slate-900 leading-snug group-hover:text-red-600 transition-colors">
                   {facility.title}
                 </h3>
-                <p className="text-[11px] text-slate-500 mt-1 leading-normal">
+                <p className="text-[14px] text-slate-700 mt-1.5 leading-relaxed">
                   {facility.subtitle}
                 </p>
               </div>
