@@ -41,6 +41,7 @@ interface NavbarProps {
     | 'facilities'
     | 'gallery'
     | 'media'
+    | '360-degree-campus'
     | 'events'
     | 'contact'
 }
@@ -103,6 +104,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
       id: 'gallery',
       dropdown: [
         { name: 'Media', href: '/media' },
+        { name: '360 Degree Campus', href: '/gallery/360-degree-campus' },
       ],
     },
     { name: 'Contact', href: '/contact', id: 'contact' },
@@ -133,7 +135,10 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                     activePage === 'educational-society' ||
                     activePage === 'school-management-committee' ||
                     activePage === 'certificates')) ||
-                (link.id === 'gallery' && (activePage === 'gallery' || activePage === 'media'))
+                (link.id === 'gallery' &&
+                  (activePage === 'gallery' ||
+                    activePage === 'media' ||
+                    activePage === '360-degree-campus'))
 
               if (link.dropdown) {
                 return (

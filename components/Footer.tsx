@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {
   MapPin,
@@ -12,6 +12,19 @@ import {
 } from 'lucide-react'
 
 export default function Footer() {
+  const [showScrollTop, setShowScrollTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Hide button in Hero section, reveal only after user scrolls down past the hero
+      setShowScrollTop(window.scrollY > 400)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -24,7 +37,8 @@ export default function Footer() {
     { name: 'Beyond Classroom', href: '/beyond' },
     { name: 'Facilities', href: '/facilities' },
     { name: 'Gallery', href: '/gallery' },
-    { name: 'News & Media', href: '/media' },
+    { name: 'Media', href: '/media' },
+    { name: '360° Campus', href: '/gallery/360-degree-campus' },
     { name: 'Contact', href: '/contact' },
   ]
 
@@ -243,11 +257,15 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Floating Scroll-to-Top Button */}
+      {/* Floating Scroll-to-Top Button (hidden in Hero section, appears after scrolling down) */}
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className="fixed bottom-6 right-6 z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+        className={`fixed bottom-6 right-6 z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${
+          showScrollTop
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-0 translate-y-4 pointer-events-none'
+        }`}
       >
         <ChevronUp className="w-5 h-5 stroke-[2.5]" />
       </button>
