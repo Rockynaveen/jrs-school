@@ -82,10 +82,10 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] h-screen min-h-screen h-[100dvh] min-h-[100dvh]"
+      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] h-[calc(100vh-5rem)] min-h-[calc(100vh-5rem)] h-[calc(100dvh-5rem)] min-h-[calc(100dvh-5rem)]"
     >
       {/* Latest News Marquee Ticker */}
-      <div className="relative z-20 w-full bg-[#02132d] border-b border-white/10 shadow-sm flex items-center py-2 sm:py-2.5 px-3 sm:px-6">
+      <div className="relative z-20 w-full bg-[#02132d] border-b border-white/10 shadow-sm flex items-center shrink-0 py-2 sm:py-2.5 px-3 sm:px-6">
         <div className="flex items-center gap-1.5 shrink-0 bg-[#dc2626] text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider px-2 sm:px-3 py-1 rounded shadow-sm">
           <Megaphone className="w-3.5 h-3.5 shrink-0 animate-bounce" />
           <span className="hidden xs:inline">Latest News</span>
@@ -167,7 +167,7 @@ export default function Hero() {
         </div>
 
       {/* Hero Content on Clean Solid Navy Left Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-12 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 md:py-8 w-full">
         <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in">
           {/* Tagline / Subtitle */}
           <div className="inline-flex items-center gap-2 mb-2.5 sm:mb-4">
@@ -220,7 +220,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom Right Carousel Controls matching design */}
-      <div className="absolute bottom-3 sm:bottom-6 lg:bottom-8 right-3 sm:right-6 lg:right-12 z-20 flex items-center gap-2 sm:gap-2.5">
+      <div className="absolute bottom-3 sm:bottom-5 lg:bottom-6 right-3 sm:right-6 lg:right-12 z-20 flex items-center gap-2 sm:gap-2.5">
         {/* Previous Button (Dark) */}
         <button
           onClick={prevSlide}
