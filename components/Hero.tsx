@@ -167,8 +167,8 @@ export default function Hero() {
         </div>
 
       {/* Hero Content on Clean Solid Navy Left Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 md:py-8 w-full">
-        <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 w-full">
+        <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in translate-y-2 sm:translate-y-4">
           {/* Tagline / Subtitle */}
           <div className="inline-flex items-center gap-2 mb-2.5 sm:mb-4">
             <span className="text-white/95 text-[11px] sm:text-xs md:text-[13px] font-bold tracking-[0.14em] uppercase flex flex-wrap items-center gap-x-2 gap-y-1">
