@@ -82,7 +82,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] h-[105vh] min-h-[105vh]"
+      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] h-screen min-h-screen h-[100dvh] min-h-[100dvh]"
     >
       {/* Latest News Marquee Ticker */}
       <div className="relative z-20 w-full bg-[#02132d] border-b border-white/10 shadow-sm flex items-center py-2 sm:py-2.5 px-3 sm:px-6">
@@ -167,8 +167,8 @@ export default function Hero() {
         </div>
 
       {/* Hero Content on Clean Solid Navy Left Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-16 md:pt-24 lg:pt-28 pb-20 sm:pb-16 lg:pb-14 w-full">
-        <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in sm:translate-y-2 md:translate-y-4">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-12 w-full">
+        <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in">
           {/* Tagline / Subtitle */}
           <div className="inline-flex items-center gap-2 mb-2.5 sm:mb-4">
             <span className="text-white/95 text-[11px] sm:text-xs md:text-[13px] font-bold tracking-[0.14em] uppercase flex flex-wrap items-center gap-x-2 gap-y-1">
