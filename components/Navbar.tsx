@@ -40,6 +40,7 @@ interface NavbarProps {
     | 'beyond'
     | 'facilities'
     | 'gallery'
+    | 'media'
     | 'events'
     | 'contact'
 }
@@ -96,8 +97,14 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
     },
     { name: 'Beyond Classroom', href: '/beyond', id: 'beyond' },
     { name: 'Facilities', href: '/facilities', id: 'facilities' },
-    { name: 'Gallery', href: '/#gallery', id: 'gallery' },
-    { name: 'Sports & Events', href: '/#events', id: 'events' },
+    {
+      name: 'Gallery',
+      href: '/gallery',
+      id: 'gallery',
+      dropdown: [
+        { name: 'Media', href: '/media' },
+      ],
+    },
     { name: 'Contact', href: '/contact', id: 'contact' },
   ]
 
@@ -125,7 +132,8 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                     activePage === 'principal' ||
                     activePage === 'educational-society' ||
                     activePage === 'school-management-committee' ||
-                    activePage === 'certificates'))
+                    activePage === 'certificates')) ||
+                (link.id === 'gallery' && (activePage === 'gallery' || activePage === 'media'))
 
               if (link.dropdown) {
                 return (
@@ -238,7 +246,8 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                   activePage === 'principal' ||
                   activePage === 'educational-society' ||
                   activePage === 'school-management-committee' ||
-                  activePage === 'certificates'))
+                  activePage === 'certificates')) ||
+              (link.id === 'gallery' && (activePage === 'gallery' || activePage === 'media'))
 
             if (link.dropdown) {
               return (

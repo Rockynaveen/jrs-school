@@ -23,6 +23,7 @@ export interface PageHeroProps {
   overlayType?: 'default' | 'logo-blue'
   primaryButton?: PageHeroButton
   secondaryButton?: PageHeroButton
+  className?: string
   children?: React.ReactNode
 }
 
@@ -38,10 +39,11 @@ export default function PageHero({
   overlayType = 'default',
   primaryButton,
   secondaryButton,
+  className,
   children,
 }: PageHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-[#031c3f] text-white min-h-[460px] sm:min-h-[520px] md:min-h-[580px] lg:min-h-[660px] flex flex-col justify-center">
+    <section className={`relative overflow-hidden bg-[#031c3f] text-white h-[70vh] min-h-[70vh] flex flex-col justify-center ${className || ''}`}>
       {/* Background Campus Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -96,7 +98,7 @@ export default function PageHero({
       </div>
 
       {/* Hero Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-16 lg:py-20 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12 lg:py-14 w-full">
         <div className="max-w-xl md:max-w-2xl" data-aos="fade-right">
           {/* Breadcrumb Navigation */}
           <nav

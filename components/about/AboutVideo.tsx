@@ -59,7 +59,7 @@ export default function AboutVideo() {
               </h2>
             </div>
 
-            <p className="text-slate-300 text-[14px] leading-relaxed opacity-90">
+            <p className="text-slate-100 text-[14px] leading-relaxed opacity-90">
               Take a virtual walk through our campus, state-of-the-art facilities, and interactive learning spaces where students discover their passions, build lifelong confidence, and prepare for a global tomorrow.
             </p>
 
