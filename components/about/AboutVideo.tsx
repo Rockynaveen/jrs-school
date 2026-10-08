@@ -15,21 +15,21 @@ export default function AboutVideo() {
   return (
     <section
       id="campus-video"
-      className="relative py-16 sm:py-24 bg-[#013aa3] text-white overflow-hidden scroll-mt-20"
+      className="relative py-16 sm:py-24 bg-[#031c3f] text-white overflow-hidden scroll-mt-20"
     >
-      {/* Background Campus/Event Photo with Logo Blue Light Transparent Overlay */}
+      {/* Background Campus/Event Photo with Enhanced Dark Transparent Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/annual-day.jpg"
           alt="JRS International School Campus Atmosphere"
-          className="w-full h-full object-cover object-center filter blur-xs scale-105 opacity-50"
+          className="w-full h-full object-cover object-center scale-105 opacity-45"
           onError={(e) => {
             const target = e.currentTarget
             target.src = '/images/campus-building.jpg'
           }}
         />
-        {/* Logo Blue Overlay with Light Transparent Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#013aa3]/60 via-[#013aa3]/70 to-[#013aa3]/80 backdrop-blur-[1px]" />
+        {/* Dark Transparent Overlay for Maximum Text Clarity */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#031c3f]/95 via-[#031c3f]/88 to-[#031c3f]/70 md:from-[#031c3f]/95 md:via-[#031c3f]/82 md:to-[#031c3f]/65 backdrop-blur-[1px]" />
 
         {/* Subtle Decorative Grid Pattern */}
         <div
