@@ -424,7 +424,7 @@ export default function AdmissionsCTA() {
                       <div className="sm:col-span-2 pt-2">
                         <Button
                           type="submit"
-                          className="w-full h-11 bg-[#0055d4] hover:bg-[#0042a3] text-white text-sm font-semibold rounded-lg shadow-md transition-all active:scale-[0.99] flex items-center justify-center gap-2"
+                          className="w-full h-11 bg-[#013aa3] hover:bg-[#012d80] text-white text-sm font-semibold rounded-lg shadow-md transition-all active:scale-[0.99] flex items-center justify-center gap-2"
                         >
                           <span>Get</span>
                           <ArrowRight className="w-4 h-4" />
@@ -526,7 +526,7 @@ export default function AdmissionsCTA() {
                       </Button>
                       <Button
                         type="submit"
-                        className="h-10 text-xs px-6 bg-[#0055d4] hover:bg-[#0042a3] text-white font-semibold"
+                        className="h-10 text-xs px-6 bg-[#013aa3] hover:bg-[#012d80] text-white font-semibold"
                       >
                         Submit Enquiry
                       </Button>

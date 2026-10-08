@@ -407,11 +407,13 @@ export default function MediaPage() {
             className="relative max-w-5xl w-full max-h-[92vh] flex items-center justify-center p-2 select-none"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={selectedArticle.image}
-              alt={selectedArticle.title}
-              className="max-h-[90vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-2xl ring-1 ring-white/15"
-            />
+            <div className="animate-fade-open flex items-center justify-center">
+              <img
+                src={selectedArticle.image}
+                alt={selectedArticle.title}
+                className="max-h-[90vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-2xl ring-1 ring-white/15"
+              />
+            </div>
           </div>
         </div>
       )}

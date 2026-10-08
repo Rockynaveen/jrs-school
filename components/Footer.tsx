@@ -35,10 +35,8 @@ export default function Footer() {
     { name: 'Academics', href: '/academics' },
     { name: 'Admissions', href: '/admissions' },
     { name: 'Beyond Classroom', href: '/beyond' },
-    { name: 'Facilities', href: '/facilities' },
+    { name: 'Amenities', href: '/facilities' },
     { name: 'Gallery', href: '/gallery' },
-    { name: 'Media', href: '/media' },
-    { name: '360° Campus', href: '/gallery/360-degree-campus' },
     { name: 'Contact', href: '/contact' },
   ]
 

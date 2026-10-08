@@ -273,6 +273,8 @@ export default function GalleryPage() {
   const [activeLightboxIndex, setActiveLightboxIndex] = useState<number | null>(null)
   const [lightboxItems, setLightboxItems] = useState<PhotoItem[]>([])
   const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null)
+  const [isClosing, setIsClosing] = useState(false)
+  const [originStyle, setOriginStyle] = useState<{ x: number; y: number; scale: number } | null>(null)
 
   useEffect(() => {
     AOS.init({
@@ -283,18 +285,29 @@ export default function GalleryPage() {
     })
   }, [])
 
+  const closeLightbox = () => {
+    setIsClosing(true)
+    setTimeout(() => {
+      setActiveLightboxIndex(null)
+      setIsClosing(false)
+      setOriginStyle(null)
+    }, 240)
+  }
+
   // Keyboard navigation for Lightbox
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        setActiveLightboxIndex(null)
+        closeLightbox()
         setActiveVideo(null)
       }
       if (activeLightboxIndex !== null && lightboxItems.length > 0) {
         if (e.key === 'ArrowRight') {
+          setOriginStyle(null)
           setActiveLightboxIndex((prev) => (prev !== null ? (prev + 1) % lightboxItems.length : 0))
         }
         if (e.key === 'ArrowLeft') {
+          setOriginStyle(null)
           setActiveLightboxIndex((prev) =>
             prev !== null ? (prev - 1 + lightboxItems.length) % lightboxItems.length : 0
           )
@@ -305,9 +318,25 @@ export default function GalleryPage() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [activeLightboxIndex, lightboxItems])
 
-  const openLightbox = (items: PhotoItem[], index: number) => {
+  const openLightbox = (items: PhotoItem[], index: number, e?: React.MouseEvent) => {
+    if (e && e.currentTarget) {
+      const rect = (e.currentTarget as HTMLElement).getBoundingClientRect()
+      const centerX = rect.left + rect.width / 2
+      const centerY = rect.top + rect.height / 2
+      const screenCenterX = window.innerWidth / 2
+      const screenCenterY = window.innerHeight / 2
+
+      const deltaX = Math.round(centerX - screenCenterX)
+      const deltaY = Math.round(centerY - screenCenterY)
+      const scale = Math.max(0.2, Math.min(0.55, rect.width / Math.min(window.innerWidth * 0.85, 900)))
+
+      setOriginStyle({ x: deltaX, y: deltaY, scale })
+    } else {
+      setOriginStyle(null)
+    }
     setLightboxItems(items)
     setActiveLightboxIndex(index)
+    setIsClosing(false)
   }
 
   return (
@@ -358,7 +387,7 @@ export default function GalleryPage() {
                   key={item.id}
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
-                  onClick={() => openLightbox(AMPHITHEATRE_IMAGES, index)}
+                  onClick={(e) => openLightbox(AMPHITHEATRE_IMAGES, index, e)}
                   className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
                 >
                   <img
@@ -390,7 +419,7 @@ export default function GalleryPage() {
                   data-aos="fade-up"
                   data-aos-delay={index * 80}
                   className="flex flex-col items-center group cursor-pointer"
-                  onClick={() => openLightbox(CLASSROOM_IMAGES, index)}
+                  onClick={(e) => openLightbox(CLASSROOM_IMAGES, index, e)}
                 >
                   <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
                     <img
@@ -427,7 +456,7 @@ export default function GalleryPage() {
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                   className="flex flex-col items-center group cursor-pointer"
-                  onClick={() => openLightbox(CAMPUS_IMAGES, index)}
+                  onClick={(e) => openLightbox(CAMPUS_IMAGES, index, e)}
                 >
                   <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300">
                     <img
@@ -477,7 +506,7 @@ export default function GalleryPage() {
                   key={item.id}
                   data-aos="fade-up"
                   data-aos-delay={(index % 4) * 80}
-                  onClick={() => openLightbox(FEB_17_IMAGES, index)}
+                  onClick={(e) => openLightbox(FEB_17_IMAGES, index, e)}
                   className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer aspect-[4/3] bg-slate-100"
                 >
                   <img
@@ -522,7 +551,7 @@ export default function GalleryPage() {
                   key={item.id}
                   data-aos="fade-up"
                   data-aos-delay={(index % 4) * 80}
-                  onClick={() => openLightbox(FEB_11_IMAGES, index)}
+                  onClick={(e) => openLightbox(FEB_11_IMAGES, index, e)}
                   className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer aspect-[4/3] bg-slate-100"
                 >
                   <img
@@ -567,7 +596,7 @@ export default function GalleryPage() {
                   key={item.id}
                   data-aos="fade-up"
                   data-aos-delay={(index % 5) * 80}
-                  onClick={() => openLightbox(SCIENCE_ACTIVITIES_IMAGES, index)}
+                  onClick={(e) => openLightbox(SCIENCE_ACTIVITIES_IMAGES, index, e)}
                   className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
                 >
                   <img
@@ -665,7 +694,7 @@ export default function GalleryPage() {
                   key={item.id}
                   data-aos="fade-up"
                   data-aos-delay={(index % 6) * 50}
-                  onClick={() => openLightbox(REPUBLIC_DAY_IMAGES, index)}
+                  onClick={(e) => openLightbox(REPUBLIC_DAY_IMAGES, index, e)}
                   className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
                 >
                   <img
@@ -697,13 +726,15 @@ export default function GalleryPage() {
       {/* 10. Magnified Image Lightbox Modal */}
       {activeLightboxIndex !== null && lightboxItems[activeLightboxIndex] && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-black/92 backdrop-blur-md animate-fade-in"
-          onClick={() => setActiveLightboxIndex(null)}
+          className={`fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-black/92 backdrop-blur-md transition-opacity duration-200 select-none ${
+            isClosing ? 'opacity-0 pointer-events-none' : 'opacity-100 animate-fade-in'
+          }`}
+          onClick={closeLightbox}
         >
           {/* Main Top-Right Screen Close Button */}
           <button
             type="button"
-            onClick={() => setActiveLightboxIndex(null)}
+            onClick={closeLightbox}
             className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[70] w-12 h-12 rounded-full bg-[#e31e24] hover:bg-[#b91c1c] text-white flex items-center justify-center transition-all cursor-pointer shadow-2xl border-2 border-white hover:scale-110 active:scale-95"
             aria-label="Close popup"
             title="Close (Esc)"
@@ -716,6 +747,7 @@ export default function GalleryPage() {
             type="button"
             onClick={(e) => {
               e.stopPropagation()
+              setOriginStyle(null)
               setActiveLightboxIndex((prev) =>
                 prev !== null ? (prev - 1 + lightboxItems.length) % lightboxItems.length : 0
               )
@@ -731,6 +763,7 @@ export default function GalleryPage() {
             type="button"
             onClick={(e) => {
               e.stopPropagation()
+              setOriginStyle(null)
               setActiveLightboxIndex((prev) =>
                 prev !== null ? (prev + 1) % lightboxItems.length : 0
               )
@@ -743,20 +776,34 @@ export default function GalleryPage() {
 
           {/* Center Image Container */}
           <div
-            className="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center justify-center p-2 select-none"
+            className="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center justify-center p-2"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={lightboxItems[activeLightboxIndex].image}
-              alt={lightboxItems[activeLightboxIndex].title}
-              className="max-h-[82vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-2xl ring-1 ring-white/15"
-            />
-            {/* Title / Counter bar */}
-            <div className="mt-3 flex items-center justify-between w-full max-w-2xl px-4 py-2 rounded-full bg-white/15 backdrop-blur-md text-white text-xs sm:text-sm font-semibold border border-white/20">
-              <span className="truncate">{lightboxItems[activeLightboxIndex].title}</span>
-              <span className="shrink-0 text-amber-400 font-bold ml-4">
-                {activeLightboxIndex + 1} / {lightboxItems.length}
-              </span>
+            <div
+              key={activeLightboxIndex}
+              className={`flex flex-col items-center justify-center w-full ${
+                isClosing ? 'animate-zoom-close' : 'animate-zoom-open'
+              }`}
+              style={
+                {
+                  '--origin-x': `${originStyle?.x ?? 0}px`,
+                  '--origin-y': `${originStyle?.y ?? 0}px`,
+                  '--origin-scale': originStyle ? `${originStyle.scale}` : '0.85',
+                } as React.CSSProperties
+              }
+            >
+              <img
+                src={lightboxItems[activeLightboxIndex].image}
+                alt={lightboxItems[activeLightboxIndex].title}
+                className="max-h-[82vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-2xl ring-1 ring-white/15 transition-all duration-200"
+              />
+              {/* Title / Counter bar */}
+              <div className="mt-3 flex items-center justify-between w-full max-w-2xl px-4 py-2 rounded-full bg-white/15 backdrop-blur-md text-white text-xs sm:text-sm font-semibold border border-white/20">
+                <span className="truncate">{lightboxItems[activeLightboxIndex].title}</span>
+                <span className="shrink-0 text-amber-400 font-bold ml-4">
+                  {activeLightboxIndex + 1} / {lightboxItems.length}
+                </span>
+              </div>
             </div>
           </div>
         </div>
