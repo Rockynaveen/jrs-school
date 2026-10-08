@@ -210,7 +210,7 @@ export default function AboutStory() {
                   <div className="w-10 h-10 flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform duration-200">
                     {item.icon}
                   </div>
-                  <h4 className="text-xs sm:text-[13px] font-bold text-slate-900 leading-tight">
+                  <h4 className="text-xs sm:text-[13px] font-medium text-slate-800 leading-tight">
                     {item.title}
                   </h4>
                   <p className="text-[14px] text-slate-700 leading-snug mt-1">

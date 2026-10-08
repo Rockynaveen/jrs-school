@@ -202,7 +202,7 @@ export default function AboutSection() {
                   <div className="w-10 h-10 flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform duration-200">
                     {item.icon}
                   </div>
-                  <span className="text-xs sm:text-[13px] font-bold text-slate-800 leading-tight">
+                  <span className="text-xs sm:text-[13px] font-medium text-slate-700 leading-tight">
                     {item.title}
                   </span>
                 </div>
