@@ -28,19 +28,47 @@ export interface MediaArticle {
   publication?: string
 }
 
-const FEATURED_ARTICLE: MediaArticle = {
-  id: 'featured-1',
-  category: 'ACHIEVEMENT',
-  title: 'విద్యార్థుల నైపుణ్యతను గుర్తించి ప్రోత్సహించాలి - సినీ హీరో, డైరెక్టర్ విశ్వక్ సేన్',
-  titleEn: '"Identify and Encourage Students\' Innate Talents" — Actor & Director Vishwak Sen at JRS Annual Day',
-  date: '15 FEB 2023',
-  excerpt:
-    'విద్యార్థులలో దాగి ఉన్న కళా నైపుణ్యాలను గుర్తించి ఆ దిశగా ప్రోత్సాహకాలు అందించినపుడే ఉన్నత స్థానాలలో రాణించగలరని ప్రముఖ సినీ హీరో, డైరెక్టర్ విశ్వక్ సేన్ అన్నారు. కొర్రెముల పరిధిలోని జేఆర్ఎస్ ఇంటర్నేషనల్ పాఠశాల వార్షికోత్సవానికి ముఖ్య అతిథిగా హాజరై ప్రసంగించారు.',
-  fullContent:
-    'ఘట్‌కేసర్ మండలం కొర్రెముల పరిధిలోని జేఆర్ఎస్ ఇంటర్నేషనల్ పాఠశాల వార్షికోత్సవం కార్యక్రమానికి ముఖ్య అతిథిగా ప్రముఖ నటుడు, డైరెక్టర్ విశ్వక్ సేన్, సినీ గాయకుడు పృథ్వీచంద్ర, పర్వతారోహకురాలు అన్విత రెడ్డి పాల్గొన్నారు. విద్యార్థులను అన్ని రంగాలలో నైపుణ్యతను పెంపొందించే విధంగా యాజమాన్యం చేస్తున్న కృషి అభినందనీయమని తెలిపారు. ప్రిన్సిపాల్ జగదీశ్వరి నటరాజ్ చేతుల మీదుగా విశ్వక్ సేన్‌కు మెమెంటో అందజేశారు.',
-  image: '/images/featured-news.png',
-  publication: 'మన తెలంగాణ (Mana Telangana) • Hyderabad Main, Page 6',
-}
+const FEATURED_ARTICLES: MediaArticle[] = [
+  {
+    id: 'featured-1',
+    category: 'ACHIEVEMENT',
+    title: 'విద్యార్థుల నైపుణ్యతను గుర్తించి ప్రోత్సహించాలి - సినీ హీరో, డైరెక్టర్ విశ్వక్ సేన్',
+    titleEn: '"Identify and Encourage Students\' Innate Talents" — Actor & Director Vishwak Sen at JRS Annual Day',
+    date: '15 FEB 2023',
+    excerpt:
+      'విద్యార్థులలో దాగి ఉన్న కళా నైపుణ్యాలను గుర్తించి ఆ దిశగా ప్రోత్సాహకాలు అందించినపుడే ఉన్నత స్థానాలలో రాణించగలరని ప్రముఖ సినీ హీరో, డైరెక్టర్ విశ్వక్ సేన్ అన్నారు. కొర్రెముల పరిధిలోని జేఆర్ఎస్ ఇంటర్నేషనల్ పాఠశాల వార్షికోత్సవానికి ముఖ్య అతిథిగా హాజరై ప్రసంగించారు.',
+    fullContent:
+      'ఘట్‌కేసర్ మండలం కొర్రెముల పరిధిలోని జేఆర్ఎస్ ఇంటర్నేషనల్ పాఠశాల వార్షికోత్సవం కార్యక్రమానికి ముఖ్య అతిథిగా ప్రముఖ నటుడు, డైరెక్టర్ విశ్వక్ సేన్, సినీ గాయకుడు పృథ్వీచంద్ర, పర్వతారోహకురాలు అన్విత రెడ్డి పాల్గొన్నారు. విద్యార్థులను అన్ని రంగాలలో నైపుణ్యతను పెంపొందించే విధంగా యాజమాన్యం చేస్తున్న కృషి అభినందనీయమని తెలిపారు. ప్రిన్సిపాల్ జగదీశ్వరి నటరాజ్ చేతుల మీదుగా విశ్వక్ సేన్‌కు మెమెంటో అందజేశారు.',
+    image: '/images/featured-news.png',
+    publication: 'మన తెలంగాణ (Mana Telangana) • Hyderabad Main, Page 6',
+  },
+  {
+    id: 'featured-2',
+    category: 'SCHOOL EVENT',
+    title: 'విద్యార్థుల నైపుణ్యతను గుర్తించి ప్రోత్సహించాలి - ప్రముఖ డైరెక్టర్ విశ్వక్ సేన్',
+    titleEn: '"Identify and Encourage Student Talents" — Director Vishwak Sen at JRS International School',
+    date: '14 FEB 2023',
+    excerpt:
+      'విద్యార్థులలో దాగి ఉన్న కళానైపుణ్యాలను గుర్తించి ఆ దిశగా ప్రోత్సాహకాలు అందించినపుడే ఉన్నత స్థానాలలో రాణించగలరని ప్రముఖ నటుడు, ప్రొడ్యూసర్ విశ్వక్ సేన్ అన్నారు. వార్షికోత్సవంలో విద్యార్థుల సాంస్కృతిక ప్రదర్శనలు ఆకట్టుకున్నాయి.',
+    fullContent:
+      'ఘట్‌కేసర్ మండలం కొర్రెముల పరిధిలోని జేఆర్ఎస్ ఇంటర్నేషనల్ పాఠశాల వార్షికోత్సవం కార్యక్రమానికి ముఖ్య అతిథిగా ప్రముఖ నటుడు, ప్రొడ్యూసర్ విశ్వక్ సేన్, సినీ గాయకుడు పృథ్వీచంద్ర, పర్వతారోహకురాలు అన్విత రెడ్డి పాల్గొన్నారు. ప్రిన్సిపాల్ జగదీశ్వరి నటరాజ్ చేతుల మీదుగా విశ్వక్ సేన్‌కు మెమెంటో అందజేశారు.',
+    image: '/images/news-surya-clipping.png',
+    publication: 'సూర్య (Surya Daily) • Ghatkesar',
+  },
+  {
+    id: 'featured-3',
+    category: 'CELEBRATION',
+    title: 'పాఠశాలలో సాంస్కృతిక కార్యక్రమాలు - గణతంత్ర దినోత్సవ వేడుకలు',
+    titleEn: 'Patriotic Celebrations & Cultural Performances on Republic Day',
+    date: '28 JAN 2023',
+    excerpt:
+      'నారపల్లిలోని జేఆర్ఎస్ ఇంటర్నేషనల్ స్కూల్‌లో గణతంత్ర దినోత్సవ వేడుకలు ఘనంగా జరిగాయి. విద్యార్థులచే నిర్వహించిన దేశభక్తితో కూడిన సాంస్కృతిక జానపద నృత్య ప్రదర్శనలు చూపురులను ఆకట్టుకున్నాయి.',
+    fullContent:
+      'పోచారం మున్సిపల్ నారపల్లిలోని జేఆర్ఎస్ ఇంటర్నేషనల్ స్కూల్‌లో గణతంత్ర దినోత్సవ వేడుకలు గురువారం ఘనంగా జరిగాయి. పలు సాంస్కృతిక నృత్య ప్రదర్శనల్లో విజేతలుగా నిలిచిన విద్యార్థులకు ప్రిన్సిపాల్ జగదీశ్వరి నటరాజ్ చేతుల మీదుగా బహుమతులు అందజేశారు.',
+    image: '/images/news-vaartha-clipping.png',
+    publication: 'వార్త (Vaartha Daily) • Ghatkesar',
+  },
+]
 
 const MEDIA_ARTICLES: MediaArticle[] = [
   {
@@ -170,43 +198,63 @@ export default function MediaPage() {
               </p>
             </div>
 
-            {/* Featured Article Card (Full Newspaper Clipping Showcase with Logo Blue Border) */}
-            <div
-              className="max-w-2xl lg:max-w-3xl mx-auto bg-white rounded-3xl border-2 border-[#013aa3]/35 hover:border-[#013aa3] shadow-2xl shadow-[#013aa3]/10 overflow-hidden transition-all duration-300 hover:shadow-3xl"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div
-                className="relative overflow-hidden bg-slate-100 group cursor-pointer"
-                onClick={() => setSelectedArticle(FEATURED_ARTICLE)}
-              >
-                {/* Full Featured Clipping Image */}
-                <img
-                  src={FEATURED_ARTICLE.image}
-                  alt={FEATURED_ARTICLE.title}
-                  className="w-full h-auto object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.01]"
-                  onError={(e) => {
-                    const target = e.currentTarget
-                    target.src = '/images/annual-day.jpg'
-                  }}
-                />
+            {/* Featured Article Cards Grid (3 cards per row, extensible for more in future) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {FEATURED_ARTICLES.map((article, index) => (
+                <div
+                  key={article.id}
+                  className="bg-white rounded-3xl border-2 border-[#013aa3]/25 hover:border-[#013aa3] shadow-lg hover:shadow-2xl shadow-[#013aa3]/10 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 flex flex-col group cursor-pointer"
+                  data-aos="fade-up"
+                  data-aos-delay={(index + 1) * 100}
+                  onClick={() => setSelectedArticle(article)}
+                >
+                  <div className="relative aspect-[16/11] w-full overflow-hidden bg-slate-100 flex items-center justify-center">
+                    {/* Full Featured Clipping Image */}
+                    <img
+                      src={article.image}
+                      alt={article.title}
+                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      onError={(e) => {
+                        const target = e.currentTarget
+                        target.src = '/images/annual-day.jpg'
+                      }}
+                    />
 
-                {/* Featured News Yellow Badge */}
-                <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10">
-                  <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md text-[11px] sm:text-xs font-black tracking-wider uppercase bg-[#f59e0b] text-slate-950 shadow-md">
-                    <Sparkles className="w-3.5 h-3.5 fill-slate-950" />
-                    FEATURED NEWS
-                  </span>
-                </div>
+                    {/* Featured News Yellow Badge */}
+                    <div className="absolute top-3.5 left-3.5 z-10">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-[10px] sm:text-[11px] font-bold tracking-wider uppercase bg-[#f59e0b] text-slate-950 shadow-md">
+                        <Sparkles className="w-3 h-3 fill-slate-950" />
+                        FEATURED NEWS
+                      </span>
+                    </div>
 
-                {/* Subtle Hover Zoom Overlay */}
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
-                  <div className="bg-white/95 backdrop-blur-sm text-[#031c3f] font-bold text-xs sm:text-sm px-5 py-2.5 rounded-full shadow-xl flex items-center gap-2">
-                    <ZoomIn className="w-4 h-4 text-[#f59e0b]" />
-                    <span>Click to View Full Size</span>
+                    {/* Subtle Hover Zoom Overlay */}
+                    <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                      <div className="bg-white/95 backdrop-blur-sm text-[#031c3f] font-semibold text-xs sm:text-sm px-4 py-2 rounded-full shadow-xl flex items-center gap-2">
+                        <ZoomIn className="w-4 h-4 text-[#f59e0b]" />
+                        <span>Click to View Full Size</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card Info Footer */}
+                  <div className="p-5 sm:p-6 flex flex-col flex-1 bg-white border-t border-slate-100">
+                    <div className="flex items-center justify-between gap-2 text-xs text-slate-500 mb-2">
+                      <span className="font-semibold text-[#013aa3] flex items-center gap-1 truncate">
+                        <Newspaper className="w-3.5 h-3.5 shrink-0" />
+                        <span className="truncate">{article.publication?.split('•')[0] || 'Press Coverage'}</span>
+                      </span>
+                      <span className="shrink-0">{article.date}</span>
+                    </div>
+                    <h3 className="text-base font-bold text-slate-900 group-hover:text-[#013aa3] transition-colors line-clamp-2 leading-snug mb-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed flex-1">
+                      {article.titleEn || article.excerpt}
+                    </p>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -325,7 +373,7 @@ export default function MediaPage() {
         </section>
 
         {/* 5. Section 3: Bottom Banner (Stay Connected With JRS News & Updates) */}
-        <section className="py-12 sm:py-16 bg-[#f8fafc] border-t border-slate-200/70">
+        <section className="py-12 sm:py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div
               className="relative overflow-hidden bg-gradient-to-r from-[#011a42] via-[#022868] to-[#011a42] rounded-3xl p-8 sm:p-10 lg:p-12 text-white shadow-xl shadow-blue-950/20"
@@ -351,7 +399,7 @@ export default function MediaPage() {
                     <span className="inline-block text-[11px] sm:text-xs font-black tracking-widest text-[#f59e0b] uppercase mb-1">
                       NEWS
                     </span>
-                    <p className="text-sm sm:text-base text-slate-300 font-medium">
+                    <p className="text-sm sm:text-base text-slate-300 font-normal">
                       Stay Connected With
                     </p>
                     <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white">

@@ -113,7 +113,8 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
   ]
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+    <>
+      <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo Area */}
@@ -374,5 +375,8 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
         </div>
       )}
     </header>
+    {/* Spacer to preserve document flow underneath the fixed header */}
+    <div className="h-16 sm:h-20 w-full shrink-0 pointer-events-none" aria-hidden="true" />
+  </>
   )
 }

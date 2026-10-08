@@ -58,37 +58,30 @@ export default function AboutWhyChoose() {
     {
       icon: <Presentation className="w-5 h-5 text-[#0284c7]" />,
       title: 'Professional Development',
-      subtitle: '',
     },
     {
       icon: <FileCheck2 className="w-5 h-5 text-[#d97706]" />,
       title: 'Qualitative Assessment',
-      subtitle: '',
     },
     {
       icon: <BookOpen className="w-5 h-5 text-[#7e22ce]" />,
       title: 'Resource & Media Center',
-      subtitle: '',
     },
     {
       icon: <Bus className="w-5 h-5 text-[#ea580c]" />,
       title: 'Field Trips & Excursions',
-      subtitle: '',
     },
     {
       icon: <Compass className="w-5 h-5 text-[#16a34a]" />,
       title: 'Career Guidance & Counseling',
-      subtitle: '',
     },
     {
       icon: <Palette className="w-5 h-5 text-[#6366f1]" />,
       title: 'Visual & Performing Arts',
-      subtitle: '',
     },
     {
       icon: <Medal className="w-5 h-5 text-[#f59e0b]" />,
       title: 'Sports Education',
-      subtitle: '',
     },
   ]
 
@@ -142,7 +135,7 @@ export default function AboutWhyChoose() {
               className="bg-white rounded-xl border border-slate-100 p-3 sm:p-3.5 text-center shadow-[0_1px_6px_rgba(0,0,0,0.02)] hover:border-slate-300 hover:bg-slate-50/60 transition-all flex flex-col items-center justify-center min-h-[96px]"
             >
               <div className="mb-2">{badge.icon}</div>
-              <span className="text-[14px] font-semibold text-slate-700 leading-tight">
+              <span className="text-[14px] font-normal text-slate-700 leading-[1.5]">
                 {badge.title}
               </span>
             </div>

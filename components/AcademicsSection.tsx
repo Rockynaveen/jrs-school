@@ -115,7 +115,7 @@ export default function AcademicsSection() {
               {/* Card Body Content */}
               <div className="p-6 sm:p-7 flex flex-col flex-1">
                 {/* Stage Title */}
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-1.5 tracking-tight group-hover:text-[#031c3f] transition-colors">
+                <h3 className="text-xl sm:text-2xl font-semibold text-slate-900 mb-1.5 tracking-tight group-hover:text-[#031c3f] transition-colors">
                   {stage.title}
                 </h3>
 
@@ -163,7 +163,7 @@ export default function AcademicsSection() {
                 <Sparkles className="w-3 h-3" />
                 <span>{currentModal.badge}</span>
               </div>
-              <h3 className="text-2xl font-bold">{currentModal.title}</h3>
+              <h3 className="text-2xl font-semibold">{currentModal.title}</h3>
               <p className="text-xs text-white/80 mt-0.5 font-medium">{currentModal.subtitle}</p>
             </div>
 

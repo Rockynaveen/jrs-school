@@ -223,8 +223,8 @@ export default function AcademicsJourney() {
                       {/* Card Content with aligned rows */}
                       <div className="p-5 pt-8 flex flex-col flex-1">
                         {/* Title Row with fixed min-height for uniform alignment */}
-                        <div className="min-h-[2.75rem] flex items-center mb-1">
-                          <h3 className="text-base font-extrabold text-[#031c3f] tracking-tight group-hover:text-blue-900 transition-colors leading-snug">
+                        <div className="min-h-[3rem] flex items-center mb-1">
+                          <h3 className="text-[18px] sm:text-[19px] font-semibold text-[#031c3f] tracking-tight group-hover:text-blue-900 transition-colors leading-snug">
                             {prog.title}
                           </h3>
                         </div>
@@ -284,7 +284,7 @@ export default function AcademicsJourney() {
               <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[10px] sm:text-[11px] font-bold uppercase tracking-wider bg-white/15 text-amber-300 mb-2">
                 <span>{currentProgramme.ageBadge}</span>
               </div>
-              <h3 className="text-2xl font-bold tracking-tight">{currentProgramme.title}</h3>
+              <h3 className="text-2xl font-semibold tracking-tight">{currentProgramme.title}</h3>
             </div>
 
             {/* Modal Body */}

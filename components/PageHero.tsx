@@ -116,16 +116,16 @@ export default function PageHero({
           </nav>
 
           {/* Main Title */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight text-white leading-[1.15] break-words">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] font-semibold tracking-tight text-white leading-[1.2] break-words">
             {title}{' '}
             {titleHighlight && (
-              <span className="text-[#f59e0b]">{titleHighlight}</span>
+              <span className="text-[#f59e0b] font-semibold">{titleHighlight}</span>
             )}
           </h1>
 
           {/* Subtitle */}
           {subtitle && (
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white/95 mt-1.5 sm:mt-2.5 tracking-tight leading-snug">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-white/90 mt-1.5 sm:mt-2.5 tracking-tight leading-snug">
               {subtitle}
             </p>
           )}

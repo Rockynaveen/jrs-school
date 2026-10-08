@@ -125,8 +125,8 @@ export default function AboutBeyond() {
                   fallbackBg="from-slate-800 to-slate-900"
                 />
 
-                {/* Dark Gradient Overlay for Contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300 pointer-events-none" />
+                {/* Dark Gradient Overlay: Black from below, reducing bottom to top, 0 opacity at top */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 via-50% to-transparent pointer-events-none transition-opacity duration-300" />
 
                 {/* Top Subtle Pill with Icon */}
                 <div className="absolute top-3 left-3 z-10">
@@ -140,7 +140,7 @@ export default function AboutBeyond() {
                   <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-amber-300/90 group-hover:text-amber-300 transition-colors">
                     {act.category}
                   </span>
-                  <h3 className="text-sm sm:text-base font-extrabold text-white tracking-tight leading-snug mt-0.5 group-hover:text-white transition-colors">
+                  <h3 className="text-sm sm:text-base font-semibold text-white tracking-tight leading-snug mt-0.5 group-hover:text-white transition-colors">
                     {act.title}
                   </h3>
 

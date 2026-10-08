@@ -90,7 +90,8 @@ export default function BeyondClassroom() {
                     fallbackText={item.image}
                     fallbackBg="from-slate-100 to-slate-200"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                  {/* Black overlay from below reducing bottom to top, reaching 0 opacity at top */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 via-50% to-transparent pointer-events-none transition-opacity duration-300" />
                 </div>
 
                 {/* Colored Label Bar */}

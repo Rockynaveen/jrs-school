@@ -14,7 +14,6 @@ import {
   Building,
   Navigation,
 } from 'lucide-react'
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from './ui/card'
 import { Input } from './ui/input'
 import { Label } from './ui/label'
 import { Textarea } from './ui/textarea'
@@ -83,10 +82,10 @@ export default function ContactPage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
               
-              {/* Left Column: Contact Form with shadcn UI (5 cols) */}
+              {/* Left Column: Contact Form (5 cols) */}
               <div className="lg:col-span-5" data-aos="fade-right">
-                <Card className="rounded-3xl border border-slate-200/80 shadow-md overflow-hidden bg-white">
-                  <CardHeader className="p-6 sm:p-8 pb-4">
+                <div className="space-y-4">
+                  <div>
                     <div className="flex items-center gap-2 mb-2">
                       <Badge
                         variant="secondary"
@@ -96,15 +95,13 @@ export default function ContactPage() {
                         Online Inquiry
                       </Badge>
                     </div>
-                    <CardTitle className="text-2xl sm:text-3xl font-extrabold text-[#031c3f] tracking-tight">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#031c3f] tracking-tight">
                       Send Us a Message
-                    </CardTitle>
-                    <CardDescription className="text-slate-700 text-sm mt-1 leading-relaxed">
+                    </h2>
+                    <p className="text-slate-700 text-sm mt-1 leading-relaxed">
                       Fill in your details and our admissions counselor will get back to you within 24 hours.
-                    </CardDescription>
-                  </CardHeader>
-
-                  <CardContent className="p-6 sm:p-8 pt-0">
+                    </p>
+                  </div>
                     {submitted ? (
                       <div className="p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-3 animate-fade-in">
                         <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto" />
@@ -258,8 +255,7 @@ export default function ContactPage() {
                         </Button>
                       </form>
                     )}
-                  </CardContent>
-                </Card>
+                </div>
               </div>
 
               {/* Right Column: Interactive Map & Location Guidance (7 cols) */}

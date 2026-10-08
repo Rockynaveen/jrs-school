@@ -15,9 +15,7 @@ import {
   HeartPulse,
   Building2,
   Wifi,
-  Sparkles,
   ArrowRight,
-  CheckCircle2,
 } from 'lucide-react'
 
 export default function FacilitiesPage() {
@@ -69,11 +67,6 @@ export default function FacilitiesPage() {
       icon: Wifi,
       iconBg: 'bg-cyan-50 text-cyan-600 border-cyan-100',
     },
-    {
-      title: 'And many more…',
-      icon: Sparkles,
-      iconBg: 'bg-purple-50 text-purple-600 border-purple-100',
-    },
   ]
 
   return (
@@ -102,7 +95,7 @@ export default function FacilitiesPage() {
 
         {/* 3. Simple & Clean Facilities Section */}
         <section id="facilities-list" className="py-14 sm:py-20 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
             <div className="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
               <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626]">
@@ -116,8 +109,8 @@ export default function FacilitiesPage() {
               </p>
             </div>
 
-            {/* Simple, Clean 2-Column / 3-Column List */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {/* Simple, Clean 4-Column Grid in Container */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
               {facilities.map((item, index) => {
                 const Icon = item.icon
                 return (
@@ -125,15 +118,15 @@ export default function FacilitiesPage() {
                     key={index}
                     data-aos="fade-up"
                     data-aos-delay={index * 50}
-                    className="p-5 sm:p-6 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/80 hover:border-red-200 hover:shadow-xl transition-all duration-200 flex items-center gap-4 sm:gap-5 group"
+                    className="p-4 sm:p-5 rounded-2xl bg-slate-50 hover:bg-white border border-slate-200/80 hover:border-red-200 hover:shadow-xl transition-all duration-200 flex items-center gap-3.5 sm:gap-4 group"
                   >
                     <div
-                      className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl flex items-center justify-center shrink-0 border-2 ${item.iconBg} transition-transform duration-200 group-hover:scale-110 shadow-sm`}
+                      className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center shrink-0 border-2 ${item.iconBg} transition-transform duration-200 group-hover:scale-110 shadow-sm`}
                     >
-                      <Icon className="w-7 h-7 sm:w-8 sm:h-8 stroke-[2.2]" />
+                      <Icon className="w-6 h-6 sm:w-7 sm:h-7 stroke-[2.2]" />
                     </div>
-                    <div className="flex-1">
-                      <p className="text-[13px] sm:text-[14px] font-semibold text-slate-800 group-hover:text-red-600 transition-colors leading-snug">
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[13px] sm:text-[14px] font-normal text-slate-800 group-hover:text-red-600 transition-colors leading-snug">
                         {item.title}
                       </p>
                     </div>
@@ -144,7 +137,7 @@ export default function FacilitiesPage() {
 
             {/* Simple Closing Note & Invitation Box */}
             <div
-              className="mt-14 p-8 sm:p-10 rounded-2xl bg-[#031c3f] text-white text-center shadow-lg relative overflow-hidden"
+              className="mt-14 max-w-4xl mx-auto p-8 sm:p-10 rounded-2xl bg-[#031c3f] text-white text-center shadow-lg relative overflow-hidden"
               data-aos="fade-up"
             >
               <div className="relative z-10 max-w-xl mx-auto space-y-4">

@@ -105,7 +105,7 @@ export default function AdmissionsProcess() {
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] mt-2 tracking-tight">
             ADMISSION <span className="text-[#dc2626]">PROCESS</span>
           </h2>
-          <p className="text-slate-700 text-[14px] font-medium mt-3">
+          <p className="text-slate-700 text-[14px] font-normal mt-3">
             Follow these simple steps to complete the admission process at JRS.
           </p>
         </div>

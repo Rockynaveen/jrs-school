@@ -83,7 +83,7 @@ export default function AboutBottomCTA({
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl lg:max-w-2xl py-12 sm:py-16 lg:py-24 space-y-4 sm:space-y-5">
           {/* Left Column: CTA Content */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-white tracking-tight leading-[1.15]">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight leading-[1.3] sm:leading-[1.35]">
             Give Your Child a Strong <br />
             Foundation <span className="text-[#f59e0b]">for Tomorrow</span>
           </h2>
