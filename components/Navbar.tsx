@@ -77,8 +77,8 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           ],
         },
         {
-          name: 'Certificates',
-          href: '/certificates',
+          name: 'Mandatory Disclosure',
+          href: '/mandatory-disclosure',
         },
       ],
     },

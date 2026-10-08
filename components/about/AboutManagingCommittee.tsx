@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Award, UserCheck, Shield, Users } from 'lucide-react'
+import { UserCheck, Shield } from 'lucide-react'
 
 interface CommitteeMember {
   sn: number
@@ -63,33 +63,29 @@ export default function AboutManagingCommittee() {
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-50 border border-red-100 text-red-600 text-[11px] font-bold tracking-wider uppercase mb-1.5">
-            <Award className="w-3 h-3" />
-            <span>Educational Society</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#031c3f] tracking-tight">
-            Managing Committee
+        <div className="mb-4">
+          <h2 className="text-xl sm:text-2xl font-bold text-[#dc2626] tracking-tight mb-1">
+            MANAGING COMMITTEE :
           </h2>
-          <p className="mt-1 text-slate-600 text-xs sm:text-sm">
+          <p className="text-slate-600 text-xs sm:text-sm">
             Distinguished governing body steering the vision, academic excellence, and strategic growth of JRS International School.
           </p>
         </div>
 
         {/* Clean, Simple Table Card */}
-        <div className="bg-[#fafbfc] rounded-xl shadow-sm border border-slate-200/80 overflow-hidden">
+        <div className="bg-white rounded-md border border-slate-300 shadow-2xs overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-slate-100/80 border-b border-slate-200 text-[11px] font-bold text-slate-700 uppercase tracking-wider">
+                <tr className="bg-[#dce7f6] border-b border-slate-300 text-xs sm:text-[13px] font-bold text-slate-800 uppercase tracking-wider">
                   <th scope="col" className="py-2.5 px-4 sm:px-6 w-16 text-center">
-                    S.N
+                    S.NO.
                   </th>
                   <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[260px]">
-                    Name of the Person
+                    NAME OF THE PERSON
                   </th>
                   <th scope="col" className="py-2.5 px-4 sm:px-6 text-right min-w-[180px]">
-                    Status / Designation
+                    STATUS / DESIGNATION
                   </th>
                 </tr>
               </thead>
