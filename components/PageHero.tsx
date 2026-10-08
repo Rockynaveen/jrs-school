@@ -23,6 +23,7 @@ export interface PageHeroProps {
   overlayType?: 'default' | 'logo-blue'
   primaryButton?: PageHeroButton
   secondaryButton?: PageHeroButton
+  rightElement?: React.ReactNode
   className?: string
   children?: React.ReactNode
 }
@@ -39,6 +40,7 @@ export default function PageHero({
   overlayType = 'default',
   primaryButton,
   secondaryButton,
+  rightElement,
   className,
   children,
 }: PageHeroProps) {
@@ -99,8 +101,9 @@ export default function PageHero({
 
       {/* Hero Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-8 md:py-10 lg:py-12 w-full">
-        <div className="max-w-xl md:max-w-2xl" data-aos="fade-right">
-          {/* Breadcrumb Navigation */}
+        <div className={rightElement ? "grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" : ""}>
+          <div className={rightElement ? "lg:col-span-8 max-w-xl md:max-w-2xl" : "max-w-xl md:max-w-2xl"} data-aos="fade-right">
+            {/* Breadcrumb Navigation */}
           <nav
             aria-label="Breadcrumb"
             className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300 mb-2.5 sm:mb-4"
@@ -220,6 +223,16 @@ export default function PageHero({
                     )}
                   </button>
                 ))}
+            </div>
+          )}
+          </div>
+
+          {rightElement && (
+            <div
+              className="hidden lg:flex lg:col-span-4 justify-end items-center pr-4"
+              data-aos="fade-left"
+            >
+              {rightElement}
             </div>
           )}
         </div>

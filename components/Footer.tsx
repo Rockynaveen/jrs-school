@@ -37,13 +37,14 @@ export default function Footer() {
     { name: 'Beyond Classroom', href: '/beyond' },
     { name: 'Amenities', href: '/facilities' },
     { name: 'Gallery', href: '/gallery' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ]
 
   const importantLinks = [
     {
       name: 'School Prospectus',
-      href: 'https://jrsinternationalschooluppal.com/wp-content/uploads/2020/05/JRS_International_School-Prospectus.pdf',
+      href: 'https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf',
       target: '_blank',
       rel: 'noopener noreferrer',
     },
@@ -57,7 +58,7 @@ export default function Footer() {
     },
     {
       name: 'Careers',
-      href: '/contact',
+      href: '/careers',
     },
     {
       name: 'Online Enquiry',

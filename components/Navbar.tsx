@@ -44,6 +44,7 @@ interface NavbarProps {
     | '360-degree-campus'
     | 'events'
     | 'contact'
+    | 'careers'
 }
 
 export default function Navbar({ activePage = 'home' }: NavbarProps) {
@@ -90,7 +91,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
         { name: 'Admissions Overview', href: '/admissions' },
         {
           name: 'Download Brochure',
-          href: 'https://jrsinternationalschooluppal.com/wp-content/uploads/2020/05/JRS_International_School-Prospectus.pdf',
+          href: 'https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf',
           target: '_blank',
           rel: 'noopener noreferrer',
         },
@@ -108,6 +109,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
       ],
     },
     { name: 'Contact', href: '/contact', id: 'contact' },
+    { name: 'Careers', href: '/careers', id: 'careers' },
   ]
 
   return (
