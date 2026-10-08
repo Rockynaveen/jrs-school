@@ -17,11 +17,6 @@ export default function AdmissionsHero() {
         text: 'Apply Now',
         href: '#enquiry-form',
       }}
-      secondaryButton={{
-        text: 'Talk to Admissions',
-        href: 'tel:+919876543210',
-        icon: 'phone',
-      }}
     />
   )
 }
