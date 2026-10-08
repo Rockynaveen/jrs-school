@@ -47,6 +47,12 @@
   h6 *:not(.font-normal):not(.font-light):not(.font-medium) {
     font-weight: 600 !important;
   }
+
+  /* Section eyebrows / tracking-widest / tracking-wider uppercase headings (e.g. "WHY CHOOSE JRS") */
+  [class*="tracking-widest"][class*="uppercase"]:not(.font-normal):not(.font-medium),
+  [class*="tracking-wider"][class*="uppercase"]:not(.font-normal):not(.font-medium) {
+    font-weight: 600 !important;
+  }
 }
 
 .text-shadow-hero {
