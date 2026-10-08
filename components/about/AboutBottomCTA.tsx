@@ -1,8 +1,8 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { ArrowRight, Play } from 'lucide-react'
+import { ArrowRight, Play, X, ExternalLink } from 'lucide-react'
 
 interface AboutBottomCTAProps {
   imageSrc?: string
@@ -15,6 +15,29 @@ export default function AboutBottomCTA({
   imageAlt = 'JRS International School Students in Science Lab',
   imagePosition = 'object-center lg:object-[center_20%]',
 }: AboutBottomCTAProps = {}) {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
+
+  // Handle escape key and body scroll lock for video popup
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsVideoModalOpen(false)
+      }
+    }
+
+    if (isVideoModalOpen) {
+      document.body.style.overflow = 'hidden'
+      window.addEventListener('keydown', handleKeyDown)
+    } else {
+      document.body.style.overflow = ''
+    }
+
+    return () => {
+      document.body.style.overflow = ''
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isVideoModalOpen])
+
   return (
     <section className="relative overflow-hidden bg-[#031c3f] text-white">
       {/* Background Graphic Accents */}
@@ -79,19 +102,82 @@ export default function AboutBottomCTA({
               <ArrowRight className="w-4 h-4 stroke-[2.5]" />
             </Link>
 
-            {/* Take a Campus Tour */}
-            <Link
-              href="/#home"
-              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95"
+            {/* Take a Campus Tour (Linked to https://youtu.be/LBvByB-S0O4 with interactive modal) */}
+            <a
+              href="https://youtu.be/LBvByB-S0O4"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => {
+                e.preventDefault()
+                setIsVideoModalOpen(true)
+              }}
+              aria-label="Take a Campus Tour (Watch Video)"
+              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 cursor-pointer group"
             >
               <span>Take a Campus Tour</span>
-              <div className="w-4 h-4 rounded-full border border-white flex items-center justify-center">
+              <div className="w-4 h-4 rounded-full border border-white flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Play className="w-2 h-2 fill-white ml-0.5" />
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
+
+      {/* Magnified Campus Tour Video Modal Popup */}
+      {isVideoModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/85 backdrop-blur-md animate-fade-in"
+          onClick={() => setIsVideoModalOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label="Campus Tour Video"
+        >
+          <div
+            className="relative w-full max-w-5xl bg-[#031c3f] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border border-white/20 animate-scale-up"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 bg-gradient-to-r from-[#031c3f] to-[#0a2f64] border-b border-white/10 text-white">
+              <div className="flex items-center gap-2.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#e31e24] animate-pulse" />
+                <h3 className="text-sm sm:text-base font-bold tracking-tight">
+                  JRS International School — Campus Tour Video
+                </h3>
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href="https://youtu.be/LBvByB-S0O4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold text-slate-200 bg-white/10 hover:bg-white/20 hover:text-white transition-colors"
+                >
+                  <span>Watch on YouTube</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setIsVideoModalOpen(false)}
+                  aria-label="Close campus tour video"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors cursor-pointer"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Magnified 16:9 Video Container */}
+            <div className="relative w-full aspect-video bg-black">
+              <iframe
+                src="https://www.youtube.com/embed/LBvByB-S0O4?autoplay=1&rel=0&modestbranding=1"
+                title="JRS International School Campus Tour Video"
+                className="absolute inset-0 w-full h-full border-0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   )
 }

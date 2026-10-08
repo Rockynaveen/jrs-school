@@ -41,11 +41,28 @@ export default function Footer() {
   ]
 
   const importantLinks = [
-    { name: 'School Prospectus', href: '#prospectus' },
-    { name: 'Mandatory Disclosure', href: '#mandatory' },
-    { name: 'CBSE Affiliation', href: '#affiliation' },
-    { name: 'Careers', href: '#careers' },
-    { name: 'Online Enquiry', href: '#enquire' },
+    {
+      name: 'School Prospectus',
+      href: 'https://jrsinternationalschooluppal.com/wp-content/uploads/2020/05/JRS_International_School-Prospectus.pdf',
+      target: '_blank',
+      rel: 'noopener noreferrer',
+    },
+    {
+      name: 'Mandatory Disclosure',
+      href: '/certificates',
+    },
+    {
+      name: 'CBSE Affiliation',
+      href: '/certificates',
+    },
+    {
+      name: 'Careers',
+      href: '/contact',
+    },
+    {
+      name: 'Online Enquiry',
+      href: '/admissions',
+    },
   ]
 
   return (
@@ -176,17 +193,32 @@ export default function Footer() {
             </div>
 
             <ul className="space-y-1.5 text-[13.5px] font-medium">
-              {importantLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="group inline-flex items-center gap-1.5 text-slate-200 hover:text-white hover:translate-x-1 transition-all duration-200"
-                  >
-                    <ArrowRight className="w-3 h-3 text-white/70 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
-                    <span>{link.name}</span>
-                  </a>
-                </li>
-              ))}
+              {importantLinks.map((link) => {
+                const isExternal = link.href.startsWith('http')
+                return (
+                  <li key={link.name}>
+                    {isExternal ? (
+                      <a
+                        href={link.href}
+                        target={link.target || '_blank'}
+                        rel={link.rel || 'noopener noreferrer'}
+                        className="group inline-flex items-center gap-1.5 text-slate-200 hover:text-white hover:translate-x-1 transition-all duration-200"
+                      >
+                        <ArrowRight className="w-3 h-3 text-white/70 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                        <span>{link.name}</span>
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="group inline-flex items-center gap-1.5 text-slate-200 hover:text-white hover:translate-x-1 transition-all duration-200"
+                      >
+                        <ArrowRight className="w-3 h-3 text-white/70 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
+                        <span>{link.name}</span>
+                      </Link>
+                    )}
+                  </li>
+                )
+              })}
             </ul>
           </div>
 

@@ -43,7 +43,7 @@ export default function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className={`relative overflow-hidden bg-[#031c3f] text-white min-h-[380px] sm:min-h-[440px] md:min-h-[480px] lg:h-[70vh] lg:min-h-[520px] flex flex-col justify-center py-10 sm:py-14 lg:py-0 ${className || ''}`}>
+    <section className={`relative overflow-hidden bg-[#031c3f] text-white h-[70vh] min-h-[70vh] h-[70dvh] min-h-[70dvh] flex flex-col justify-center ${className || ''}`}>
       {/* Background Campus Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -98,12 +98,12 @@ export default function PageHero({
       </div>
 
       {/* Hero Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 md:py-12 lg:py-14 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-8 md:py-10 lg:py-12 w-full">
         <div className="max-w-xl md:max-w-2xl" data-aos="fade-right">
           {/* Breadcrumb Navigation */}
           <nav
             aria-label="Breadcrumb"
-            className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300 mb-3 sm:mb-4 md:mb-5"
+            className="flex items-center gap-2 text-xs sm:text-sm font-medium text-slate-300 mb-2.5 sm:mb-4"
           >
             <Link href="/" className="hover:text-white transition-colors">
               Home
@@ -122,21 +122,21 @@ export default function PageHero({
 
           {/* Subtitle */}
           {subtitle && (
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white/95 mt-2 sm:mt-3 tracking-tight leading-snug">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white/95 mt-1.5 sm:mt-2.5 tracking-tight leading-snug">
               {subtitle}
             </p>
           )}
 
           {/* Description Paragraph */}
           {description && (
-            <p className="text-slate-200 text-xs sm:text-sm md:text-[15px] sm:leading-relaxed max-w-xl opacity-90 leading-relaxed mt-3 sm:mt-4">
+            <p className="text-slate-200 text-xs sm:text-sm md:text-[15px] sm:leading-relaxed max-w-xl opacity-90 leading-relaxed mt-2.5 sm:mt-3.5">
               {description}
             </p>
           )}
 
           {/* Action Buttons */}
           {(primaryButton || secondaryButton) && (
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mt-6 sm:mt-8">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mt-4 sm:mt-6">
               {/* Primary Button */}
               {primaryButton &&
                 (primaryButton.href ? (
