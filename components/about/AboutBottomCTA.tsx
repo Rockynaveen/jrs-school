@@ -42,7 +42,7 @@ export default function AboutBottomCTA({
       </div>
 
       {/* Right Column: Students Photo touching the right edge of the section */}
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-[50%] xl:w-[54%] w-full h-[340px] sm:h-[420px] lg:h-full z-0 overflow-hidden">
+      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-[50%] xl:w-[54%] w-full h-[220px] sm:h-[340px] lg:h-full z-0 overflow-hidden">
         <img
           src={imageSrc}
           alt={imageAlt}

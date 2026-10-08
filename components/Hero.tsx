@@ -82,7 +82,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] h-[calc(100vh-5rem)] min-h-[calc(100vh-5rem)] h-[calc(100dvh-5rem)] min-h-[calc(100dvh-5rem)]"
+      className="relative w-full overflow-hidden flex flex-col bg-[#031c3f] min-h-[540px] sm:min-h-[calc(100vh-5rem)] sm:min-h-[calc(100dvh-5rem)] h-auto sm:h-[calc(100dvh-5rem)]"
     >
       {/* Latest News Marquee Ticker */}
       <div className="relative z-20 w-full bg-[#02132d] border-b border-white/10 shadow-sm flex items-center shrink-0 py-2 sm:py-2.5 px-3 sm:px-6">
@@ -167,7 +167,7 @@ export default function Hero() {
         </div>
 
       {/* Hero Content on Clean Solid Navy Left Section */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-12 md:pt-16 pb-16 sm:pb-8 w-full">
         <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in translate-y-2 sm:translate-y-4">
           {/* Tagline / Subtitle */}
           <div className="inline-flex items-center gap-2 mb-2.5 sm:mb-4">

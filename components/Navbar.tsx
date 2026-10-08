@@ -113,13 +113,13 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo Area */}
           <Link href="/" className="flex items-center group py-1">
             <img
               src="/images/logo.png"
               alt="JRS International School"
-              className="h-11 sm:h-12 md:h-14 w-auto object-contain group-hover:scale-[1.02] transition-transform duration-200"
+              className="h-10 sm:h-12 md:h-14 w-auto object-contain group-hover:scale-[1.02] transition-transform duration-200"
               style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
           </Link>
@@ -242,7 +242,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-white border-b border-slate-200 shadow-xl px-4 pt-3 pb-6 space-y-2">
+        <div className="xl:hidden bg-white border-b border-slate-200 shadow-xl px-4 pt-3 pb-6 space-y-2 max-h-[calc(100vh-4.5rem)] overflow-y-auto">
           {navLinks.map((link) => {
             const isActive =
               link.id === activePage ||

@@ -735,11 +735,11 @@ export default function GalleryPage() {
           <button
             type="button"
             onClick={closeLightbox}
-            className="fixed top-4 right-4 sm:top-6 sm:right-6 z-[70] w-12 h-12 rounded-full bg-[#e31e24] hover:bg-[#b91c1c] text-white flex items-center justify-center transition-all cursor-pointer shadow-2xl border-2 border-white hover:scale-110 active:scale-95"
+            className="fixed top-3 right-3 sm:top-6 sm:right-6 z-[70] w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#e31e24] hover:bg-[#b91c1c] text-white flex items-center justify-center transition-all cursor-pointer shadow-2xl border-2 border-white hover:scale-110 active:scale-95"
             aria-label="Close popup"
             title="Close (Esc)"
           >
-            <X className="w-6 h-6 stroke-[3]" />
+            <X className="w-5 h-5 sm:w-6 sm:h-6 stroke-[3]" />
           </button>
 
           {/* Previous Arrow */}
@@ -752,10 +752,10 @@ export default function GalleryPage() {
                 prev !== null ? (prev - 1 + lightboxItems.length) % lightboxItems.length : 0
               )
             }}
-            className="absolute left-3 sm:left-6 z-50 w-11 h-11 rounded-full bg-white/20 hover:bg-[#e31e24] text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-md border border-white/30"
+            className="absolute left-2 sm:left-6 z-50 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/20 hover:bg-[#e31e24] text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-md border border-white/30"
             aria-label="Previous Image"
           >
-            <ChevronLeft className="w-6 h-6" />
+            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Next Arrow */}
@@ -768,10 +768,10 @@ export default function GalleryPage() {
                 prev !== null ? (prev + 1) % lightboxItems.length : 0
               )
             }}
-            className="absolute right-3 sm:right-6 z-50 w-11 h-11 rounded-full bg-white/20 hover:bg-[#e31e24] text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-md border border-white/30"
+            className="absolute right-2 sm:right-6 z-50 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-white/20 hover:bg-[#e31e24] text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-md border border-white/30"
             aria-label="Next Image"
           >
-            <ChevronRight className="w-6 h-6" />
+            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
           </button>
 
           {/* Center Image Container */}

@@ -130,7 +130,7 @@ export default function AdmissionsKeyInfo() {
             return (
               <div
                 key={item.id}
-                className={`group relative bg-white rounded-2xl p-6 sm:p-7 shadow-sm border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 ${item.hoverBorder} ${item.hoverShadow} ${item.hoverBg} overflow-hidden flex flex-col justify-between`}
+                className={`group relative bg-white rounded-2xl p-5 sm:p-7 shadow-sm border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 ${item.hoverBorder} ${item.hoverShadow} ${item.hoverBg} overflow-hidden flex flex-col justify-between`}
               >
                 {/* Colored Top Accent Stripe that expands on hover */}
                 <div
@@ -144,15 +144,15 @@ export default function AdmissionsKeyInfo() {
                   {item.num}
                 </span>
 
-                <div className="flex items-start gap-4 relative z-10">
+                <div className="flex items-start gap-3.5 sm:gap-4 relative z-10">
                   {/* Icon with Hover Pop Effect */}
                   <div
-                    className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 shadow-sm transition-all duration-300 ${item.iconDefault} ${item.iconHover}`}
+                    className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 shadow-sm transition-all duration-300 ${item.iconDefault} ${item.iconHover}`}
                   >
                     <Icon className="w-5 h-5 transition-transform duration-300 group-hover:rotate-6" />
                   </div>
 
-                  <div className="flex-1 space-y-2.5 pr-8">
+                  <div className="flex-1 space-y-2 sm:space-y-2.5 pr-2 sm:pr-8">
                     {/* Badge and Title */}
                     <div className="flex flex-wrap items-center gap-2">
                       <span

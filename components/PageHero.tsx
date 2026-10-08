@@ -43,7 +43,7 @@ export default function PageHero({
   children,
 }: PageHeroProps) {
   return (
-    <section className={`relative overflow-hidden bg-[#031c3f] text-white h-[70vh] min-h-[70vh] flex flex-col justify-center ${className || ''}`}>
+    <section className={`relative overflow-hidden bg-[#031c3f] text-white min-h-[380px] sm:min-h-[440px] md:min-h-[480px] lg:h-[70vh] lg:min-h-[520px] flex flex-col justify-center py-10 sm:py-14 lg:py-0 ${className || ''}`}>
       {/* Background Campus Image */}
       <div className="absolute inset-0 z-0">
         <img

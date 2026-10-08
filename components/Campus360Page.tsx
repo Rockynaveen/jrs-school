@@ -272,7 +272,7 @@ export default function Campus360Page() {
                     className="group relative rounded-2xl overflow-hidden bg-slate-900 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 cursor-pointer border border-slate-200/80"
                   >
                     {/* Panoramic Image Frame */}
-                    <div className="relative aspect-[2/1] w-full overflow-hidden bg-slate-800">
+                    <div className="relative aspect-[16/10] sm:aspect-[2/1] w-full overflow-hidden bg-slate-800">
                       <img
                         src={item.image}
                         alt={item.title}
