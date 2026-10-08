@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Plus, Minus } from 'lucide-react'
 
 export default function AdmissionsFAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [openIndices, setOpenIndices] = useState<number[]>([0])
 
   const faqs = [
     {
@@ -77,91 +77,76 @@ export default function AdmissionsFAQ() {
   ]
 
   const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index)
+    setOpenIndices((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    )
   }
 
   return (
-    <section className="py-10 bg-white overflow-hidden">
+    <section className="py-12 sm:py-16 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
+          <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#dc2626] block mb-2">
+            ADMISSIONS FAQS
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-slate-600 text-sm sm:text-base mt-2">
+            Find answers to commonly asked questions about admissions, academics, and life at JRS.
+          </p>
+        </div>
 
-          {/* Left Column: FAQs Accordion */}
-          <div
-            className="lg:col-span-7 space-y-6"
-            data-aos="fade-right"
-          >
-            <div>
-              <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626] block mb-2">
-                ADMISSIONS FAQS
-              </span>
+        {/* FAQ Cards: 2 per row */}
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 items-start"
+          data-aos="fade-up"
+        >
+          {faqs.map((faq, index) => {
+            const isOpen = openIndices.includes(index)
+            const isLastOdd = index === faqs.length - 1 && faqs.length % 2 !== 0
 
-              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
-                Frequently Asked Questions
-              </h2>
-            </div>
+            return (
+              <div
+                key={index}
+                className={`border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 bg-white shadow-sm hover:shadow-md hover:border-slate-300 self-start ${
+                  isLastOdd ? 'md:col-span-2 md:w-[calc(50%-10px)] md:mx-auto w-full' : ''
+                }`}
+              >
+                <button
+                  type="button"
+                  onClick={() => toggleFAQ(index)}
+                  className="w-full flex items-center justify-between p-4 sm:p-5 text-left bg-white hover:bg-slate-50/80 transition-colors duration-150 gap-4"
+                  aria-expanded={isOpen}
+                >
+                  <span className="font-semibold text-slate-900 text-sm sm:text-[15px] leading-snug">
+                    {faq.question}
+                  </span>
 
-            <div className="space-y-3 pt-2">
-              {faqs.map((faq, index) => {
-                const isOpen = openIndex === index
-
-                return (
                   <div
-                    key={index}
-                    className="border border-slate-200 rounded-2xl overflow-hidden transition-colors duration-200"
+                    className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-colors duration-200 ${
+                      isOpen
+                        ? 'bg-red-50 text-[#dc2626]'
+                        : 'bg-slate-100 text-slate-600'
+                    }`}
                   >
-                    <button
-                      type="button"
-                      onClick={() => toggleFAQ(index)}
-                      className="w-full flex items-center justify-between p-4 sm:p-5 text-left bg-white hover:bg-slate-50/80 transition-colors duration-150 gap-4"
-                      aria-expanded={isOpen}
-                    >
-                      <span className="font-semibold text-slate-900 text-sm sm:text-[15px] leading-snug">
-                        {faq.question}
-                      </span>
-
-                      <div className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center shrink-0 text-slate-600 transition-transform duration-200">
-                        {isOpen ? (
-                          <Minus className="w-4 h-4 text-[#dc2626] stroke-[2.5]" />
-                        ) : (
-                          <Plus className="w-4 h-4 text-slate-700 stroke-[2.5]" />
-                        )}
-                      </div>
-                    </button>
-
-                    {isOpen && (
-                      <div className="px-4 sm:px-5 pb-5 pt-1 text-slate-700 text-xs sm:text-[14px] leading-relaxed border-t border-slate-100 bg-slate-50/50">
-                        {faq.answer}
-                      </div>
+                    {isOpen ? (
+                      <Minus className="w-4 h-4 text-[#dc2626] stroke-[2.5]" />
+                    ) : (
+                      <Plus className="w-4 h-4 text-slate-700 stroke-[2.5]" />
                     )}
                   </div>
-                )
-              })}
-            </div>
-          </div>
+                </button>
 
-          {/* Right Column: Student Image */}
-          <div
-            className="lg:col-span-5 flex justify-center"
-            data-aos="fade-left"
-          >
-            <div className="relative w-full max-w-md">
-
-              {/* Arched Photo Frame */}
-              <div className="relative rounded-t-full rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100">
-                <img
-                  src="/images/admission.jpeg"
-                  alt="Student at JRS International School"
-                  className="w-full h-[520px] sm:h-[580px] object-cover object-center hover:scale-105 transition-transform duration-500"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent pointer-events-none" />
+                {isOpen && (
+                  <div className="px-4 sm:px-5 pb-5 pt-1 text-slate-700 text-xs sm:text-[14px] leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                    {faq.answer}
+                  </div>
+                )}
               </div>
-
-              {/* Decorative Background Halo */}
-              <div className="absolute -inset-3 rounded-t-full rounded-b-3xl bg-slate-200/50 -z-10 blur-xl pointer-events-none" />
-            </div>
-          </div>
-
+            )
+          })}
         </div>
       </div>
     </section>
