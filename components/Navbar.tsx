@@ -222,7 +222,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           {/* Enquire Now CTA Button */}
           <div className="hidden sm:flex items-center">
             <Link
-              href="/admissions"
+              href="/admissions#enquiry-form"
               className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs font-semibold text-white bg-[#dc2626] hover:bg-[#b91c1c] active:scale-95 shadow-md shadow-red-500/20 transition-all duration-200"
             >
               Enquire Now
@@ -364,7 +364,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           })}
           <div className="pt-2">
             <Link
-              href="/admissions"
+              href="/admissions#enquiry-form"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full text-center block px-6 py-2.5 rounded-full text-sm font-semibold text-white bg-[#dc2626] hover:bg-[#b91c1c] shadow-md shadow-red-500/20"
             >

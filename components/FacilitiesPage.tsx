@@ -133,7 +133,7 @@ export default function FacilitiesPage() {
                       <Icon className="w-7 h-7 sm:w-8 sm:h-8 stroke-[2.2]" />
                     </div>
                     <div className="flex-1">
-                      <p className="text-[15px] sm:text-base font-bold text-slate-800 group-hover:text-red-600 transition-colors leading-snug">
+                      <p className="text-[13px] sm:text-[14px] font-semibold text-slate-800 group-hover:text-red-600 transition-colors leading-snug">
                         {item.title}
                       </p>
                     </div>

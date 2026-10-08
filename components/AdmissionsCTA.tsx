@@ -99,11 +99,13 @@ export default function AdmissionsCTA() {
   return (
     <section
       id="contact"
-      className="relative bg-[#031c3f] py-10 overflow-hidden text-white"
+      className="relative bg-[#031c3f] py-10 overflow-hidden text-white scroll-mt-24"
     >
-      <span id="enquire" className="absolute -top-10" />
-      <span id="admissions" className="absolute -top-10" />
-      <span id="enquiry-form" className="absolute -top-10" />
+      <span id="enquire" className="absolute -top-24" />
+      <span id="admissions" className="absolute -top-24" />
+      <span id="enquiry-form" className="absolute -top-24" />
+      <span id="enquiry" className="absolute -top-24" />
+      <span id="enquire-now" className="absolute -top-24" />
 
       {/* Realistic Campus Building Background Image with Deep Navy Gradient */}
       <div className="absolute inset-0 z-0">

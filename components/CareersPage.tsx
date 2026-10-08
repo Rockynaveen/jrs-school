@@ -191,7 +191,7 @@ export default function CareersPage() {
                       <h3 className="text-[15px] font-bold text-[#031c3f] leading-snug group-hover:text-[#013aa3] transition-colors">
                         {item.title}
                       </h3>
-                      <p className="text-xs text-slate-600 leading-relaxed mt-1">
+                      <p className="text-[14px] text-slate-700 leading-relaxed mt-1.5">
                         {item.description}
                       </p>
                     </div>
@@ -244,7 +244,7 @@ export default function CareersPage() {
                   </h3>
 
                   {/* Instructions */}
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
+                  <p className="text-[14px] text-slate-700 leading-relaxed">
                     If you are looking for an opportunity to work at JRS
                     International School, please send your resume to:{' '}
                     <a
@@ -258,7 +258,7 @@ export default function CareersPage() {
 
                   {/* What to mention */}
                   <div className="mt-5 pt-4 border-t border-blue-100/80">
-                    <h4 className="text-xs sm:text-sm font-bold text-slate-900 mb-3">
+                    <h4 className="text-[14px] font-bold text-slate-900 mb-3">
                       Please ensure you mention:
                     </h4>
 
@@ -266,7 +266,7 @@ export default function CareersPage() {
                       {applicationRequirements.map((req, idx) => (
                         <li
                           key={idx}
-                          className="flex items-start gap-2.5 text-xs sm:text-[13px] text-slate-700 leading-relaxed"
+                          className="flex items-start gap-2.5 text-[14px] text-slate-700 leading-relaxed"
                         >
                           <CheckCircle2 className="w-4 h-4 text-[#013aa3] shrink-0 mt-0.5" />
                           <span>{req}</span>

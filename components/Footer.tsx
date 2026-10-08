@@ -61,8 +61,12 @@ export default function Footer() {
       href: '/careers',
     },
     {
+      name: 'Enquire Now',
+      href: '/admissions#enquiry-form',
+    },
+    {
       name: 'Online Enquiry',
-      href: '/admissions',
+      href: '/admissions#enquiry-form',
     },
   ]
 
