@@ -81,7 +81,7 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8">
-          
+
           {/* Column 1: School Identity (Col span 4) */}
           <div className="lg:col-span-4 space-y-3">
             {/* Logo in White */}
@@ -296,11 +296,10 @@ export default function Footer() {
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${
-          showScrollTop
+        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${showScrollTop
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-y-4 pointer-events-none'
-        }`}
+          }`}
       >
         <ChevronUp className="w-5 h-5 stroke-[2.5]" />
       </button>
@@ -327,9 +326,9 @@ export default function Footer() {
           </div>
 
           <div className="flex items-center gap-1.5 text-slate-300">
-            <span>Designed with</span>
+            <span>Designed by</span>
+            <span className="font-semibold text-white tracking-wide">Sunseaz</span>
             <Heart className="w-3.5 h-3.5 fill-red-500 text-red-500 inline-block animate-pulse" />
-            <span className="font-semibold text-white tracking-wide">for a Brighter Tomorrow</span>
           </div>
         </div>
       </div>
