@@ -1,83 +1,266 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import SchoolImage from './SchoolImage'
+
+// Clean SVG Icons matching the reference design
+const ClassroomDeskIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <rect x="5" y="4" width="14" height="8" rx="1.5" />
+    <path d="M3 15h18" />
+    <path d="M5 15v5" />
+    <path d="M19 15v5" />
+    <circle cx="12" cy="18" r="1.5" />
+  </svg>
+)
+
+const LabFlaskIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M10 2v5.5L4.5 18c-.8 1.4.2 3 1.8 3h11.4c1.6 0 2.6-1.6 1.8-3L14 7.5V2" />
+    <path d="M8.5 2h7" />
+    <path d="M7 15h10" />
+    <circle cx="10" cy="18" r="0.5" fill="currentColor" />
+    <circle cx="13" cy="17" r="0.5" fill="currentColor" />
+  </svg>
+)
+
+const OpenBookIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+  </svg>
+)
+
+const RunningAthleteIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <circle cx="15" cy="4" r="2" />
+    <path d="m13 8-3 4 2 2-3 6" />
+    <path d="m10 12-4-1" />
+    <path d="m14 10 3 2 3-1" />
+    <path d="m12 14 3 3 3-1" />
+  </svg>
+)
+
+const SchoolBusIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <rect x="4" y="3" width="16" height="15" rx="3" />
+    <path d="M4 11h16" />
+    <path d="M4 6h16" />
+    <circle cx="7.5" cy="15" r="1.5" />
+    <circle cx="16.5" cy="15" r="1.5" />
+    <path d="M6 18v2" />
+    <path d="M18 18v2" />
+  </svg>
+)
 
 const facilities = [
   {
     title: 'Smart Classrooms',
     subtitle: 'Modern and interactive learning spaces',
     image: '/images/facilities/smart-classroom.jpg',
+    icon: ClassroomDeskIcon,
+    waveColor: 'text-[#031c3f]',
+    iconBg: 'bg-[#031c3f]',
+    href: '/facilities',
   },
   {
     title: 'Science & Computer Labs',
-    subtitle: 'Well-equipped labs',
+    subtitle: 'Well-equipped labs for hands-on learning',
     image: '/images/facilities/science-lab.jpg',
+    icon: LabFlaskIcon,
+    waveColor: 'text-[#e31e24]',
+    iconBg: 'bg-[#e31e24]',
+    href: '/facilities',
   },
   {
     title: 'Library',
-    subtitle: 'A world of knowledge',
+    subtitle: 'A world of knowledge and imagination',
     image: '/images/facilities/library.jpg',
+    icon: OpenBookIcon,
+    waveColor: 'text-[#031c3f]',
+    iconBg: 'bg-[#031c3f]',
+    href: '/facilities',
   },
   {
     title: 'Sports Facilities',
-    subtitle: 'Indoor & outdoor sports',
+    subtitle: 'Indoor & outdoor sports for all-round growth',
     image: '/images/facilities/sports.jpg',
+    icon: RunningAthleteIcon,
+    waveColor: 'text-[#e31e24]',
+    iconBg: 'bg-[#e31e24]',
+    href: '/facilities',
   },
   {
     title: 'Transport',
-    subtitle: 'Safe and secure transport',
+    subtitle: 'Safe, reliable and secure transport',
     image: '/images/facilities/transport.jpg',
+    icon: SchoolBusIcon,
+    waveColor: 'text-[#031c3f]',
+    iconBg: 'bg-[#031c3f]',
+    href: '/facilities',
   },
 ]
 
 export default function FacilitiesSection() {
   return (
-    <section id="facilities" className="py-10 bg-[#edf5fd] border-y border-[#dbeafe]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Header */}
-        <div className="mb-8" data-aos="fade-up">
-          <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626]">
-            OUR FACILITIES
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a1931] mt-2 tracking-tight">
-            World-Class Infrastructure
-          </h2>
+    <section id="facilities" className="py-14 sm:py-20 bg-[#fafcff] relative overflow-hidden">
+      {/* Decorative Light Blue Ambient Glow on Left */}
+      <div className="absolute -top-20 -left-20 w-80 sm:w-96 h-80 sm:h-96 rounded-full bg-[#dbeafe]/40 blur-3xl pointer-events-none" />
+
+      {/* Decorative Dot Grid on Top Right */}
+      <div className="absolute top-6 right-6 w-32 h-32 opacity-25 pointer-events-none hidden md:block">
+        <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <pattern id="facilitiesDotsPattern" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.5" fill="#031c3f" />
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#facilitiesDotsPattern)" />
+        </svg>
+      </div>
+
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 relative">
+        {/* Header Section */}
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 relative" data-aos="fade-up">
+          {/* Eyebrow: — OUR FACILITIES — */}
+          <div className="flex items-center justify-center gap-3 mb-2.5">
+            <span className="w-8 h-[1.5px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              OUR FACILITIES
+            </span>
+            <span className="w-8 h-[1.5px] bg-[#e31e24]" />
+          </div>
+
+          {/* Heading with Decorative Confetti Pills */}
+          <div className="relative inline-block">
+            {/* Left Confetti Pills */}
+            <div className="absolute -left-10 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-2 pointer-events-none">
+              <span className="w-6 h-2 rounded-full bg-[#e31e24]/70 rotate-[-35deg]" />
+              <span className="w-6 h-2 rounded-full bg-[#e31e24]/70 rotate-[-35deg] ml-2" />
+            </div>
+
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
+              World-Class <span className="text-[#e31e24]">Infrastructure</span>
+            </h2>
+
+            {/* Right Confetti Pill */}
+            <div className="absolute -right-10 top-1/2 -translate-y-1/2 hidden md:block pointer-events-none">
+              <span className="w-7 h-2 rounded-full bg-[#e31e24]/70 rotate-[45deg] block" />
+            </div>
+          </div>
+
+          {/* Subtitle */}
+          <p className="text-slate-500 text-sm sm:text-base mt-2 leading-relaxed">
+            Modern facilities designed to inspire, explore and grow
+          </p>
         </div>
 
-        {/* 5 Cards Row */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-          {facilities.map((facility, index) => (
-            <div
-              key={index}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group border border-slate-100 flex flex-col text-left"
-            >
-              {/* Image Container */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-slate-100">
-                <SchoolImage
-                  src={facility.image}
-                  alt={facility.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  fallbackText={facility.image}
-                  fallbackBg="from-slate-100 via-blue-50 to-slate-200"
-                />
-              </div>
+        {/* 5 Cards Responsive Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+          {facilities.map((facility, index) => {
+            const Icon = facility.icon
+            return (
+              <Link
+                key={index}
+                href={facility.href}
+                data-aos="fade-up"
+                data-aos-delay={index * 75}
+                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100/90 flex flex-col group hover:-translate-y-1.5 cursor-pointer"
+              >
+                {/* Photo with Organic Wave Cut at Bottom - Compact Landscape Aspect Ratio */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
+                  <SchoolImage
+                    src={facility.image}
+                    alt={facility.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    fallbackText={facility.title}
+                    fallbackBg="from-slate-100 via-blue-50 to-slate-200"
+                  />
 
-              {/* Text info */}
-              <div className="p-4 sm:p-4.5 flex-1 flex flex-col justify-center">
-                <h3 className="text-[15px] sm:text-base font-bold text-slate-900 leading-snug group-hover:text-red-600 transition-colors">
-                  {facility.title}
-                </h3>
-                <p className="text-[14px] text-slate-700 mt-1.5 leading-relaxed">
-                  {facility.subtitle}
-                </p>
-              </div>
-            </div>
-          ))}
+                  {/* Organic Colored Wave Rising on the Right */}
+                  <div className="absolute bottom-0 left-0 right-0 pointer-events-none leading-none z-10">
+                    <svg
+                      viewBox="0 0 300 90"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`w-full h-10 sm:h-12 block ${facility.waveColor}`}
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        d="M 0,90 L 0,65 C 50,65 85,82 135,76 C 190,70 230,28 300,8 L 300,90 Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
+                </div>
+
+                {/* Floating Circle Icon */}
+                <div className="relative px-4 sm:px-4.5 z-20 -mt-5">
+                  <div
+                    className={`w-10 h-10 rounded-full ${facility.iconBg} text-white flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-110`}
+                  >
+                    <Icon className="w-5 h-5 stroke-[2]" />
+                  </div>
+                </div>
+
+                {/* Card Content Body - Extra bottom padding for clean breathing room */}
+                <div className="pt-2 pb-5 sm:pb-6 px-4 sm:px-4.5 flex flex-col flex-1">
+                  {/* Facility Title */}
+                  <h3 className="text-[15px] sm:text-[16px] font-bold text-[#031c3f] tracking-tight leading-snug min-h-[38px] sm:min-h-[40px] flex items-center group-hover:text-[#e31e24] transition-colors">
+                    {facility.title}
+                  </h3>
+
+                  {/* Facility Subtitle */}
+                  <p className="text-[14px] sm:text-[12.5px] text-slate-700 leading-relaxed">
+                    {facility.subtitle}
+                  </p>
+                </div>
+              </Link>
+            )
+          })}
         </div>
       </div>
     </section>
   )
 }
+
+
