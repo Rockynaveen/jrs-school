@@ -105,13 +105,13 @@ export default function AcademicsSection() {
       alt: 'Primary school student studying in classroom',
       imagePosition: 'object-[center_12%]',
       icon: BookOpen,
-      numColor: 'text-[#e0effa]',
-      waveColor: 'text-[#0084d6]',
-      iconBg: 'bg-[#0084d6]',
-      iconShadow: 'shadow-[0_8px_20px_-3px_rgba(0,132,214,0.45)]',
-      pillBg: 'bg-[#e6f4fc]',
-      pillText: 'text-[#0084d6]',
-      pillHover: 'hover:bg-[#d5edfa]',
+      numColor: 'text-[#fce4e6]',
+      waveColor: 'text-[#e31e24]',
+      iconBg: 'bg-[#e31e24]',
+      iconShadow: 'shadow-[0_8px_20px_-3px_rgba(227,30,36,0.45)]',
+      pillBg: 'bg-[#feecee]',
+      pillText: 'text-[#e31e24]',
+      pillHover: 'hover:bg-[#fddde0]',
       curriculumHighlights: [
         'Integrated CBSE-aligned NCERT syllabus framework',
         'Experiential STEM learning and scientific experiments',
@@ -151,7 +151,7 @@ export default function AcademicsSection() {
   const currentModal = activeCurriculum !== null ? stages[activeCurriculum] : null
 
   return (
-    <section id="academics" className="py-16 sm:py-20 bg-[#031c3f] relative overflow-hidden scroll-mt-16">
+    <section id="academics" className="py-10 bg-[#031c3f] relative overflow-hidden scroll-mt-16">
       {/* Decorative Ambient Background Glow on Left */}
       <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-[#0a2f64]/60 blur-3xl pointer-events-none" />
 
@@ -192,10 +192,10 @@ export default function AcademicsSection() {
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
-                className="bg-white rounded-[26px] sm:rounded-[28px] overflow-hidden shadow-xl flex flex-col sm:flex-row relative group hover:-translate-y-1 transition-all duration-300 min-h-[270px] sm:min-h-[295px] lg:h-[305px]"
+                className="bg-white rounded-[26px] sm:rounded-[28px] overflow-hidden shadow-xl flex flex-col sm:flex-row relative group hover:-translate-y-1 transition-all duration-300 min-h-[330px] sm:min-h-[355px] lg:min-h-[370px]"
               >
                 {/* Photo Container: ~39% Width with Rounded Bottom-Right Seam Corner */}
-                <div className="relative w-full sm:w-[39%] h-56 sm:h-full shrink-0 overflow-hidden bg-slate-100 rounded-br-[36px] sm:rounded-br-[42px]">
+                <div className="relative w-full sm:w-[39%] h-60 sm:h-full shrink-0 overflow-hidden bg-slate-100 rounded-br-[36px] sm:rounded-br-[42px]">
                   <SchoolImage
                     src={stage.image}
                     alt={stage.alt}
@@ -205,7 +205,7 @@ export default function AcademicsSection() {
                   />
 
                   {/* Organic Colored Wedge in Bottom-Left Corner */}
-                  <div className="absolute bottom-0 left-0 pointer-events-none leading-none z-10 w-32 sm:w-36 h-28 sm:h-32">
+                  <div className="absolute bottom-0 left-0 pointer-events-none leading-none z-10 w-36 sm:w-40 h-32 sm:h-36">
                     <svg
                       viewBox="0 0 100 100"
                       fill="none"
@@ -240,10 +240,10 @@ export default function AcademicsSection() {
                 </div>
 
                 {/* Card Content Area: ~61% Width */}
-                <div className="p-4.5 sm:p-5 lg:p-5.5 flex flex-col justify-between flex-1 relative bg-white overflow-hidden w-full sm:w-[61%]">
+                <div className="p-5 sm:p-6 lg:p-6 flex flex-col justify-between flex-1 relative bg-white overflow-hidden w-full sm:w-[61%]">
                   {/* Giant Watermark Stage Number in Top-Right Corner */}
                   <span
-                    className={`absolute top-2 right-3.5 sm:right-4 font-black text-5xl sm:text-[62px] ${stage.numColor} select-none pointer-events-none tracking-tight leading-none z-0`}
+                    className={`absolute top-2 right-3.5 sm:right-4 font-black text-5xl sm:text-[68px] ${stage.numColor} select-none pointer-events-none tracking-tight leading-none z-0`}
                   >
                     {stage.number}
                   </span>
@@ -255,22 +255,22 @@ export default function AcademicsSection() {
                     </span>
 
                     {/* Stage Title */}
-                    <h3 className="text-lg sm:text-[21px] font-extrabold text-[#031c3f] tracking-tight mb-2 group-hover:text-[#e31e24] transition-colors leading-tight">
+                    <h3 className="text-lg sm:text-[21px] font-extrabold text-[#031c3f] tracking-tight mb-2.5 group-hover:text-[#e31e24] transition-colors leading-tight">
                       {stage.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-[12px] sm:text-[12.5px] text-slate-600 leading-relaxed mb-4">
+                    <p className="text-[14px] text-slate-600 leading-relaxed mb-5">
                       {stage.description}
                     </p>
                   </div>
 
                   {/* Bottom Action: Keep only View Curriculum button */}
-                  <div className="pt-1 mt-auto relative z-10 flex items-center">
+                  <div className="pt-2 mt-auto relative z-10 flex items-center">
                     <button
                       type="button"
                       onClick={() => setActiveCurriculum(index)}
-                      className={`inline-flex items-center px-4 py-1.5 rounded-full text-xs font-bold ${stage.pillBg} ${stage.pillText} ${stage.pillHover} hover:opacity-90 transition-all cursor-pointer`}
+                      className={`inline-flex items-center px-4.5 py-2 rounded-full text-xs font-bold ${stage.pillBg} ${stage.pillText} ${stage.pillHover} hover:opacity-90 transition-all cursor-pointer shadow-2xs`}
                     >
                       View Curriculum
                     </button>

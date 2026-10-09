@@ -123,38 +123,6 @@ const documentsAndInformation: DocumentItem[] = [
   },
 ]
 
-const academicsList: DocumentItem[] = [
-  {
-    sno: 1,
-    title: 'FEE STRUCTURE OF THE SCHOOL',
-    btnLabel: 'FEE STRUCTURE',
-    href: '/admissions',
-    authority: 'School Management Committee (SMC)',
-  },
-  {
-    sno: 2,
-    title: 'ANNUAL ACADEMIC CALENDER',
-    btnLabel: 'ANNUAL ACADEMIC CALENDAR',
-    href: '/academics',
-    authority: 'Academic Directorate, JRS',
-  },
-  {
-    sno: 3,
-    title: 'LIST OF SCHOOL MANAGEMENT COMMITTEE (SMC)',
-    btnLabel: 'SCHOOL MANAGEMENT COMMITTEE',
-    href: '/school-management-committee',
-    authority: 'JRS Educational Society',
-  },
-  {
-    sno: 4,
-    title: 'LIST OF PARENTS TEACHERS ASSOCIATION (PTA) MEMBERS',
-    btnLabel: 'PARENTS TEACHERS ASSOCIATION',
-    href: '/admissions',
-    authority: 'Parent Teacher Association, JRS',
-  },
-]
-
-
 const schoolInfrastructure = [
   {
     sno: 1,
@@ -376,62 +344,6 @@ export default function CertificatesPage() {
                             ) : (
                               <span className="bg-[#eaf1fb] text-[#1e40af] border border-[#bfdbfe] font-bold text-[11px] sm:text-xs px-3.5 py-1.5 rounded uppercase tracking-wider inline-block">
                                 {doc.btnLabel}
-                              </span>
-                            )}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </section>
-
-            {/* SECTION 3: ACADEMICS: */}
-            <section data-aos="fade-up">
-              <h2 className="text-xl sm:text-2xl font-bold text-[#dc2626] mb-3 tracking-tight">
-                ACADEMICS:
-              </h2>
-
-              <div className="bg-white rounded-md border border-slate-300 shadow-2xs overflow-hidden">
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left border-collapse">
-                    <thead>
-                      <tr className="bg-[#dce7f6] border-b border-slate-300 text-xs sm:text-[13px] font-bold text-slate-800 uppercase tracking-wider">
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 w-20 text-left">
-                          S.NO.
-                        </th>
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[380px]">
-                          DOCUMENTS/INFORMATION
-                        </th>
-                        <th scope="col" className="py-2.5 px-4 sm:px-6 min-w-[240px] text-center sm:text-left">
-                          UPLOAD DOCUMENTS
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-200 text-xs sm:text-[13px] text-slate-700">
-                      {academicsList.map((item) => (
-                        <tr
-                          key={item.sno}
-                          className="hover:bg-slate-50/70 transition-colors"
-                        >
-                          <td className="py-3 px-4 sm:px-6 font-medium text-slate-800">
-                            {item.sno}
-                          </td>
-                          <td className="py-3 px-4 sm:px-6 text-slate-800 font-medium">
-                            {item.title}
-                          </td>
-                          <td className="py-3 px-4 sm:px-6">
-                            {item.href ? (
-                              <Link
-                                href={item.href}
-                                className="bg-[#eaf1fb] hover:bg-[#dbe7f6] text-[#1e40af] border border-[#bfdbfe] font-bold text-[11px] sm:text-xs px-3.5 py-1.5 rounded uppercase tracking-wider shadow-2xs hover:shadow-xs transition-all active:scale-95 cursor-pointer inline-flex items-center gap-1.5"
-                              >
-                                <span>{item.btnLabel}</span>
-                              </Link>
-                            ) : (
-                              <span className="bg-[#eaf1fb] text-[#1e40af] border border-[#bfdbfe] font-bold text-[11px] sm:text-xs px-3.5 py-1.5 rounded uppercase tracking-wider inline-block">
-                                {item.btnLabel}
                               </span>
                             )}
                           </td>

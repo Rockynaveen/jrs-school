@@ -38,17 +38,17 @@ export default function LandingPage() {
         {/* 4. About JRS Section */}
         <AboutSection />
 
-        {/* 5. Key Statistics Navy Banner */}
-        <StatsBar />
-
-        {/* 6. Academics Section */}
+        {/* 5. Academics Section */}
         <AcademicsSection />
 
-        {/* 7. Facilities Section */}
+        {/* 6. Facilities Section */}
         <FacilitiesSection />
 
-        {/* 8. Beyond Classroom Section */}
+        {/* 7. Beyond Classroom Section */}
         <BeyondClassroom />
+
+        {/* 8. Key Statistics Navy Banner */}
+        <StatsBar />
 
         {/* 9. Latest Events Section */}
         <EventsSection />
