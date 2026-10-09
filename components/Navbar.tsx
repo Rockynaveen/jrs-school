@@ -115,8 +115,8 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm transition-all duration-300">
-        {/* Top Bar: Above Header Navigation */}
-        <div className="bg-[#031c3f] text-white border-b border-white/15 relative z-20">
+        {/* Top Bar: Above Header Navigation (hidden on mobile devices) */}
+        <div className="hidden md:block bg-[#031c3f] text-white border-b border-white/15 relative z-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2">
             {/* Left Contact & Affiliation Info */}
             <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-white/90 font-normal">
