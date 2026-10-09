@@ -71,7 +71,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="relative bg-[#031c3f] text-slate-200 overflow-hidden leading-[25px] text-[14px]">
+    <footer className="relative bg-[#031c3f] text-slate-200 overflow-hidden text-sm">
       {/* Distinct Divider Bar: Crisp White Line + Bold Red & Blue Gradient */}
       <div className="w-full relative z-20">
         <div className="h-[2px] w-full bg-white/80" />
@@ -95,10 +95,10 @@ export default function Footer() {
             </Link>
 
             <div>
-              <h3 className="text-white font-bold text-[14px] sm:text-[15px] tracking-tight leading-snug">
+              <h3 className="text-white font-bold text-sm sm:text-[15px] tracking-tight leading-snug">
                 JRS International School, Narapally, Hyderabad
               </h3>
-              <p className="text-slate-200 text-[13px] leading-relaxed mt-1 max-w-sm">
+              <p className="text-slate-300 text-sm leading-relaxed mt-1 max-w-sm">
                 Nurturing young minds with knowledge, values and a global perspective.
               </p>
             </div>
@@ -167,13 +167,13 @@ export default function Footer() {
           {/* Column 2: Quick Links (Col span 2) */}
           <div className="lg:col-span-2 space-y-3">
             <div>
-              <h4 className="text-[15px] font-bold text-white tracking-tight">
+              <h4 className="text-base font-bold text-white tracking-tight">
                 Quick Links
               </h4>
               <div className="w-7 h-0.5 bg-white/30 mt-1 rounded-full" />
             </div>
 
-            <ul className="space-y-1.5 text-[13.5px] font-medium">
+            <ul className="space-y-2 text-sm font-medium">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
@@ -191,13 +191,13 @@ export default function Footer() {
           {/* Column 3: Important Links (Col span 2) */}
           <div className="lg:col-span-2 space-y-3">
             <div>
-              <h4 className="text-[15px] font-bold text-white tracking-tight">
+              <h4 className="text-base font-bold text-white tracking-tight">
                 Important Links
               </h4>
               <div className="w-7 h-0.5 bg-white/30 mt-1 rounded-full" />
             </div>
 
-            <ul className="space-y-1.5 text-[13.5px] font-medium">
+            <ul className="space-y-2 text-sm font-medium">
               {importantLinks.map((link) => {
                 const isExternal = link.href.startsWith('http')
                 return (
@@ -230,13 +230,13 @@ export default function Footer() {
           {/* Column 4: Contact Us & Campus Map (Col span 4) */}
           <div id="footer-contact" className="lg:col-span-4 space-y-3">
             <div>
-              <h4 className="text-[15px] font-bold text-white tracking-tight">
+              <h4 className="text-base font-bold text-white tracking-tight">
                 Contact Us
               </h4>
               <div className="w-7 h-0.5 bg-white/30 mt-1 rounded-full" />
             </div>
 
-            <div className="space-y-2 text-[13.5px] text-slate-200">
+            <div className="space-y-2.5 text-sm text-slate-200">
               {/* Address */}
               <div className="flex items-start gap-2.5">
                 <div className="w-7 h-7 rounded-lg bg-white/10 border border-white/15 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -327,7 +327,14 @@ export default function Footer() {
 
           <div className="flex items-center gap-1.5 text-slate-300">
             <span>Designed by</span>
-            <span className="font-semibold text-white tracking-wide">Sunseaz</span>
+            <a
+              href="https://www.sunseaz.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white tracking-wide no-underline hover:text-amber-400 transition-colors"
+            >
+              Sunseaz
+            </a>
             <Heart className="w-3.5 h-3.5 fill-red-500 text-red-500 inline-block animate-pulse" />
           </div>
         </div>

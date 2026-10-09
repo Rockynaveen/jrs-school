@@ -78,7 +78,7 @@ export default function ContactPage() {
 
 
         {/* 4. Form & Map Section */}
-        <section id="contact-form" className="py-14 sm:py-20 bg-[#f8fafc]">
+        <section id="contact-form" className="py-10 sm:py-16 bg-[#f8fafc]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
               
@@ -89,16 +89,16 @@ export default function ContactPage() {
                     <div className="flex items-center gap-2 mb-2">
                       <Badge
                         variant="secondary"
-                        className="bg-red-50 text-red-600 border border-red-100 font-bold uppercase tracking-wider text-[11px] px-2.5 py-0.5"
+                        className="bg-red-50 text-red-600 border border-red-100 font-bold uppercase tracking-wider text-xs px-2.5 py-1"
                       >
-                        <MessageSquare className="w-3 h-3 mr-1" />
+                        <MessageSquare className="w-3.5 h-3.5 mr-1" />
                         Online Inquiry
                       </Badge>
                     </div>
-                    <h2 className="text-2xl sm:text-3xl font-bold text-[#031c3f] tracking-tight">
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-[#031c3f] tracking-tight">
                       Send Us a Message
                     </h2>
-                    <p className="text-slate-700 text-sm mt-1 leading-relaxed">
+                    <p className="text-slate-600 text-sm sm:text-[15px] mt-1 leading-relaxed">
                       Fill in your details and our admissions counselor will get back to you within 24 hours.
                     </p>
                   </div>
@@ -133,7 +133,7 @@ export default function ContactPage() {
                         <div className="space-y-1.5">
                           <Label
                             htmlFor="parentName"
-                            className="text-xs font-bold text-slate-700 uppercase tracking-wider"
+                            className="text-xs sm:text-[13px] font-bold text-slate-700 uppercase tracking-wider"
                           >
                             Parent / Guardian Name *
                           </Label>
@@ -154,7 +154,7 @@ export default function ContactPage() {
                           <div className="space-y-1.5">
                             <Label
                               htmlFor="phone"
-                              className="text-xs font-bold text-slate-700 uppercase tracking-wider"
+                              className="text-xs sm:text-[13px] font-bold text-slate-700 uppercase tracking-wider"
                             >
                               Phone Number *
                             </Label>
@@ -174,7 +174,7 @@ export default function ContactPage() {
                           <div className="space-y-1.5">
                             <Label
                               htmlFor="grade"
-                              className="text-xs font-bold text-slate-700 uppercase tracking-wider"
+                              className="text-xs sm:text-[13px] font-bold text-slate-700 uppercase tracking-wider"
                             >
                               Grade of Child
                             </Label>
@@ -201,7 +201,7 @@ export default function ContactPage() {
                         <div className="space-y-1.5">
                           <Label
                             htmlFor="email"
-                            className="text-xs font-bold text-slate-700 uppercase tracking-wider"
+                            className="text-xs sm:text-[13px] font-bold text-slate-700 uppercase tracking-wider"
                           >
                             Email Address
                           </Label>
@@ -220,7 +220,7 @@ export default function ContactPage() {
                         <div className="space-y-1.5">
                           <Label
                             htmlFor="message"
-                            className="text-xs font-bold text-slate-700 uppercase tracking-wider"
+                            className="text-xs sm:text-[13px] font-bold text-slate-700 uppercase tracking-wider"
                           >
                             Your Query or Message *
                           </Label>
@@ -242,7 +242,7 @@ export default function ContactPage() {
                           variant="red"
                           size="lg"
                           disabled={isSubmitting}
-                          className="w-full rounded-full shadow-md shadow-red-500/20 font-bold"
+                          className="w-full rounded-full shadow-md shadow-red-500/20 text-sm sm:text-base font-semibold"
                         >
                           {isSubmitting ? (
                             <span>Sending message...</span>

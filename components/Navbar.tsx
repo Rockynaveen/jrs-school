@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Menu, X, ChevronDown, ChevronRight, Phone, Mail, FileText, Award } from 'lucide-react'
+import { Menu, X, ChevronDown, ChevronRight, Phone, Mail, FileText, Award, Download } from 'lucide-react'
 
 interface DropdownSubItem {
   name: string
@@ -114,54 +114,57 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm transition-all duration-300">
+      <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm transition-all duration-300">
         {/* Top Bar: Above Header Navigation */}
-        <div className="bg-[#031c3f] text-white border-b border-white/10">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-8 sm:h-9">
+        <div className="bg-[#031c3f] text-white border-b border-white/15 relative z-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2">
             {/* Left Contact & Affiliation Info */}
-            <div className="flex items-center gap-3 sm:gap-4 text-[11px] sm:text-xs text-slate-300">
+            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-white/90 font-normal">
               <a
                 href="tel:+9191574043210"
-                className="inline-flex items-center gap-1.5 hover:text-white transition-colors"
+                className="inline-flex items-center gap-1.5 text-white/90 hover:text-white transition-colors font-normal shrink-0"
               >
-                <Phone className="w-3 h-3 text-[#e31e24]" />
-                <span className="font-medium">+91 915740 43210</span>
+                <Phone className="w-3.5 h-3.5 text-[#ff4d4f] shrink-0" />
+                <span className="text-white/90 font-normal">+91 915740 43210</span>
               </a>
 
-              <span className="text-white/25 hidden md:inline">•</span>
+              <span className="text-white/40 hidden md:inline shrink-0">•</span>
 
               <a
                 href="mailto:info@jrsinternationalschool.com"
-                className="hidden md:inline-flex items-center gap-1.5 hover:text-white transition-colors"
+                className="hidden md:inline-flex items-center gap-1.5 text-white/85 hover:text-white transition-colors font-normal shrink-0"
               >
-                <Mail className="w-3 h-3 text-[#e31e24]" />
-                <span className="font-medium">info@jrsinternationalschool.com</span>
+                <Mail className="w-3.5 h-3.5 text-[#ff4d4f] shrink-0" />
+                <span className="text-white/85 font-normal">info@jrsinternationalschool.com</span>
               </a>
 
-              <span className="text-white/25 hidden lg:inline">•</span>
+              <span className="text-white/40 hidden lg:inline shrink-0">•</span>
 
-              <span className="hidden lg:inline-flex items-center gap-1.5 text-slate-300">
-                <Award className="w-3 h-3 text-amber-400" />
+              <span className="hidden lg:inline-flex items-center gap-1.5 text-white/85 font-normal shrink-0">
+                <Award className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 <span>CBSE Affiliated School</span>
               </span>
             </div>
 
             {/* Right: Mandatory Disclosure & Quick links */}
-            <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
               <Link
                 href="/mandatory-disclosure"
-                className="inline-flex items-center gap-1.5 font-bold text-amber-300 hover:text-white bg-white/10 hover:bg-white/20 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-[11px] sm:text-xs transition-all border border-amber-300/30 shadow-xs cursor-pointer"
+                className="inline-flex items-center gap-1.5 font-normal text-amber-300 hover:text-white bg-white/10 hover:bg-white/20 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs transition-all border border-amber-300/35 shadow-xs cursor-pointer shrink-0"
               >
-                <FileText className="w-3.5 h-3.5 text-amber-300" />
-                <span>Mandatory Disclosure</span>
+                <FileText className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+                <span className="text-amber-300 font-normal">Mandatory Disclosure</span>
               </Link>
 
-              <Link
-                href="/admissions#enquiry-form"
-                className="hidden sm:inline-flex items-center text-[11px] font-semibold text-slate-300 hover:text-white transition-colors ml-1"
+              <a
+                href="https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden sm:inline-flex items-center gap-1.5 font-normal text-amber-300 hover:text-white bg-white/10 hover:bg-white/20 px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full text-xs transition-all border border-amber-300/35 shadow-xs cursor-pointer shrink-0"
               >
-                <span>Admissions 2026-27</span>
-              </Link>
+                <Download className="w-3.5 h-3.5 text-amber-300 shrink-0" />
+                <span className="text-amber-300 font-normal">School Prospectus</span>
+              </a>
             </div>
           </div>
         </div>
@@ -276,7 +279,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
           <div className="hidden sm:flex items-center">
             <Link
               href="/admissions#enquiry-form"
-              className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-xs font-semibold text-white bg-[#dc2626] hover:bg-[#b91c1c] active:scale-95 shadow-md shadow-red-500/20 transition-all duration-200"
+              className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-semibold text-white bg-[#dc2626] hover:bg-[#b91c1c] active:scale-95 shadow-md shadow-red-500/20 transition-all duration-200"
             >
               Enquire Now
             </Link>

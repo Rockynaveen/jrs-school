@@ -171,7 +171,7 @@ export default function Hero() {
         <div key={activeSlide} className="max-w-xl lg:max-w-2xl text-left animate-fade-in translate-y-2 sm:translate-y-4">
           {/* Tagline / Subtitle */}
           <div className="inline-flex items-center gap-2 mb-2.5 sm:mb-4">
-            <span className="text-white/95 text-[11px] sm:text-xs md:text-[13px] font-bold tracking-[0.14em] uppercase flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span className="text-white/95 text-xs sm:text-[13px] font-bold tracking-wider uppercase flex flex-wrap items-center gap-x-2 gap-y-1">
               {current.tagline.split('•').map((part, i) => (
                 <React.Fragment key={i}>
                   {i > 0 && <span className="text-[#f59e0b] font-black">•</span>}
@@ -190,7 +190,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtext */}
-          <p className="text-xs sm:text-sm md:text-[15px] lg:text-base text-white/90 leading-relaxed font-normal mb-5 sm:mb-7 max-w-lg lg:max-w-xl">
+          <p className="text-sm sm:text-[15px] lg:text-base text-white/90 leading-relaxed font-normal mb-5 sm:mb-7 max-w-lg lg:max-w-xl">
             {current.description}
           </p>
 
@@ -199,7 +199,7 @@ export default function Hero() {
             {/* Primary Admissions Button */}
             <Link
               href="/admissions"
-              className="inline-flex items-center justify-center gap-2 px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/30 transition-all duration-200 text-center"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/30 transition-all duration-200 text-center"
             >
               <span>Admissions 2026-27</span>
               <ArrowRight className="w-4 h-4" />
@@ -210,7 +210,7 @@ export default function Hero() {
               type="button"
               onClick={() => setIsVideoModalOpen(true)}
               aria-label="Play virtual campus tour video"
-              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold text-white bg-[#031c3f]/50 hover:bg-[#031c3f]/80 active:scale-95 border border-white/40 backdrop-blur-sm transition-all duration-200 group cursor-pointer text-center"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-sm font-semibold text-white bg-[#031c3f]/50 hover:bg-[#031c3f]/80 active:scale-95 border border-white/40 backdrop-blur-sm transition-all duration-200 group cursor-pointer text-center"
             >
               <span>Take a Virtual Tour</span>
               <Play className="w-3 h-3 fill-white text-white group-hover:scale-110 transition-transform ml-0.5" />

@@ -164,7 +164,7 @@ export default function FacilitiesSection() {
           {/* Eyebrow: — OUR FACILITIES — */}
           <div className="flex items-center justify-center gap-3 mb-2.5">
             <span className="w-8 h-[1.5px] bg-[#e31e24]" />
-            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+            <span className="text-xs sm:text-[13px] font-semibold uppercase tracking-wider text-[#e31e24]">
               OUR FACILITIES
             </span>
             <span className="w-8 h-[1.5px] bg-[#e31e24]" />
@@ -178,7 +178,7 @@ export default function FacilitiesSection() {
               <span className="w-6 h-2 rounded-full bg-[#e31e24]/70 rotate-[-35deg] ml-2" />
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#031c3f] tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
               World-Class <span className="text-[#e31e24]">Infrastructure</span>
             </h2>
 
@@ -189,13 +189,13 @@ export default function FacilitiesSection() {
           </div>
 
           {/* Subtitle */}
-          <p className="text-slate-500 text-sm sm:text-base mt-2 leading-relaxed">
+          <p className="text-slate-600 text-[15px] sm:text-base mt-2.5 leading-relaxed">
             Modern facilities designed to inspire, explore and grow
           </p>
         </div>
 
         {/* 5 Cards Responsive Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5 items-stretch">
           {facilities.map((facility, index) => {
             const Icon = facility.icon
             return (
@@ -204,7 +204,7 @@ export default function FacilitiesSection() {
                 href={facility.href}
                 data-aos="fade-up"
                 data-aos-delay={index * 75}
-                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100/90 flex flex-col group hover:-translate-y-1.5 cursor-pointer"
+                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100/90 flex flex-col h-full group hover:-translate-y-1.5 cursor-pointer"
               >
                 {/* Photo with Organic Wave Cut at Bottom - Compact Landscape Aspect Ratio */}
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
@@ -243,14 +243,14 @@ export default function FacilitiesSection() {
                 </div>
 
                 {/* Card Content Body - Extra bottom padding for clean breathing room */}
-                <div className="pt-2 pb-5 sm:pb-6 px-4 sm:px-4.5 flex flex-col flex-1">
+                <div className="pt-2 pb-5 sm:pb-6 px-4 sm:px-4.5 flex flex-col flex-1 justify-between">
                   {/* Facility Title */}
-                  <h3 className="text-[15px] sm:text-[16px] font-bold text-[#031c3f] tracking-tight leading-snug min-h-[38px] sm:min-h-[40px] flex items-center group-hover:text-[#e31e24] transition-colors">
+                  <h3 className="text-[15px] sm:text-[16px] font-semibold text-[#031c3f] tracking-tight leading-snug min-h-[44px] flex items-center group-hover:text-[#e31e24] transition-colors">
                     {facility.title}
                   </h3>
 
                   {/* Facility Subtitle */}
-                  <p className="text-[14px] sm:text-[12.5px] text-slate-700 leading-relaxed">
+                  <p className="text-[13px] sm:text-[13.5px] text-slate-600 leading-relaxed mt-1">
                     {facility.subtitle}
                   </p>
                 </div>

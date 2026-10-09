@@ -116,10 +116,10 @@ export default function PageHero({
           </nav>
 
           {/* Main Title */}
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-[38px] xl:text-[42px] font-semibold tracking-tight text-white leading-[1.2] break-words">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[42px] font-bold tracking-tight text-white leading-[1.2] break-words">
             {title}{' '}
             {titleHighlight && (
-              <span className="text-[#f59e0b] font-semibold">{titleHighlight}</span>
+              <span className="text-[#f59e0b] font-bold">{titleHighlight}</span>
             )}
           </h1>
 
@@ -132,7 +132,7 @@ export default function PageHero({
 
           {/* Description Paragraph */}
           {description && (
-            <p className="text-slate-200 text-xs sm:text-sm md:text-[15px] sm:leading-relaxed max-w-xl opacity-90 leading-relaxed mt-2.5 sm:mt-3.5">
+            <p className="text-slate-200 text-sm md:text-[15px] lg:text-base max-w-xl opacity-90 leading-relaxed mt-2.5 sm:mt-3.5">
               {description}
             </p>
           )}
@@ -147,7 +147,7 @@ export default function PageHero({
                     <a
                       href={primaryButton.href}
                       onClick={primaryButton.onClick}
-                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
+                      className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
                     >
                       <span>{primaryButton.text}</span>
                       <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -156,7 +156,7 @@ export default function PageHero({
                     <Link
                       href={primaryButton.href}
                       onClick={primaryButton.onClick}
-                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
+                      className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
                     >
                       <span>{primaryButton.text}</span>
                       <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -166,7 +166,7 @@ export default function PageHero({
                   <button
                     type="button"
                     onClick={primaryButton.onClick}
-                    className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
+                    className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] shadow-lg shadow-red-600/30 transition-all duration-200 active:scale-95 text-center"
                   >
                     <span>{primaryButton.text}</span>
                     <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -180,7 +180,7 @@ export default function PageHero({
                     <a
                       href={secondaryButton.href}
                       onClick={secondaryButton.onClick}
-                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
+                      className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
                     >
                       <span>{secondaryButton.text}</span>
                       {secondaryButton.icon === 'phone' ? (
@@ -195,7 +195,7 @@ export default function PageHero({
                     <Link
                       href={secondaryButton.href}
                       onClick={secondaryButton.onClick}
-                      className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 md:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
+                      className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/40 backdrop-blur-sm transition-all duration-200 active:scale-95 text-center"
                     >
                       <span>{secondaryButton.text}</span>
                       {secondaryButton.icon === 'phone' ? (

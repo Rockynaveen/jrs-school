@@ -122,7 +122,7 @@ export default function StatsBar() {
                 key={idx}
                 data-aos="fade-up"
                 data-aos-delay={idx * 120}
-                className="flex flex-col items-center justify-center space-y-2 group"
+                className="flex flex-col items-center justify-center space-y-2.5 group"
               >
                 <div className="text-amber-400 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-8 h-8 md:w-9 md:h-9" />
@@ -136,7 +136,7 @@ export default function StatsBar() {
                     duration={2000}
                   />
                 </div>
-                <div className="text-xs sm:text-[13px] text-slate-300 font-medium">
+                <div className="text-[13px] sm:text-sm text-slate-300 font-medium tracking-wide">
                   {stat.label}
                 </div>
               </div>

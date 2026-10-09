@@ -250,17 +250,17 @@ export default function AcademicsSection() {
 
                   <div className="relative z-10 pt-1 sm:pt-0">
                     {/* Subtitle / Syllabus */}
-                    <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#e31e24] mb-1.5 block max-w-[62%] leading-tight">
+                    <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#e31e24] mb-2 block max-w-[65%] leading-tight">
                       {stage.subtitle}
                     </span>
 
                     {/* Stage Title */}
-                    <h3 className="text-lg sm:text-[21px] font-extrabold text-[#031c3f] tracking-tight mb-2.5 group-hover:text-[#e31e24] transition-colors leading-tight">
+                    <h3 className="text-lg sm:text-[20px] font-extrabold text-[#031c3f] tracking-tight mb-2.5 group-hover:text-[#e31e24] transition-colors leading-tight">
                       {stage.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-[14px] text-slate-600 leading-relaxed mb-5">
+                    <p className="text-[14px] sm:text-[15px] text-slate-600 leading-relaxed mb-5">
                       {stage.description}
                     </p>
                   </div>
@@ -270,7 +270,7 @@ export default function AcademicsSection() {
                     <button
                       type="button"
                       onClick={() => setActiveCurriculum(index)}
-                      className={`inline-flex items-center px-4.5 py-2 rounded-full text-xs font-bold ${stage.pillBg} ${stage.pillText} ${stage.pillHover} hover:opacity-90 transition-all cursor-pointer shadow-2xs`}
+                      className={`inline-flex items-center px-4.5 py-2 rounded-full text-xs sm:text-[13px] font-bold ${stage.pillBg} ${stage.pillText} ${stage.pillHover} hover:opacity-90 transition-all cursor-pointer shadow-2xs`}
                     >
                       View Curriculum
                     </button>

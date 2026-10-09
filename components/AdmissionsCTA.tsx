@@ -134,7 +134,7 @@ export default function AdmissionsCTA() {
                 Admission Open for <br />
                 <span className="text-[#facc15]">2026 – 2027</span>
               </h2>
-              <p className="text-slate-300 text-xs sm:text-sm mt-2 max-w-xl leading-relaxed">
+              <p className="text-slate-200 text-sm sm:text-[15px] mt-2.5 max-w-xl leading-relaxed">
                 Give your child the right foundation for a brighter future. Apply early for personalized guidance, campus tour, and direct interaction with academic mentors.
               </p>
             </div>
@@ -143,14 +143,14 @@ export default function AdmissionsCTA() {
             <div className="flex flex-wrap items-center gap-2.5">
               <a
                 href="tel:+919876543210"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 px-3.5 py-1.5 rounded-full text-xs text-slate-100 transition-colors"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] text-slate-100 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-[#facc15]" />
                 <span className="font-medium">+91 98765 43210</span>
               </a>
               <a
                 href="mailto:info@jrsinternationalschool.com"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 px-3.5 py-1.5 rounded-full text-xs text-slate-100 transition-colors"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] text-slate-100 transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 text-[#facc15]" />
                 <span className="font-medium">info@jrsinternationalschool.com</span>
@@ -164,8 +164,8 @@ export default function AdmissionsCTA() {
                   <GraduationCap className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-white">CBSE Curriculum</h4>
-                  <p className="text-[10px] text-slate-300">National standards</p>
+                  <h4 className="text-xs sm:text-[13px] font-semibold text-white">CBSE Curriculum</h4>
+                  <p className="text-[11px] sm:text-xs text-slate-300">National standards</p>
                 </div>
               </div>
 
@@ -174,8 +174,8 @@ export default function AdmissionsCTA() {
                   <Sparkles className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-white">Holistic Growth</h4>
-                  <p className="text-[10px] text-slate-300">Arts, sports & STEM</p>
+                  <h4 className="text-xs sm:text-[13px] font-semibold text-white">Holistic Growth</h4>
+                  <p className="text-[11px] sm:text-xs text-slate-300">Arts, sports & STEM</p>
                 </div>
               </div>
 
@@ -184,14 +184,14 @@ export default function AdmissionsCTA() {
                   <Award className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-white">Top Faculty</h4>
-                  <p className="text-[10px] text-slate-300">Caring mentorship</p>
+                  <h4 className="text-xs sm:text-[13px] font-semibold text-white">Top Faculty</h4>
+                  <p className="text-[11px] sm:text-xs text-slate-300">Caring mentorship</p>
                 </div>
               </div>
             </div>
 
             {/* Micro reassurance line */}
-            <div className="flex items-center gap-5 pt-0.5 text-xs text-slate-300">
+            <div className="flex items-center gap-5 pt-0.5 text-xs sm:text-[13px] text-slate-300">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                 100% Confidential
@@ -213,7 +213,7 @@ export default function AdmissionsCTA() {
                   <h3 className="text-lg sm:text-xl font-bold text-[#031c3f] tracking-tight">
                     Enquiry Form
                   </h3>
-                  <p className="text-xs text-slate-500 mt-0.5">
+                  <p className="text-[13px] text-slate-500 mt-1">
                     Fill in the details below to enquire for admissions.
                   </p>
                 </div>

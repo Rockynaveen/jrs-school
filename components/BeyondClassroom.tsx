@@ -65,7 +65,7 @@ export default function BeyondClassroom() {
           <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626]">
             BEYOND CLASSROOM
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0a1931] mt-2 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight">
             A Platform for Every Talent
           </h2>
         </div>
@@ -99,7 +99,7 @@ export default function BeyondClassroom() {
                   className={`${item.color} text-white py-2.5 sm:py-3 px-1.5 sm:px-2.5 flex items-center justify-center gap-1.5 sm:gap-2 font-bold shadow-md transition-all duration-300 min-h-[48px] sm:min-h-[52px]`}
                 >
                   <Icon className="w-4 h-4 sm:w-4.5 sm:h-4.5 flex-shrink-0" />
-                  <span className="leading-tight text-center whitespace-normal sm:whitespace-nowrap text-[11px] sm:text-xs md:text-[13px] xl:text-sm">
+                  <span className="leading-tight text-center whitespace-normal sm:whitespace-nowrap text-xs sm:text-[13px] xl:text-sm font-semibold tracking-wide">
                     {item.title}
                   </span>
                 </div>

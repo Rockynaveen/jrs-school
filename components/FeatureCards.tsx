@@ -56,7 +56,7 @@ export default function FeatureCards() {
   return (
     <section className="relative z-20 bg-[#edf5fd] border-b border-[#dbeafe] py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-5 items-stretch">
           {features.map((item, index) => {
             const Icon = item.icon
             return (
@@ -64,22 +64,22 @@ export default function FeatureCards() {
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
-                className={`bg-white rounded-2xl p-5 sm:p-6 text-center shadow-sm hover:shadow-xl border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 ${item.hoverBorder} flex flex-col items-center justify-center group`}
+                className={`bg-white rounded-2xl p-5 sm:p-6 text-center shadow-sm hover:shadow-xl border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 ${item.hoverBorder} flex flex-col items-center justify-start h-full group`}
               >
                 {/* Circular Badge Icon */}
                 <div
-                  className={`w-12 h-12 rounded-2xl ${item.bgColor} ${item.iconShadow} text-white flex items-center justify-center mb-3.5 shadow-md group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-12 h-12 rounded-2xl ${item.bgColor} ${item.iconShadow} text-white flex items-center justify-center mb-4 shadow-md group-hover:scale-110 transition-transform duration-300`}
                 >
                   <Icon className="w-6 h-6 stroke-[2]" />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-sm sm:text-[15px] font-bold text-slate-900 mb-1.5 leading-snug">
+                <h3 className="text-[15px] sm:text-base font-bold text-slate-900 mb-2 leading-snug min-h-[44px] flex items-center justify-center text-center">
                   {item.title}
                 </h3>
 
                 {/* Subtitle */}
-                <p className="text-[14px] text-slate-700 leading-relaxed max-w-[200px]">
+                <p className="text-[13px] sm:text-sm text-slate-600 leading-relaxed max-w-[210px] mt-auto">
                   {item.subtitle}
                 </p>
               </div>

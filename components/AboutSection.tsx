@@ -180,13 +180,13 @@ export default function AboutSection() {
               <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24]">
                 ABOUT JRS
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] mt-2 tracking-tight leading-[1.15]">
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold text-[#031c3f] mt-2 tracking-tight leading-[1.2]">
                 A Legacy of Excellence <br className="hidden sm:inline" /> in Education
               </h2>
             </div>
 
             {/* Description Paragraph */}
-            <p className="text-slate-700 text-sm sm:text-[15px] leading-relaxed max-w-xl">
+            <p className="text-slate-600 text-[15px] sm:text-base leading-relaxed max-w-xl">
               JRS International School, Uppal, Hyderabad is committed to providing quality education with a perfect blend of academics, values and co-curricular activities. We focus on developing confident, responsible and compassionate individuals who are prepared for a constantly evolving world.
             </p>
 
@@ -202,7 +202,7 @@ export default function AboutSection() {
                   <div className="w-10 h-10 flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform duration-200">
                     {item.icon}
                   </div>
-                  <span className="text-xs sm:text-[13px] font-medium text-slate-700 leading-tight">
+                  <span className="text-xs sm:text-[13px] font-semibold text-slate-700 leading-snug">
                     {item.title}
                   </span>
                 </div>
@@ -213,7 +213,7 @@ export default function AboutSection() {
             <div className="pt-2">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/25 transition-all duration-200"
+                className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full text-sm font-semibold text-white bg-[#e31e24] hover:bg-[#c9181e] active:scale-95 shadow-lg shadow-red-600/25 transition-all duration-200"
               >
                 <span>Know More About Us</span>
                 <ArrowRight className="w-4 h-4" />
