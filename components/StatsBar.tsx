@@ -130,9 +130,9 @@ export default function StatsBar() {
         <div className="absolute inset-0 bg-[#031127]/75 backdrop-blur-[1px]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* 4 Glassmorphism Cards in Compact Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* 4 Glassmorphism Cards in Tight Compact Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-2.5 lg:gap-3">
           {stats.map((stat, idx) => {
             const Icon = stat.icon
             return (
@@ -140,7 +140,7 @@ export default function StatsBar() {
                 key={idx}
                 data-aos="fade-up"
                 data-aos-delay={idx * 80}
-                className="flex flex-col items-center justify-center text-center p-5 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] backdrop-blur-md border border-white/20 hover:border-white/35 transition-all duration-300 shadow-xl group"
+                className="flex flex-col items-center justify-center text-center p-4 sm:p-4.5 rounded-xl sm:rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] backdrop-blur-md border border-white/20 hover:border-white/35 transition-all duration-300 shadow-xl group"
               >
                 {/* Icon above count */}
                 <div className="text-[#facc15] group-hover:scale-110 transition-transform duration-300 mb-2.5">
