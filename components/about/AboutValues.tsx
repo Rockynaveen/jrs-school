@@ -63,15 +63,18 @@ export default function AboutValues() {
   ]
 
   return (
-    <section id="values" className="py-12 sm:py-16 bg-white">
+    <section id="values" className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-left mb-8 sm:mb-10">
-          <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24]">
-            OUR VALUES & ATTRIBUTES
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight">
-            Building Character for a Better Tomorrow
+          <div className="flex items-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              OUR VALUES & ATTRIBUTES
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
+            Building Character for a <span className="text-[#e31e24]">Better Tomorrow</span>
           </h2>
         </div>
 

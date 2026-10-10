@@ -54,7 +54,7 @@ const features = [
 
 export default function FeatureCards() {
   return (
-    <section className="relative z-20 bg-[#edf5fd] border-b border-[#dbeafe] py-10">
+    <section className="relative z-20 bg-transparent py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-5 items-stretch">
           {features.map((item, index) => {
@@ -64,7 +64,8 @@ export default function FeatureCards() {
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
-                className={`bg-white rounded-2xl p-5 sm:p-6 text-center shadow-sm hover:shadow-xl border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 ${item.hoverBorder} flex flex-col items-center justify-start h-full group`}
+                style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
+                className={`bg-white rounded-2xl p-5 sm:p-6 text-center border border-slate-100 transition-all duration-300 hover:-translate-y-1.5 ${item.hoverBorder} flex flex-col items-center justify-start h-full group`}
               >
                 {/* Circular Badge Icon */}
                 <div

@@ -94,17 +94,23 @@ export default function FacilitiesPage() {
         />
 
         {/* 3. Simple & Clean Facilities Section */}
-        <section id="facilities-list" className="py-14 sm:py-20 bg-white">
+        <section id="facilities-list" className="py-10 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Header */}
-            <div className="text-center max-w-2xl mx-auto mb-12" data-aos="fade-up">
-              <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626]">
-                OUR CAMPUS
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight">
-                State-of-the-Art Facilities
+            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
+              {/* Eyebrow: — OUR CAMPUS — */}
+              <div className="flex items-center justify-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+                <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+                  OUR CAMPUS
+                </span>
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
+                State-of-the-Art <span className="text-[#e31e24]">Facilities</span>
               </h2>
-              <p className="text-slate-700 text-sm sm:text-base mt-3 leading-relaxed">
+              <p className="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
                 The campus boasts of the following unique facilities to make this happen:
               </p>
             </div>

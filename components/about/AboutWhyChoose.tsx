@@ -86,15 +86,18 @@ export default function AboutWhyChoose() {
   ]
 
   return (
-    <section id="why-choose" className="py-12 sm:py-16 bg-[#fafbfc]">
+    <section id="why-choose" className="py-10 bg-[#fafbfc]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-left mb-8 sm:mb-10">
-          <span className="text-xs sm:text-[13px] font-semibold uppercase tracking-widest text-[#e31e24]">
-            WHY CHOOSE JRS
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight">
-            What Makes JRS Different?
+          <div className="flex items-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              WHY CHOOSE JRS
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
+            What Makes JRS <span className="text-[#e31e24]">Different?</span>
           </h2>
         </div>
 
