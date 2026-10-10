@@ -145,46 +145,22 @@ const facilities = [
 export default function FacilitiesSection() {
   return (
     <section id="facilities" className="py-10 bg-transparent relative overflow-hidden">
-
-      {/* Decorative Dot Grid on Top Right */}
-      <div className="absolute top-6 right-6 w-32 h-32 opacity-25 pointer-events-none hidden md:block">
-        <svg width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <pattern id="facilitiesDotsPattern" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
-            <circle cx="2" cy="2" r="1.5" fill="#031c3f" />
-          </pattern>
-          <rect width="100%" height="100%" fill="url(#facilitiesDotsPattern)" />
-        </svg>
-      </div>
-
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-10 relative">
         {/* Header Section */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 relative" data-aos="fade-up">
           {/* Eyebrow: — OUR FACILITIES — */}
-          <div className="flex items-center justify-center gap-3 mb-2.5">
-            <span className="w-8 h-[1.5px] bg-[#e31e24]" />
-            <span className="text-xs sm:text-[13px] font-semibold uppercase tracking-wider text-[#e31e24]">
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
               OUR FACILITIES
             </span>
-            <span className="w-8 h-[1.5px] bg-[#e31e24]" />
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
           </div>
 
-          {/* Heading with Decorative Confetti Pills */}
-          <div className="relative inline-block">
-            {/* Left Confetti Pills */}
-            <div className="absolute -left-10 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-2 pointer-events-none">
-              <span className="w-6 h-2 rounded-full bg-[#e31e24]/70 rotate-[-35deg]" />
-              <span className="w-6 h-2 rounded-full bg-[#e31e24]/70 rotate-[-35deg] ml-2" />
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
-              World-Class <span className="text-[#e31e24]">Infrastructure</span>
-            </h2>
-
-            {/* Right Confetti Pill */}
-            <div className="absolute -right-10 top-1/2 -translate-y-1/2 hidden md:block pointer-events-none">
-              <span className="w-7 h-2 rounded-full bg-[#e31e24]/70 rotate-[45deg] block" />
-            </div>
-          </div>
+          {/* Heading */}
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
+            World-Class <span className="text-[#e31e24]">Infrastructure</span>
+          </h2>
 
           {/* Subtitle */}
           <p className="text-slate-600 text-[15px] sm:text-base mt-2.5 leading-relaxed">
@@ -202,7 +178,8 @@ export default function FacilitiesSection() {
                 href={facility.href}
                 data-aos="fade-up"
                 data-aos-delay={index * 75}
-                className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100/90 flex flex-col h-full group hover:-translate-y-1.5 cursor-pointer"
+                style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
+                className="bg-white rounded-3xl overflow-hidden transition-all duration-300 border border-slate-100 flex flex-col h-full group hover:-translate-y-1.5 cursor-pointer"
               >
                 {/* Photo with Organic Wave Cut at Bottom - Compact Landscape Aspect Ratio */}
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">

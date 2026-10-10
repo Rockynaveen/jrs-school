@@ -34,19 +34,19 @@ const events = [
 
 export default function EventsSection() {
   return (
-    <section id="events" className="py-10 bg-[#edf5fd] border-y border-[#dbeafe]">
+    <section id="events" className="py-10 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left Column: Heading & Description */}
           <div className="lg:col-span-4 space-y-5">
             <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="w-6 h-[2px] bg-[#e31e24]" />
+              <div className="flex items-center gap-2.5 mb-2.5">
+                <span className="w-8 h-[2px] bg-[#e31e24]" />
                 <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
                   LATEST EVENTS
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#031c3f] mt-1 leading-tight tracking-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
                 What's Happening <br className="hidden sm:block" />
                 at <span className="text-[#e31e24]">JRS</span>
               </h2>
@@ -73,7 +73,8 @@ export default function EventsSection() {
               {events.map((event, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl border border-slate-200/80 hover:border-red-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col h-full group"
+                  style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
+                  className="bg-white rounded-2xl border border-slate-100 hover:border-red-200 transition-all duration-300 overflow-hidden flex flex-col h-full group"
                 >
                   {/* Event Image */}
                   <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100 shrink-0">

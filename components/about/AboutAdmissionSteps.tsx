@@ -90,7 +90,7 @@ export default function AboutAdmissionSteps() {
   ]
 
   return (
-    <section id="admission-process" className="py-14 sm:py-20 bg-white relative overflow-hidden">
+    <section id="admission-process" className="py-10 bg-white relative overflow-hidden">
       {/* Subtle Graduation Cap Watermark in Top Right */}
       <div className="absolute top-4 right-6 pointer-events-none opacity-[0.06] select-none hidden md:block">
         <GraduationCap className="w-72 h-72 text-slate-900" />
@@ -99,13 +99,17 @@ export default function AboutAdmissionSteps() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <span className="text-xs sm:text-[13px] font-extrabold uppercase tracking-widest text-[#e31e24]">
-            STEPS OF
-          </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-[#031c3f] mt-2 tracking-tight">
-            ADMISSION <span className="text-[#e31e24]">PROCESS</span>
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              STEPS OF ADMISSION
+            </span>
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
+            Admission <span className="text-[#e31e24]">Process</span>
           </h2>
-          <p className="text-slate-700 text-xs sm:text-sm font-normal mt-3">
+          <p className="text-slate-600 text-sm sm:text-base mt-2.5 leading-relaxed">
             Follow these simple steps to complete the admission process at JRS.
           </p>
         </div>

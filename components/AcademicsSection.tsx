@@ -169,7 +169,7 @@ export default function AcademicsSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
           {/* Eyebrow: — ACADEMIC PROGRAMMES — */}
-          <div className="flex items-center justify-center gap-3 mb-2.5">
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
             <span className="w-8 h-[2px] bg-[#e31e24]" />
             <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
               ACADEMIC PROGRAMMES
@@ -178,7 +178,7 @@ export default function AcademicsSection() {
           </div>
 
           {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-white tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-white tracking-tight leading-tight">
             Shaping <span className="text-[#e31e24]">Inquiring Minds</span> at Every Stage
           </h2>
         </div>
@@ -192,7 +192,8 @@ export default function AcademicsSection() {
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
-                className="bg-white rounded-[26px] sm:rounded-[28px] overflow-hidden shadow-xl flex flex-col sm:flex-row relative group hover:-translate-y-1 transition-all duration-300 min-h-[330px] sm:min-h-[355px] lg:min-h-[370px]"
+                style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
+                className="bg-white rounded-[26px] sm:rounded-[28px] overflow-hidden flex flex-col sm:flex-row relative group hover:-translate-y-1 transition-all duration-300 min-h-[330px] sm:min-h-[355px] lg:min-h-[370px]"
               >
                 {/* Photo Container: ~39% Width with Rounded Bottom-Right Seam Corner */}
                 <div className="relative w-full sm:w-[39%] h-60 sm:h-full shrink-0 overflow-hidden bg-slate-100 rounded-br-[36px] sm:rounded-br-[42px]">

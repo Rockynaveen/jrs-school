@@ -99,7 +99,7 @@ export default function AdmissionsCTA() {
   return (
     <section
       id="contact"
-      className="relative bg-[#031c3f] py-10 overflow-hidden text-white scroll-mt-24"
+      className="relative bg-[#030d1d] py-12 lg:py-16 overflow-hidden text-white scroll-mt-24"
     >
       <span id="enquire" className="absolute -top-24" />
       <span id="admissions" className="absolute -top-24" />
@@ -107,22 +107,20 @@ export default function AdmissionsCTA() {
       <span id="enquiry" className="absolute -top-24" />
       <span id="enquire-now" className="absolute -top-24" />
 
-      {/* Realistic Campus Building Background Image with Deep Navy Gradient */}
+      {/* Campus Background Image with Dark Black Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src="/images/contact-bg.jpg"
           alt="JRS International School Campus"
           className="w-full h-full object-cover object-[center_35%]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#031c3f]/95 via-[#031c3f]/90 to-[#031c3f]/80 backdrop-blur-[1px]" />
+        {/* Dark black/navy overlay matching Stats section */}
+        <div className="absolute inset-0 bg-[#031127]/80 backdrop-blur-[1px]" />
       </div>
-
-      {/* Signature Red Corner Swoop Accent */}
-      <div className="absolute -bottom-28 -right-28 w-96 h-96 sm:w-[520px] sm:h-[520px] bg-[#dc2626] rounded-full opacity-80 z-0 pointer-events-none transform rotate-12" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
-          
+
           {/* Left Column: Heading, Info, Highlights */}
           <div className="lg:col-span-6 space-y-4 sm:space-y-5" data-aos="fade-right">
             <div>
@@ -143,25 +141,25 @@ export default function AdmissionsCTA() {
             <div className="flex flex-wrap items-center gap-2.5">
               <a
                 href="tel:+919876543210"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] text-slate-100 transition-colors"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] text-slate-100 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-[#facc15]" />
                 <span className="font-medium">+91 98765 43210</span>
               </a>
               <a
                 href="mailto:info@jrsinternationalschool.com"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/10 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] text-slate-100 transition-colors"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] text-slate-100 transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 text-[#facc15]" />
                 <span className="font-medium">info@jrsinternationalschool.com</span>
               </a>
             </div>
 
-            {/* 3 Circular Feature Badges */}
+            {/* 3 Glassmorphism Feature Badges on Left Side */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1 max-w-xl">
-              <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                <div className="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-md">
-                  <GraduationCap className="w-4 h-4" />
+              <div className="flex items-center gap-2.5 p-3 rounded-xl sm:rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md transition-all duration-300 shadow-lg group">
+                <div className="shrink-0 text-[#facc15] group-hover:scale-110 transition-transform">
+                  <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <h4 className="text-xs sm:text-[13px] font-semibold text-white">CBSE Curriculum</h4>
@@ -169,9 +167,9 @@ export default function AdmissionsCTA() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                <div className="w-8 h-8 rounded-full bg-yellow-500 text-white flex items-center justify-center shrink-0 shadow-md">
-                  <Sparkles className="w-4 h-4" />
+              <div className="flex items-center gap-2.5 p-3 rounded-xl sm:rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md transition-all duration-300 shadow-lg group">
+                <div className="shrink-0 text-[#facc15] group-hover:scale-110 transition-transform">
+                  <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <h4 className="text-xs sm:text-[13px] font-semibold text-white">Holistic Growth</h4>
@@ -179,9 +177,9 @@ export default function AdmissionsCTA() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                <div className="w-8 h-8 rounded-full bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-md">
-                  <Award className="w-4 h-4" />
+              <div className="flex items-center gap-2.5 p-3 rounded-xl sm:rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 backdrop-blur-md transition-all duration-300 shadow-lg group">
+                <div className="shrink-0 text-[#facc15] group-hover:scale-110 transition-transform">
+                  <Award className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
                   <h4 className="text-xs sm:text-[13px] font-semibold text-white">Top Faculty</h4>
@@ -203,17 +201,17 @@ export default function AdmissionsCTA() {
             </div>
           </div>
 
-          {/* Right Column: Clean 2-Field-per-Row Enquiry Form Card */}
+          {/* Right Column: Glassmorphism Enquiry Form Container */}
           <div className="lg:col-span-6" data-aos="fade-left">
-            <Card className="bg-white rounded-2xl p-5 sm:p-6 shadow-xl text-slate-900 border border-slate-100">
+            <Card className="bg-white/[0.08] hover:bg-white/[0.12] backdrop-blur-md border border-white/20 rounded-2xl p-5 sm:p-6 shadow-2xl text-white transition-all duration-300">
               <CardContent className="p-0">
-                
+
                 {/* Form Title */}
-                <div className="mb-3.5 pb-2.5 border-b border-slate-100">
-                  <h3 className="text-lg sm:text-xl font-bold text-[#031c3f] tracking-tight">
+                <div className="mb-3.5 pb-2.5 border-b border-white/15">
+                  <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">
                     Enquiry Form
                   </h3>
-                  <p className="text-[13px] text-slate-500 mt-1">
+                  <p className="text-[13px] text-slate-200 mt-1">
                     Fill in the details below to enquire for admissions.
                   </p>
                 </div>
@@ -221,36 +219,36 @@ export default function AdmissionsCTA() {
                 {submitted ? (
                   /* Success View */
                   <div className="py-8 text-center space-y-3">
-                    <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 mx-auto flex items-center justify-center">
+                    <div className="w-14 h-14 rounded-full bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 mx-auto flex items-center justify-center">
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
-                    <h4 className="text-xl font-bold text-slate-900">
+                    <h4 className="text-xl font-bold text-white">
                       Enquiry Submitted!
                     </h4>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xs mx-auto">
+                    <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-xs mx-auto">
                       Thank you for your interest. Our admissions officer will contact you at{' '}
-                      <span className="font-semibold text-slate-900">
+                      <span className="font-semibold text-white">
                         +{formData.countryCode} {formData.parentMobile}
                       </span>{' '}
                       shortly.
                     </p>
 
-                    <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 text-left text-xs text-slate-700 space-y-1.5 mt-3">
+                    <div className="bg-white/10 border border-white/20 rounded-xl p-3 text-left text-xs text-slate-200 space-y-1.5 mt-3">
                       <div className="flex justify-between">
-                        <span className="text-slate-500">Academic Year:</span>
-                        <span className="font-semibold">{formData.academicYear}</span>
+                        <span className="text-slate-300">Academic Year:</span>
+                        <span className="font-semibold text-white">{formData.academicYear}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-500">Class:</span>
-                        <span className="font-semibold">{formData.grade}</span>
+                        <span className="text-slate-300">Class:</span>
+                        <span className="font-semibold text-white">{formData.grade}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-500">Student:</span>
-                        <span className="font-semibold">{formData.studentName}</span>
+                        <span className="text-slate-300">Student:</span>
+                        <span className="font-semibold text-white">{formData.studentName}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-500">Admission Type:</span>
-                        <span className="font-semibold">{formData.admissionType}</span>
+                        <span className="text-slate-300">Admission Type:</span>
+                        <span className="font-semibold text-white">{formData.admissionType}</span>
                       </div>
                     </div>
 
@@ -259,7 +257,7 @@ export default function AdmissionsCTA() {
                         type="button"
                         onClick={resetForm}
                         variant="outline"
-                        className="rounded-full inline-flex items-center gap-2 text-xs"
+                        className="rounded-full inline-flex items-center gap-2 text-xs bg-white/10 border-white/20 text-white hover:bg-white/20"
                       >
                         <RotateCcw className="w-3.5 h-3.5" />
                         Submit Another Enquiry
@@ -270,8 +268,8 @@ export default function AdmissionsCTA() {
                   /* Step 1: 2 Fields per Row Grid Layout */
                   <form onSubmit={handleGetDetails} className="space-y-4">
                     {errorMsg && (
-                      <div className="p-2.5 bg-red-50 border border-red-200 text-red-700 text-xs rounded-lg flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4 shrink-0 text-red-600" />
+                      <div className="p-2.5 bg-red-500/20 border border-red-500/40 text-red-200 text-xs rounded-lg flex items-center gap-2">
+                        <AlertCircle className="w-4 h-4 shrink-0 text-red-400" />
                         <span>{errorMsg}</span>
                       </div>
                     )}
@@ -279,7 +277,7 @@ export default function AdmissionsCTA() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       {/* Row 1 - Field 1: Academic Year */}
                       <div className="space-y-1">
-                        <Label htmlFor="academicYear" className="text-xs font-semibold text-slate-700">
+                        <Label htmlFor="academicYear" className="text-xs font-semibold text-slate-200">
                           Academic Year
                         </Label>
                         <Select
@@ -288,16 +286,16 @@ export default function AdmissionsCTA() {
                           onChange={(e) =>
                             setFormData({ ...formData, academicYear: e.target.value })
                           }
-                          className="h-10 text-xs"
+                          className="h-10 text-xs bg-white/10 border-white/20 text-white rounded-lg focus:border-amber-400"
                         >
-                          <option value="2026-2027">2026-2027</option>
-                          <option value="2027-2028">2027-2028</option>
+                          <option value="2026-2027" className="bg-[#031127] text-white">2026-2027</option>
+                          <option value="2027-2028" className="bg-[#031127] text-white">2027-2028</option>
                         </Select>
                       </div>
 
                       {/* Row 1 - Field 2: Branch */}
                       <div className="space-y-1">
-                        <Label htmlFor="branch" className="text-xs font-semibold text-slate-700">
+                        <Label htmlFor="branch" className="text-xs font-semibold text-slate-200">
                           Branch
                         </Label>
                         <Select
@@ -306,9 +304,9 @@ export default function AdmissionsCTA() {
                           onChange={(e) =>
                             setFormData({ ...formData, branch: e.target.value })
                           }
-                          className="h-10 text-xs"
+                          className="h-10 text-xs bg-white/10 border-white/20 text-white rounded-lg focus:border-amber-400"
                         >
-                          <option value="JRS INTERNATIONAL SCHOOL">
+                          <option value="JRS INTERNATIONAL SCHOOL" className="bg-[#031127] text-white">
                             JRS INTERNATIONAL SCHOOL
                           </option>
                         </Select>
@@ -316,7 +314,7 @@ export default function AdmissionsCTA() {
 
                       {/* Row 2 - Field 3: Admission Type */}
                       <div className="space-y-1">
-                        <Label htmlFor="admissionType" className="text-xs font-semibold text-slate-700">
+                        <Label htmlFor="admissionType" className="text-xs font-semibold text-slate-200">
                           Admission Type
                         </Label>
                         <Select
@@ -325,17 +323,17 @@ export default function AdmissionsCTA() {
                           onChange={(e) =>
                             setFormData({ ...formData, admissionType: e.target.value })
                           }
-                          className="h-10 text-xs"
+                          className="h-10 text-xs bg-white/10 border-white/20 text-white rounded-lg focus:border-amber-400"
                         >
-                          <option value="DAY SCHOLAR">DAY SCHOLAR</option>
-                          <option value="DAY BOARDING">DAY BOARDING</option>
-                          <option value="RESIDENTIAL">RESIDENTIAL</option>
+                          <option value="DAY SCHOLAR" className="bg-[#031127] text-white">DAY SCHOLAR</option>
+                          <option value="DAY BOARDING" className="bg-[#031127] text-white">DAY BOARDING</option>
+                          <option value="RESIDENTIAL" className="bg-[#031127] text-white">RESIDENTIAL</option>
                         </Select>
                       </div>
 
                       {/* Row 2 - Field 4: Grade */}
                       <div className="space-y-1">
-                        <Label htmlFor="grade" className="text-xs font-semibold text-slate-700">
+                        <Label htmlFor="grade" className="text-xs font-semibold text-slate-200">
                           Grade
                         </Label>
                         <Select
@@ -344,31 +342,31 @@ export default function AdmissionsCTA() {
                           onChange={(e) =>
                             setFormData({ ...formData, grade: e.target.value })
                           }
-                          className="h-10 text-xs"
+                          className="h-10 text-xs bg-white/10 border-white/20 text-white rounded-lg focus:border-amber-400"
                           required
                         >
-                          <option value="">-SELECT CLASS-</option>
-                          <option value="Nursery">Nursery</option>
-                          <option value="LKG">LKG</option>
-                          <option value="UKG">UKG</option>
-                          <option value="Class 1">Class 1</option>
-                          <option value="Class 2">Class 2</option>
-                          <option value="Class 3">Class 3</option>
-                          <option value="Class 4">Class 4</option>
-                          <option value="Class 5">Class 5</option>
-                          <option value="Class 6">Class 6</option>
-                          <option value="Class 7">Class 7</option>
-                          <option value="Class 8">Class 8</option>
-                          <option value="Class 9">Class 9</option>
-                          <option value="Class 10">Class 10</option>
-                          <option value="Class 11">Class 11</option>
-                          <option value="Class 12">Class 12</option>
+                          <option value="" className="bg-[#031127] text-white">-SELECT CLASS-</option>
+                          <option value="Nursery" className="bg-[#031127] text-white">Nursery</option>
+                          <option value="LKG" className="bg-[#031127] text-white">LKG</option>
+                          <option value="UKG" className="bg-[#031127] text-white">UKG</option>
+                          <option value="Class 1" className="bg-[#031127] text-white">Class 1</option>
+                          <option value="Class 2" className="bg-[#031127] text-white">Class 2</option>
+                          <option value="Class 3" className="bg-[#031127] text-white">Class 3</option>
+                          <option value="Class 4" className="bg-[#031127] text-white">Class 4</option>
+                          <option value="Class 5" className="bg-[#031127] text-white">Class 5</option>
+                          <option value="Class 6" className="bg-[#031127] text-white">Class 6</option>
+                          <option value="Class 7" className="bg-[#031127] text-white">Class 7</option>
+                          <option value="Class 8" className="bg-[#031127] text-white">Class 8</option>
+                          <option value="Class 9" className="bg-[#031127] text-white">Class 9</option>
+                          <option value="Class 10" className="bg-[#031127] text-white">Class 10</option>
+                          <option value="Class 11" className="bg-[#031127] text-white">Class 11</option>
+                          <option value="Class 12" className="bg-[#031127] text-white">Class 12</option>
                         </Select>
                       </div>
 
                       {/* Row 3 - Field 5: Parent Mobile No (with Country Code) */}
                       <div className="space-y-1">
-                        <Label htmlFor="parentMobile" className="text-xs font-semibold text-slate-700">
+                        <Label htmlFor="parentMobile" className="text-xs font-semibold text-slate-200">
                           Parent Mobile No
                         </Label>
                         <div className="flex gap-1.5">
@@ -379,13 +377,13 @@ export default function AdmissionsCTA() {
                               onChange={(e) =>
                                 setFormData({ ...formData, countryCode: e.target.value })
                               }
-                              className="h-10 text-xs px-2"
+                              className="h-10 text-xs px-2 bg-white/10 border-white/20 text-white rounded-lg focus:border-amber-400"
                             >
-                              <option value="91">+91</option>
-                              <option value="1">+1</option>
-                              <option value="44">+44</option>
-                              <option value="971">+971</option>
-                              <option value="966">+966</option>
+                              <option value="91" className="bg-[#031127] text-white">+91</option>
+                              <option value="1" className="bg-[#031127] text-white">+1</option>
+                              <option value="44" className="bg-[#031127] text-white">+44</option>
+                              <option value="971" className="bg-[#031127] text-white">+971</option>
+                              <option value="966" className="bg-[#031127] text-white">+966</option>
                             </Select>
                           </div>
                           <Input
@@ -399,7 +397,7 @@ export default function AdmissionsCTA() {
                               const val = e.target.value.replace(/\D/g, '')
                               setFormData({ ...formData, parentMobile: val })
                             }}
-                            className="h-10 text-xs flex-1"
+                            className="h-10 text-xs flex-1 bg-white/10 border-white/20 text-white placeholder-slate-400 rounded-lg focus:border-amber-400"
                             required
                           />
                         </div>
@@ -407,7 +405,7 @@ export default function AdmissionsCTA() {
 
                       {/* Row 3 - Field 6: Student DOB */}
                       <div className="space-y-1">
-                        <Label htmlFor="studentDob" className="text-xs font-semibold text-slate-700">
+                        <Label htmlFor="studentDob" className="text-xs font-semibold text-slate-200">
                           Student DOB
                         </Label>
                         <Input
@@ -417,19 +415,19 @@ export default function AdmissionsCTA() {
                           onChange={(e) =>
                             setFormData({ ...formData, studentDob: e.target.value })
                           }
-                          className="h-10 text-xs cursor-pointer"
+                          className="h-10 text-xs cursor-pointer bg-white/10 border-white/20 text-white rounded-lg focus:border-amber-400 [color-scheme:dark]"
                           required
                         />
                       </div>
 
-                      {/* Row 4 - Full-width Action Button */}
-                      <div className="sm:col-span-2 pt-2">
+                      {/* Row 4 - Premium Enquiry Action Button */}
+                      <div className="sm:col-span-2 pt-2 flex justify-end">
                         <Button
                           type="submit"
-                          className="w-full h-11 bg-[#013aa3] hover:bg-[#012d80] text-white text-sm font-semibold rounded-lg shadow-md transition-all active:scale-[0.99] flex items-center justify-center gap-2"
+                          className="w-full sm:w-auto h-10 px-7 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-amber-500/20 hover:shadow-amber-500/35 transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2 group"
                         >
-                          <span>Get</span>
-                          <ArrowRight className="w-4 h-4" />
+                          <span>Enquire Now</span>
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </Button>
                       </div>
                     </div>
@@ -438,14 +436,14 @@ export default function AdmissionsCTA() {
                   /* Step 2: Student & Parent Details */
                   <form onSubmit={handleFinalSubmit} className="space-y-3.5">
                     {errorMsg && (
-                      <div className="p-2.5 bg-red-50 border border-red-200 text-red-700 text-xs rounded-lg flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4 shrink-0 text-red-600" />
+                      <div className="p-2.5 bg-red-500/20 border border-red-500/40 text-red-200 text-xs rounded-lg flex items-center gap-2">
+                        <AlertCircle className="w-4 h-4 shrink-0 text-red-400" />
                         <span>{errorMsg}</span>
                       </div>
                     )}
 
                     {/* Summary Pill */}
-                    <div className="bg-blue-50 border border-blue-100 rounded-lg p-2.5 flex items-center justify-between text-xs text-slate-700">
+                    <div className="bg-white/10 border border-white/20 rounded-lg p-2.5 flex items-center justify-between text-xs text-slate-200">
                       <div className="text-xs space-y-0.5">
                         <div>
                           <strong>Class:</strong> {formData.grade} • <strong>Year:</strong> {formData.academicYear}
@@ -457,7 +455,7 @@ export default function AdmissionsCTA() {
                       <button
                         type="button"
                         onClick={() => setStep(1)}
-                        className="text-xs font-semibold text-blue-700 hover:underline shrink-0 ml-2"
+                        className="text-xs font-semibold text-amber-400 hover:underline shrink-0 ml-2"
                       >
                         Edit
                       </button>
@@ -465,7 +463,7 @@ export default function AdmissionsCTA() {
 
                     {/* Student Full Name */}
                     <div className="space-y-1">
-                      <Label htmlFor="studentName" className="text-xs font-semibold text-slate-700">
+                      <Label htmlFor="studentName" className="text-xs font-semibold text-slate-200">
                         Student Full Name *
                       </Label>
                       <Input
@@ -476,14 +474,14 @@ export default function AdmissionsCTA() {
                         onChange={(e) =>
                           setFormData({ ...formData, studentName: e.target.value })
                         }
-                        className="h-10 text-xs"
+                        className="h-10 text-xs bg-white/10 border-white/20 text-white placeholder-slate-400 rounded-lg focus:border-amber-400"
                         required
                       />
                     </div>
 
                     {/* Parent / Guardian Name */}
                     <div className="space-y-1">
-                      <Label htmlFor="parentName" className="text-xs font-semibold text-slate-700">
+                      <Label htmlFor="parentName" className="text-xs font-semibold text-slate-200">
                         Parent / Guardian Name *
                       </Label>
                       <Input
@@ -494,14 +492,14 @@ export default function AdmissionsCTA() {
                         onChange={(e) =>
                           setFormData({ ...formData, parentName: e.target.value })
                         }
-                        className="h-10 text-xs"
+                        className="h-10 text-xs bg-white/10 border-white/20 text-white placeholder-slate-400 rounded-lg focus:border-amber-400"
                         required
                       />
                     </div>
 
                     {/* Email Address */}
                     <div className="space-y-1">
-                      <Label htmlFor="emailAddress" className="text-xs font-semibold text-slate-700">
+                      <Label htmlFor="emailAddress" className="text-xs font-semibold text-slate-200">
                         Email Address (Optional)
                       </Label>
                       <Input
@@ -512,7 +510,7 @@ export default function AdmissionsCTA() {
                         onChange={(e) =>
                           setFormData({ ...formData, emailAddress: e.target.value })
                         }
-                        className="h-10 text-xs"
+                        className="h-10 text-xs bg-white/10 border-white/20 text-white placeholder-slate-400 rounded-lg focus:border-amber-400"
                       />
                     </div>
 
@@ -522,15 +520,16 @@ export default function AdmissionsCTA() {
                         type="button"
                         variant="outline"
                         onClick={() => setStep(1)}
-                        className="h-10 text-xs px-4"
+                        className="h-10 text-xs px-4 bg-white/10 border-white/20 text-white hover:bg-white/20 rounded-xl"
                       >
                         Back
                       </Button>
                       <Button
                         type="submit"
-                        className="h-10 text-xs px-6 bg-[#013aa3] hover:bg-[#012d80] text-white font-semibold"
+                        className="h-10 px-6 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg shadow-amber-500/20 hover:shadow-amber-500/35 transition-all duration-300 active:scale-[0.98] flex items-center justify-center gap-2 group"
                       >
-                        Submit Enquiry
+                        <span>Submit Enquiry</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </Button>
                     </div>
                   </form>
@@ -544,3 +543,4 @@ export default function AdmissionsCTA() {
     </section>
   )
 }
+

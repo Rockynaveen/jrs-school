@@ -61,12 +61,18 @@ export default function BeyondClassroom() {
     <section id="beyond" className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Header */}
-        <div className="mb-8" data-aos="fade-up">
-          <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#dc2626]">
-            BEYOND CLASSROOM
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#031c3f] mt-2 tracking-tight">
-            A Platform for Every Talent
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">
+          {/* Eyebrow: — BEYOND CLASSROOM — */}
+          <div className="flex items-center justify-center gap-2.5 mb-2.5">
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+            <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider text-[#e31e24]">
+              BEYOND CLASSROOM
+            </span>
+            <span className="w-8 h-[2px] bg-[#e31e24]" />
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight">
+            A Platform for <span className="text-[#e31e24]">Every Talent</span>
           </h2>
         </div>
 
@@ -79,7 +85,8 @@ export default function BeyondClassroom() {
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={index * 80}
-                className="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col bg-slate-100"
+                style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
+                className="group relative rounded-2xl overflow-hidden transition-all duration-300 flex flex-col bg-slate-100 hover:-translate-y-1"
               >
                 {/* Image Container */}
                 <div className="relative aspect-[4/5] w-full overflow-hidden">

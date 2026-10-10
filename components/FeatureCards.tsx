@@ -54,7 +54,7 @@ const features = [
 
 export default function FeatureCards() {
   return (
-    <section className="relative z-20 bg-transparent py-8 sm:py-10">
+    <section className="relative z-20 bg-transparent py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-5 items-stretch">
           {features.map((item, index) => {

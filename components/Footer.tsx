@@ -72,12 +72,6 @@ export default function Footer() {
 
   return (
     <footer className="relative bg-[#031c3f] text-slate-200 overflow-hidden text-sm">
-      {/* Distinct Divider Bar: Crisp White Line + Bold Red & Blue Gradient */}
-      <div className="w-full relative z-20">
-        <div className="h-[2px] w-full bg-white/80" />
-        <div className="h-[5px] w-full bg-gradient-to-r from-[#dc2626] via-[#2563eb] to-[#dc2626] shadow-sm shadow-blue-950/60" />
-      </div>
-
       {/* Main Footer Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8">
@@ -242,7 +236,7 @@ export default function Footer() {
                 <div className="w-7 h-7 rounded-lg bg-white/10 border border-white/15 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
                   <MapPin className="w-3.5 h-3.5" />
                 </div>
-                <span className="leading-snug">
+                <span className="leading-relaxed">
                   JRS International School, Narapally, Near Uppal Depot, Hyderabad, Telangana
                 </span>
               </div>
@@ -292,11 +286,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Floating Scroll-to-Top Button (hidden in Hero section, appears after scrolling down) */}
+      {/* Floating Scroll-to-Top Button (positioned above WhatsApp button) */}
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${showScrollTop
+        className={`fixed bottom-20 right-5 sm:bottom-24 sm:right-6 z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${showScrollTop
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-y-4 pointer-events-none'
           }`}

@@ -116,56 +116,56 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
     <>
       <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm transition-all duration-300">
         {/* Top Bar: Above Header Navigation (hidden on mobile devices) */}
-        <div className="hidden md:block bg-[#031c3f] text-white border-b border-white/15 relative z-20">
+        <div style={{ backgroundColor: 'rgb(240, 244, 250)' }} className="hidden md:block text-[#031c3f] border-b border-slate-200/80 relative z-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2">
             {/* Left Contact & Affiliation Info */}
-            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-white font-light">
+            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-[#031c3f] font-normal">
               <a
                 href="tel:+9191574043210"
-                className="inline-flex items-center gap-1.5 text-white hover:text-amber-300 transition-colors font-light shrink-0"
+                className="inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0"
               >
-                <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span className="text-white font-light">+91 915740 43210</span>
+                <Phone className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <span className="text-[#031c3f]">+91 915740 43210</span>
               </a>
 
-              <span className="text-white/40 hidden md:inline shrink-0">•</span>
+              <span className="text-slate-400 hidden md:inline shrink-0">•</span>
 
               <a
                 href="mailto:info@jrsinternationalschool.com"
-                className="hidden md:inline-flex items-center gap-1.5 text-white hover:text-amber-300 transition-colors font-light shrink-0"
+                className="hidden md:inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0"
               >
-                <Mail className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span className="text-white font-light">info@jrsinternationalschool.com</span>
+                <Mail className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <span className="text-[#031c3f]">info@jrsinternationalschool.com</span>
               </a>
 
-              <span className="text-white/40 hidden lg:inline shrink-0">•</span>
+              <span className="text-slate-400 hidden lg:inline shrink-0">•</span>
 
-              <span className="hidden lg:inline-flex items-center gap-1.5 text-white font-light shrink-0">
-                <Award className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span className="text-white font-light">CBSE Affiliated School</span>
+              <span className="hidden lg:inline-flex items-center gap-1.5 text-[#031c3f] font-normal shrink-0">
+                <Award className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <span className="text-[#031c3f]">CBSE Affiliated School</span>
               </span>
             </div>
 
             {/* Right: Mandatory Disclosure & Quick links */}
-            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-white font-light shrink-0">
+            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-[#031c3f] font-normal shrink-0">
               <Link
                 href="/mandatory-disclosure"
-                className="inline-flex items-center gap-1.5 font-light text-white hover:text-amber-300 transition-colors shrink-0"
+                className="inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0"
               >
-                <FileText className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span className="text-white font-light">Mandatory Disclosure</span>
+                <FileText className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <span className="text-[#031c3f]">Mandatory Disclosure</span>
               </Link>
 
-              <span className="text-white/40 hidden sm:inline shrink-0">•</span>
+              <span className="text-slate-400 hidden sm:inline shrink-0">•</span>
 
               <a
                 href="https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 font-light text-white hover:text-amber-300 transition-colors shrink-0"
+                className="hidden sm:inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0"
               >
-                <Download className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                <span className="text-white font-light">School Prospectus</span>
+                <Download className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <span className="text-[#031c3f]">School Prospectus</span>
               </a>
             </div>
           </div>
