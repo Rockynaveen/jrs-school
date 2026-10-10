@@ -54,7 +54,10 @@ function CountUpNumber({
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    if (!start) return
+    if (!start) {
+      setCount(0)
+      return
+    }
 
     let startTime: number | null = null
     let animationFrameId: number
@@ -63,7 +66,7 @@ function CountUpNumber({
       if (!startTime) startTime = currentTime
       const elapsed = currentTime - startTime
       const progress = Math.min(elapsed / duration, 1)
-      // Ease out cubic: fast start, soft and graceful finish
+      // Ease out cubic formula for smooth count-up from 0 to value
       const easedProgress = 1 - Math.pow(1 - progress, 3)
       const currentVal = Math.floor(easedProgress * value)
       setCount(currentVal)
@@ -103,7 +106,7 @@ export default function StatsBar() {
           observer.disconnect()
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2, rootMargin: '0px 0px -40px 0px' }
     )
 
     observer.observe(node)
@@ -112,32 +115,59 @@ export default function StatsBar() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="bg-[#081730] py-10 border-y border-blue-950/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 text-center">
+    <section
+      ref={sectionRef}
+      className="relative py-8 sm:py-10 overflow-hidden text-white"
+    >
+      {/* Background Image with Project Navy Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/campus-building.jpg"
+          alt="JRS International School Campus"
+          className="w-full h-full object-cover object-center"
+        />
+        {/* Semi-transparent dark navy overlay matching project palette */}
+        <div className="absolute inset-0 bg-[#031127]/75 backdrop-blur-[1px]" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Compact Header Title */}
+        <div className="text-center mb-6" data-aos="fade-down">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Our Journey In <span className="text-[#e31e24]">Numbers</span>
+          </h2>
+        </div>
+
+        {/* 4 Glassmorphism Cards in Compact Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {stats.map((stat, idx) => {
             const Icon = stat.icon
             return (
               <div
                 key={idx}
                 data-aos="fade-up"
-                data-aos-delay={idx * 120}
-                className="flex flex-col items-center justify-center space-y-2.5 group"
+                data-aos-delay={idx * 80}
+                className="flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] backdrop-blur-md border border-white/20 hover:border-white/35 transition-all duration-300 shadow-xl group"
               >
-                <div className="text-amber-400 group-hover:scale-110 transition-transform duration-300">
-                  <Icon className="w-8 h-8 md:w-9 md:h-9" />
+                {/* Larger Icon aligned straight with the number */}
+                <div className="shrink-0 text-[#facc15] pt-0.5 group-hover:scale-105 transition-transform duration-300">
+                  <Icon className="w-9 h-9 sm:w-10 sm:h-10" />
                 </div>
-                <div className="text-3xl md:text-4xl font-extrabold text-white tracking-tight tabular-nums">
-                  <CountUpNumber
-                    value={stat.value}
-                    suffix={stat.suffix}
-                    prefix={stat.prefix}
-                    start={isVisible}
-                    duration={2000}
-                  />
-                </div>
-                <div className="text-[13px] sm:text-sm text-slate-300 font-medium tracking-wide">
-                  {stat.label}
+
+                {/* Right Side Text Stack */}
+                <div className="flex flex-col text-left">
+                  <div className="text-3xl sm:text-4xl font-black text-white tracking-tight tabular-nums leading-none">
+                    <CountUpNumber
+                      value={stat.value}
+                      suffix={stat.suffix}
+                      prefix={stat.prefix}
+                      start={isVisible}
+                      duration={2000}
+                    />
+                  </div>
+                  <div className="text-xs sm:text-sm font-semibold text-slate-200 mt-2 leading-tight">
+                    {stat.label}
+                  </div>
                 </div>
               </div>
             )
@@ -147,3 +177,9 @@ export default function StatsBar() {
     </section>
   )
 }
+
+
+
+
+
+
