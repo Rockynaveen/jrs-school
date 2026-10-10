@@ -117,7 +117,7 @@ export default function StatsBar() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-8 sm:py-10 overflow-hidden text-white"
+      className="relative py-14 sm:py-16 lg:py-20 overflow-hidden text-white"
     >
       {/* Background Image with Project Navy Overlay */}
       <div className="absolute inset-0 z-0">
@@ -131,13 +131,6 @@ export default function StatsBar() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Compact Header Title */}
-        <div className="text-center mb-6" data-aos="fade-down">
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Our Journey In <span className="text-[#e31e24]">Numbers</span>
-          </h2>
-        </div>
-
         {/* 4 Glassmorphism Cards in Compact Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
           {stats.map((stat, idx) => {
@@ -147,27 +140,27 @@ export default function StatsBar() {
                 key={idx}
                 data-aos="fade-up"
                 data-aos-delay={idx * 80}
-                className="flex items-start gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] backdrop-blur-md border border-white/20 hover:border-white/35 transition-all duration-300 shadow-xl group"
+                className="flex flex-col items-center justify-center text-center p-5 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.08] hover:bg-white/[0.14] backdrop-blur-md border border-white/20 hover:border-white/35 transition-all duration-300 shadow-xl group"
               >
-                {/* Larger Icon aligned straight with the number */}
-                <div className="shrink-0 text-[#facc15] pt-0.5 group-hover:scale-105 transition-transform duration-300">
-                  <Icon className="w-9 h-9 sm:w-10 sm:h-10" />
+                {/* Icon above count */}
+                <div className="text-[#facc15] group-hover:scale-110 transition-transform duration-300 mb-2.5">
+                  <Icon className="w-8 h-8 sm:w-9 sm:h-9" />
                 </div>
 
-                {/* Right Side Text Stack */}
-                <div className="flex flex-col text-left">
-                  <div className="text-3xl sm:text-4xl font-black text-white tracking-tight tabular-nums leading-none">
-                    <CountUpNumber
-                      value={stat.value}
-                      suffix={stat.suffix}
-                      prefix={stat.prefix}
-                      start={isVisible}
-                      duration={2000}
-                    />
-                  </div>
-                  <div className="text-xs sm:text-sm font-semibold text-slate-200 mt-2 leading-tight">
-                    {stat.label}
-                  </div>
+                {/* Count Number in center */}
+                <div className="text-3xl sm:text-4xl font-black text-white tracking-tight tabular-nums leading-none">
+                  <CountUpNumber
+                    value={stat.value}
+                    suffix={stat.suffix}
+                    prefix={stat.prefix}
+                    start={isVisible}
+                    duration={2000}
+                  />
+                </div>
+
+                {/* Label below count */}
+                <div className="text-xs sm:text-sm font-semibold text-slate-200 mt-2 leading-tight">
+                  {stat.label}
                 </div>
               </div>
             )
