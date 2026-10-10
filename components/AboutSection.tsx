@@ -38,9 +38,9 @@ export default function AboutSection() {
           <div className="lg:col-span-6 relative pb-6 sm:pb-8" data-aos="fade-right">
             <div className="relative grid grid-cols-12 gap-3 sm:gap-4 items-start">
               
-              {/* Image 1 (Left - Taller Portrait photo from top to bottom) */}
+              {/* Image 1 (Left - Portrait photo) */}
               <div className="col-span-6">
-                <div className="relative aspect-[3/4.4] w-full overflow-hidden bg-slate-100 shadow-md">
+                <div className="relative aspect-[3/4.4] w-full overflow-hidden bg-slate-100 shadow-md rounded-2xl">
                   <SchoolImage
                     src="/images/about-students.jpg"
                     alt="JRS International School Students"
@@ -51,9 +51,9 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              {/* Right Side: Image 2 on top + Video card below it */}
+              {/* Right Side: Image 2 (Same as 1st image) + Video card below it */}
               <div className="col-span-6">
-                <div className="relative aspect-[4/3.8] w-full overflow-hidden bg-slate-100 shadow-md">
+                <div className="relative aspect-[3/4.4] w-full overflow-hidden bg-slate-100 shadow-md rounded-2xl">
                   <SchoolImage
                     src="/images/campus-building.jpg"
                     alt="JRS International School Campus Building"
@@ -64,9 +64,9 @@ export default function AboutSection() {
                 </div>
               </div>
 
-              {/* Floating Video Card (Positioned directly below the right photo, overlapping left photo) */}
+              {/* Floating Video Card with border radius */}
               <div
-                className="col-span-12 sm:col-span-auto sm:absolute sm:bottom-0 sm:right-0 sm:left-[28%] z-20 bg-white p-4 sm:p-5 mt-3 sm:mt-0 transition-transform duration-300 hover:-translate-y-1"
+                className="col-span-12 sm:col-span-auto sm:absolute sm:bottom-0 sm:right-0 sm:left-[28%] z-20 bg-white p-4 sm:p-5 mt-3 sm:mt-0 transition-transform duration-300 hover:-translate-y-1 rounded-2xl border border-slate-100"
                 style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
               >
                 <p className="text-[13px] sm:text-sm font-bold text-[#031c3f] leading-snug mb-3">

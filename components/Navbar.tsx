@@ -124,7 +124,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 href="tel:+9191574043210"
                 className="inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0"
               >
-                <Phone className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <Phone className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
                 <span className="text-[#031c3f]">+91 915740 43210</span>
               </a>
 
@@ -134,14 +134,14 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 href="mailto:info@jrsinternationalschool.com"
                 className="hidden md:inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0"
               >
-                <Mail className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
                 <span className="text-[#031c3f]">info@jrsinternationalschool.com</span>
               </a>
 
               <span className="text-slate-400 hidden lg:inline shrink-0">•</span>
 
               <span className="hidden lg:inline-flex items-center gap-1.5 text-[#031c3f] font-normal shrink-0">
-                <Award className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <Award className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
                 <span className="text-[#031c3f]">CBSE Affiliated School</span>
               </span>
             </div>
@@ -152,7 +152,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 href="/mandatory-disclosure"
                 className="inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0"
               >
-                <FileText className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <FileText className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
                 <span className="text-[#031c3f]">Mandatory Disclosure</span>
               </Link>
 
@@ -164,7 +164,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 rel="noopener noreferrer"
                 className="hidden sm:inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0"
               >
-                <Download className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                <Download className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
                 <span className="text-[#031c3f]">School Prospectus</span>
               </a>
             </div>

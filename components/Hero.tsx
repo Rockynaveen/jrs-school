@@ -113,8 +113,11 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#031c3f]/40 via-transparent to-transparent z-[1] pointer-events-none" />
       </div>
 
-      {/* Latest News Marquee Ticker (Below Header, Transparent, Attached to the End) */}
-      <div className="relative z-20 w-full bg-transparent border-b border-white/15 flex items-stretch shrink-0 h-[28px] sm:h-[30px] pl-0 pr-3 sm:pr-6">
+      {/* Latest News Marquee Ticker (Below Header, Attached to the End) */}
+      <div
+        style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
+        className="relative z-20 w-full border-b border-white/15 flex items-stretch shrink-0 h-[28px] sm:h-[30px] pl-0 pr-3 sm:pr-6"
+      >
         <div className="flex items-center gap-1.5 shrink-0 bg-[#dc2626] text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider pl-2.5 sm:pl-3 pr-2.5 sm:pr-3 shadow-sm z-10 self-stretch">
           <Megaphone className="w-3 h-3 shrink-0 animate-bounce" />
           <span>News</span>
