@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 }
 
 import WhatsAppButton from '../components/WhatsAppButton'
+import Script from 'next/script'
 
 export default function RootLayout({
   children,
@@ -32,6 +33,20 @@ export default function RootLayout({
       <body className="bg-white text-slate-800 antialiased font-sans overflow-x-hidden min-h-screen w-full">
         {children}
         <WhatsAppButton />
+
+        {/* Zoho SalesIQ Live Chat Widget */}
+        <Script id="zsiq-init" strategy="afterInteractive">
+          {`
+            window.$zoho = window.$zoho || {};
+            $zoho.salesiq = $zoho.salesiq || { ready: function(){} };
+          `}
+        </Script>
+        <Script
+          id="zsiqscript"
+          src="https://salesiq.zoho.in/widget?wc=siq03ac49bba0baf12c1689a69cfa7fab714cedc5f444bba32f2e99b8853a7da01a"
+          strategy="afterInteractive"
+          defer
+        />
       </body>
     </html>
   )

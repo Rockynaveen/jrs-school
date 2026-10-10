@@ -10,7 +10,7 @@ export default function WhatsAppButton() {
   return (
     <aside
       aria-label="WhatsApp Contact"
-      className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex items-center group"
+      className="fixed bottom-[84px] right-5 sm:bottom-[92px] sm:right-6 z-40 flex items-center group"
     >
       {/* Desktop Hover Tooltip */}
       <span

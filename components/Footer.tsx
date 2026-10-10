@@ -286,11 +286,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Floating Scroll-to-Top Button (positioned above WhatsApp button) */}
+      {/* Floating Scroll-to-Top Button (positioned above live chat) */}
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className={`fixed bottom-20 right-5 sm:bottom-24 sm:right-6 z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${showScrollTop
+        className={`fixed bottom-24 right-5 sm:bottom-28 sm:right-6 z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${showScrollTop
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-y-4 pointer-events-none'
           }`}
