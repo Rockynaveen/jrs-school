@@ -99,7 +99,7 @@ export default function AdmissionsCTA() {
   return (
     <section
       id="contact"
-      className="relative bg-[#030d1d] py-12 lg:py-16 overflow-hidden text-white scroll-mt-24"
+      className="relative bg-[#030d1d] py-10 overflow-hidden text-white scroll-mt-24"
     >
       <span id="enquire" className="absolute -top-24" />
       <span id="admissions" className="absolute -top-24" />
@@ -140,11 +140,11 @@ export default function AdmissionsCTA() {
             {/* Quick Contact Chips */}
             <div className="flex flex-wrap items-center gap-2.5">
               <a
-                href="tel:+919876543210"
+                href="tel:+9191574043210"
                 className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-xs sm:text-[13px] text-slate-100 transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-[#facc15]" />
-                <span className="font-medium">+91 98765 43210</span>
+                <span className="font-medium">+91 915740 43210</span>
               </a>
               <a
                 href="mailto:info@jrsinternationalschool.com"

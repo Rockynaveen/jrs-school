@@ -10,11 +10,11 @@ export default function WhatsAppButton() {
   return (
     <aside
       aria-label="WhatsApp Contact"
-      className="fixed bottom-[84px] right-5 sm:bottom-[92px] sm:right-6 z-40 flex items-center group"
+      className="fixed bottom-[84px] right-[20px] sm:bottom-[96px] sm:right-[24px] z-40 flex items-center justify-center group pointer-events-none"
     >
-      {/* Desktop Hover Tooltip */}
+      {/* Desktop Hover Tooltip (Positioned absolutely so it does not affect button alignment) */}
       <span
-        className="hidden md:inline-block mr-3 px-3.5 py-1.5 rounded-full bg-slate-900/95 text-white text-xs font-semibold shadow-xl border border-white/10 pointer-events-none transition-all duration-300 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0"
+        className="hidden md:inline-block absolute right-full mr-3 px-3.5 py-1.5 rounded-full bg-slate-900/95 text-white text-xs font-semibold shadow-xl border border-white/10 pointer-events-none transition-all duration-300 opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 whitespace-nowrap"
       >
         Chat on WhatsApp
       </span>
@@ -24,7 +24,7 @@ export default function WhatsAppButton() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with JRS International School on WhatsApp"
-        className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer"
+        className="relative w-[50px] h-[50px] sm:w-[56px] sm:h-[56px] rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer pointer-events-auto"
         style={{
           boxShadow: '0 8px 24px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0, 0, 0, 0.2)',
         }}

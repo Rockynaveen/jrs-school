@@ -58,7 +58,7 @@ const activities = [
 
 export default function BeyondClassroom() {
   return (
-    <section id="beyond" className="py-10 bg-white">
+    <section id="beyond" className="py-10 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12" data-aos="fade-up">

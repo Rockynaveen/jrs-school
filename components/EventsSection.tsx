@@ -34,7 +34,7 @@ const events = [
 
 export default function EventsSection() {
   return (
-    <section id="events" className="py-10 bg-transparent">
+    <section id="events" className="py-10 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* Left Column: Heading & Description */}

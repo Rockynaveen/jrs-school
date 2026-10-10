@@ -71,7 +71,10 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="relative bg-[#031c3f] text-slate-200 overflow-hidden text-sm">
+    <footer
+      className="relative bg-[#031c3f] text-slate-200 overflow-hidden text-sm font-['Inter',sans-serif] font-normal"
+      style={{ fontFamily: "'Inter', sans-serif" }}
+    >
       {/* Main Footer Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 lg:gap-8">
@@ -89,7 +92,10 @@ export default function Footer() {
             </Link>
 
             <div>
-              <h3 className="text-white font-bold text-sm sm:text-[15px] tracking-tight leading-snug">
+              <h3
+                className="text-white font-['Manrope',sans-serif] font-semibold text-sm sm:text-[15px] tracking-tight leading-snug"
+                style={{ fontFamily: "'Manrope', sans-serif" }}
+              >
                 JRS International School, Narapally, Hyderabad
               </h3>
               <p className="text-slate-300 text-sm leading-relaxed mt-1 max-w-sm">
@@ -161,7 +167,10 @@ export default function Footer() {
           {/* Column 2: Quick Links (Col span 2) */}
           <div className="lg:col-span-2 space-y-3">
             <div>
-              <h4 className="text-base font-bold text-white tracking-tight">
+              <h4
+                className="text-base font-['Manrope',sans-serif] font-semibold text-white tracking-tight"
+                style={{ fontFamily: "'Manrope', sans-serif" }}
+              >
                 Quick Links
               </h4>
               <div className="w-7 h-0.5 bg-white/30 mt-1 rounded-full" />
@@ -185,7 +194,10 @@ export default function Footer() {
           {/* Column 3: Important Links (Col span 2) */}
           <div className="lg:col-span-2 space-y-3">
             <div>
-              <h4 className="text-base font-bold text-white tracking-tight">
+              <h4
+                className="text-base font-['Manrope',sans-serif] font-semibold text-white tracking-tight"
+                style={{ fontFamily: "'Manrope', sans-serif" }}
+              >
                 Important Links
               </h4>
               <div className="w-7 h-0.5 bg-white/30 mt-1 rounded-full" />
@@ -224,7 +236,10 @@ export default function Footer() {
           {/* Column 4: Contact Us & Campus Map (Col span 4) */}
           <div id="footer-contact" className="lg:col-span-4 space-y-3">
             <div>
-              <h4 className="text-base font-bold text-white tracking-tight">
+              <h4
+                className="text-base font-['Manrope',sans-serif] font-semibold text-white tracking-tight"
+                style={{ fontFamily: "'Manrope', sans-serif" }}
+              >
                 Contact Us
               </h4>
               <div className="w-7 h-0.5 bg-white/30 mt-1 rounded-full" />
@@ -286,11 +301,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Floating Scroll-to-Top Button (positioned above live chat) */}
+      {/* Floating Scroll-to-Top Button (positioned above WhatsApp & live chat, vertically aligned) */}
       <button
         onClick={scrollToTop}
         aria-label="Scroll to top"
-        className={`fixed bottom-24 right-5 sm:bottom-28 sm:right-6 z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${showScrollTop
+        className={`fixed bottom-[148px] right-[25px] sm:bottom-[168px] sm:right-[32px] z-40 w-10 h-10 rounded-full bg-[#031c3f] hover:bg-[#02132d] text-white flex items-center justify-center shadow-2xl border border-white/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer ${showScrollTop
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 translate-y-4 pointer-events-none'
           }`}
@@ -305,7 +320,7 @@ export default function Footer() {
             © 2026 <span className="text-white font-semibold">JRS International School</span>. All Rights Reserved.
           </div>
 
-          <div className="flex items-center gap-3 text-slate-300">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-slate-300">
             <a href="#privacy" className="hover:text-white transition-colors">
               Privacy Policy
             </a>

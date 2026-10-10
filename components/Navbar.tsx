@@ -114,46 +114,49 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm transition-all duration-300">
+      <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white border-b border-slate-100 shadow-sm transition-all duration-300 font-['Inter',sans-serif]">
         {/* Top Bar: Above Header Navigation (hidden on mobile devices) */}
-        <div style={{ backgroundColor: 'rgb(240, 244, 250)' }} className="hidden md:block text-[#031c3f] border-b border-slate-200/80 relative z-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2">
+        <div
+          style={{ backgroundColor: 'rgb(240, 244, 250)', fontFamily: "'Inter', sans-serif" }}
+          className="hidden md:block text-[#031c3f] border-b border-slate-200/80 relative z-20 font-['Inter',sans-serif] font-normal"
+        >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between min-h-[34px] sm:min-h-[38px] py-1 gap-2 font-['Inter',sans-serif] font-normal">
             {/* Left Contact & Affiliation Info */}
-            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-[#031c3f] font-normal">
+            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-[#031c3f] font-normal font-['Inter',sans-serif]">
               <a
                 href="tel:+9191574043210"
-                className="inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0"
+                className="inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0 font-['Inter',sans-serif]"
               >
                 <Phone className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f]">+91 915740 43210</span>
+                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">+91 915740 43210</span>
               </a>
 
               <span className="text-slate-400 hidden md:inline shrink-0">•</span>
 
               <a
                 href="mailto:info@jrsinternationalschool.com"
-                className="hidden md:inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0"
+                className="hidden md:inline-flex items-center gap-1.5 text-[#031c3f] hover:text-[#e31e24] transition-colors font-normal shrink-0 font-['Inter',sans-serif]"
               >
                 <Mail className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f]">info@jrsinternationalschool.com</span>
+                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">info@jrsinternationalschool.com</span>
               </a>
 
               <span className="text-slate-400 hidden lg:inline shrink-0">•</span>
 
-              <span className="hidden lg:inline-flex items-center gap-1.5 text-[#031c3f] font-normal shrink-0">
+              <span className="hidden lg:inline-flex items-center gap-1.5 text-[#031c3f] font-normal shrink-0 font-['Inter',sans-serif]">
                 <Award className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f]">CBSE Affiliated School</span>
+                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">CBSE Affiliated School</span>
               </span>
             </div>
 
             {/* Right: Mandatory Disclosure & Quick links */}
-            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-[#031c3f] font-normal shrink-0">
+            <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-[13px] text-[#031c3f] font-normal shrink-0 font-['Inter',sans-serif]">
               <Link
                 href="/mandatory-disclosure"
-                className="inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0"
+                className="inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif]"
               >
                 <FileText className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f]">Mandatory Disclosure</span>
+                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">Mandatory Disclosure</span>
               </Link>
 
               <span className="text-slate-400 hidden sm:inline shrink-0">•</span>
@@ -162,10 +165,10 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
                 href="https://jrsinternationalschooluppal.com/wp-content/uploads/2022/01/Brochure-2020-JRS.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0"
+                className="hidden sm:inline-flex items-center gap-1.5 font-normal text-[#031c3f] hover:text-[#e31e24] transition-colors shrink-0 font-['Inter',sans-serif]"
               >
                 <Download className="w-3.5 h-3.5 text-[#e31e24] shrink-0" />
-                <span className="text-[#031c3f]">School Prospectus</span>
+                <span className="text-[#031c3f] font-['Inter',sans-serif] font-normal">School Prospectus</span>
               </a>
             </div>
           </div>
@@ -433,7 +436,7 @@ export default function Navbar({ activePage = 'home' }: NavbarProps) {
       )}
     </header>
     {/* Spacer to preserve document flow underneath the fixed header */}
-    <div className="h-16 md:h-[122px] w-full shrink-0 pointer-events-none" aria-hidden="true" />
+    <div className="h-16 sm:h-20 md:h-[122px] w-full shrink-0 pointer-events-none" aria-hidden="true" />
   </>
   )
 }

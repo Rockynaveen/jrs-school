@@ -179,7 +179,7 @@ export default function FacilitiesSection() {
                 data-aos="fade-up"
                 data-aos-delay={index * 75}
                 style={{ boxShadow: 'rgba(149, 157, 165, 0.2) 0px 8px 24px' }}
-                className="bg-white rounded-3xl overflow-hidden transition-all duration-300 border border-slate-100 flex flex-col h-full group hover:-translate-y-1.5 cursor-pointer"
+                className="bg-white rounded-3xl overflow-hidden transition-all duration-300 border border-slate-100 flex flex-col h-full group hover:-translate-y-1.5 cursor-pointer sm:last:col-span-2 md:last:col-span-1 lg:last:col-span-1 sm:last:max-w-md sm:last:mx-auto md:last:max-w-none md:last:mx-0 w-full"
               >
                 {/* Photo with Organic Wave Cut at Bottom - Compact Landscape Aspect Ratio */}
                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">

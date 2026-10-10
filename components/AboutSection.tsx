@@ -112,10 +112,7 @@ export default function AboutSection() {
               </div>
 
               {/* Main Heading */}
-              <h2
-                style={{ lineHeight: '3rem' }}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-[3rem]"
-              >
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold text-[#031c3f] tracking-tight leading-tight sm:leading-snug lg:leading-[1.18]">
                 A Legacy of Excellence <span className="text-[#e31e24]">in Education</span>
               </h2>
             </div>

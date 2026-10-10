@@ -21,14 +21,15 @@ export default function LandingPage() {
       easing: 'ease-out-cubic',
       once: true,
       offset: 50,
+      disable: 'mobile',
     })
   }, [])
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-800 antialiased">
+    <div className="min-h-screen flex flex-col bg-white text-slate-800 antialiased w-full">
       {/* 1. Header / Navbar */}
       <Navbar />
 
-      <main className="flex-1">
+      <main className="flex-1 w-full">
         {/* 2. Hero Section */}
         <Hero />
 

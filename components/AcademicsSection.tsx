@@ -93,10 +93,7 @@ export default function AcademicsSection() {
   const currentModal = activeCurriculum !== null ? stages[activeCurriculum] : null
 
   return (
-    <section id="academics" className="py-12 sm:py-20 lg:py-24 bg-slate-50 relative scroll-mt-16 text-slate-900">
-      {/* Subtle Ambient Background Lighting */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+    <section id="academics" className="py-10 bg-transparent relative scroll-mt-16 text-slate-900">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -118,19 +115,21 @@ export default function AcademicsSection() {
           </p>
         </div>
 
-        {/* Academic Stage Cards */}
-        <div className="space-y-6 sm:space-y-10 lg:space-y-16 pb-8 sm:pb-12">
+        {/* Academic Stage Cards with On-Scroll Sticky Stacking */}
+        <div className="space-y-6 sm:space-y-10 lg:space-y-12 pb-20 sm:pb-28 lg:pb-36">
           {stages.map((stage, index) => (
             <div
               key={index}
-              className="sticky flex flex-col lg:flex-row items-stretch rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden border border-slate-200/80 bg-white text-slate-900 group transition-all duration-300"
+              className="sticky [top:var(--stack-top-mobile)] sm:[top:var(--stack-top-tablet)] lg:[top:var(--stack-top-desktop)] flex flex-col lg:flex-row items-stretch rounded-2xl sm:rounded-3xl lg:rounded-[32px] overflow-hidden border border-slate-200/90 bg-white text-slate-900 group transition-all duration-300 shadow-[0_12px_36px_rgba(0,0,0,0.08)] hover:shadow-[0_16px_48px_rgba(0,0,0,0.12)]"
               style={{
-                top: `${72 + index * 20}px`,
+                ['--stack-top-mobile' as any]: `${76 + index * 18}px`,
+                ['--stack-top-tablet' as any]: `${96 + index * 24}px`,
+                ['--stack-top-desktop' as any]: `${128 + index * 28}px`,
                 zIndex: index + 10,
               }}
             >
               {/* Left Column: Image */}
-              <div className="w-full lg:w-1/2 min-h-[220px] sm:min-h-[360px] lg:min-h-[480px] relative overflow-hidden bg-slate-950 shrink-0">
+              <div className="w-full lg:w-1/2 min-h-[200px] sm:min-h-[300px] lg:min-h-[460px] relative overflow-hidden bg-slate-950 shrink-0">
                 <SchoolImage
                   src={stage.image}
                   alt={stage.alt}
@@ -141,7 +140,7 @@ export default function AcademicsSection() {
               </div>
 
               {/* Right Column: Clean Content Area */}
-              <div className="w-full lg:w-1/2 bg-white p-5 sm:p-8 lg:p-12 text-slate-900 relative overflow-hidden flex flex-col justify-between">
+              <div className="w-full lg:w-1/2 bg-white p-5 sm:p-8 lg:p-11 text-slate-900 relative overflow-hidden flex flex-col justify-between">
                 
                 <div className="relative z-10 space-y-3 sm:space-y-4">
                   {/* Stage Tag */}

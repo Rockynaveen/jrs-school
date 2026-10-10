@@ -116,18 +116,19 @@ export default function Hero() {
       {/* Latest News Marquee Ticker (Below Header, Attached to the End) */}
       <div
         style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
-        className="relative z-20 w-full border-b border-white/15 flex items-stretch shrink-0 h-[28px] sm:h-[30px] pl-0 pr-3 sm:pr-6"
+        className="relative z-20 w-full max-w-full overflow-hidden border-b border-white/15 flex items-stretch shrink-0 pl-0 pr-3 sm:pr-6"
       >
-        <div className="flex items-center gap-1.5 shrink-0 bg-[#dc2626] text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider pl-2.5 sm:pl-3 pr-2.5 sm:pr-3 shadow-sm z-10 self-stretch">
-          <Megaphone className="w-3 h-3 shrink-0 animate-bounce" />
+        <div className="flex items-center gap-1.5 shrink-0 bg-[#dc2626] text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider px-2.5 sm:px-3 py-[10px] shadow-sm z-10 self-stretch">
+          <Megaphone className="w-3.5 h-3.5 shrink-0 animate-bounce" />
           <span>News</span>
         </div>
-        <div className="flex-1 overflow-hidden ml-2.5 sm:ml-3 flex items-center">
+        <div className="flex-1 min-w-0 max-w-full overflow-hidden ml-2.5 sm:ml-3 flex items-center py-[10px]">
           <marquee
             behavior="scroll"
             direction="left"
             scrollamount="6"
-            className="text-[11px] sm:text-xs font-medium text-white/95 py-0 cursor-pointer block leading-tight"
+            className="w-full max-w-full text-[13px] sm:text-[14px] font-normal text-white/95 cursor-pointer block leading-normal font-['Inter',sans-serif]"
+            style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400 }}
             onMouseEnter={(e: any) => e.currentTarget.stop()}
             onMouseLeave={(e: any) => e.currentTarget.start()}
           >
