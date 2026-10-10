@@ -144,9 +144,7 @@ const facilities = [
 
 export default function FacilitiesSection() {
   return (
-    <section id="facilities" className="py-10 bg-[#fafcff] relative overflow-hidden">
-      {/* Decorative Light Blue Ambient Glow on Left */}
-      <div className="absolute -top-20 -left-20 w-80 sm:w-96 h-80 sm:h-96 rounded-full bg-[#dbeafe]/40 blur-3xl pointer-events-none" />
+    <section id="facilities" className="py-10 bg-transparent relative overflow-hidden">
 
       {/* Decorative Dot Grid on Top Right */}
       <div className="absolute top-6 right-6 w-32 h-32 opacity-25 pointer-events-none hidden md:block">
