@@ -93,9 +93,9 @@ export default function AcademicsSection() {
   const currentModal = activeCurriculum !== null ? stages[activeCurriculum] : null
 
   return (
-    <section id="academics" className="py-16 sm:py-20 lg:py-24 bg-[#030f26] relative scroll-mt-16 text-white">
+    <section id="academics" className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative scroll-mt-16 text-slate-900">
       {/* Subtle Ambient Background Lighting */}
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -110,10 +110,10 @@ export default function AcademicsSection() {
             <span className="w-8 h-[2px] bg-[#e31e24]" />
           </div>
 
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight whitespace-nowrap">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#031c3f] tracking-tight leading-tight whitespace-nowrap">
             Shaping <span className="text-[#e31e24]">Inquiring Minds</span> at Every Stage
           </h2>
-          <p className="text-slate-300 text-sm sm:text-base mt-3 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-slate-600 text-sm sm:text-base mt-3 max-w-2xl mx-auto leading-relaxed">
             Our progressive CBSE curriculum combines academic rigor, experiential STEM learning, and holistic character development from early years to middle school graduation.
           </p>
         </div>
@@ -123,7 +123,7 @@ export default function AcademicsSection() {
           {stages.map((stage, index) => (
             <div
               key={index}
-              className="sticky flex flex-col lg:flex-row items-stretch rounded-3xl lg:rounded-[32px] overflow-hidden shadow-2xl border border-white/15 bg-white text-slate-900 group transition-all duration-300"
+              className="sticky flex flex-col lg:flex-row items-stretch rounded-3xl lg:rounded-[32px] overflow-hidden border border-slate-200/80 bg-white text-slate-900 group transition-all duration-300"
               style={{
                 top: `${96 + index * 28}px`,
                 zIndex: index + 10,
